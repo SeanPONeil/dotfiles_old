@@ -28,7 +28,7 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = GohuFont Nerd Font Complete Mono:pixelsize=12;3
+font-0 = GohuFont Nerd Font:pixelsize=14;3
 font-1 = FontAwesome:style=Regular:pixelsize=14;3
 ;font-2 = FontAwesome:style=Regular:pixelsize=14
 ;font-3 = FontAwesome:style=Regular:pixelsize=14
