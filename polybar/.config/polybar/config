@@ -40,7 +40,7 @@ dpi=${xrdb:Xft.dpi:-1}
 
 modules-left = bspwm
 modules-center = date
-modules-right = battery wlan powermenu
+modules-right = backlight battery wlan powermenu
 
 ;tray-position =
 ;tray-padding =
@@ -343,8 +343,7 @@ bar-progress-fill = ─
 bar-progress-empty = ─
 
 [module/backlight]
-type = internal/backlight
-card = intel_backlight
+type = internal/xbacklight
 
 [settings]
 screenchange-reload = true
