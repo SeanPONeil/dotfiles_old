@@ -255,19 +255,6 @@ menu-3-0-exec = pkill -KILL -u $USER
 ;format-background = #A07354
 ;format-padding = 4
 
-
-
-[module/cpu]
-type = internal/cpu
-
-; Seconds to sleep between updates
-; Default: 1
-interval = 0.5
-
-format = <label>
-label = CPU %percentage%%
-
-
 [module/mpd]
 type = internal/mpd
 
