@@ -3,6 +3,7 @@ source <(antibody init)
 antibody bundle < $HOME/.zsh_plugins
 
 source $HOME/.aliases
+source $HOME/.aliases-`uname`
 
 # PyWal colors
 source $XDG_CACHE_HOME/wal/colors.sh

@@ -1,5 +1,2 @@
-alias pbcopy="xsel --clipboard --input"
-alias pbpaste="xsel --clipboard --output"
 alias vim="nvim"
-alias ls="ls --color=auto"
 alias diff='diff --color=auto'
