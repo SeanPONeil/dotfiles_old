@@ -1,3 +1,8 @@
+# ZSH completion
+zstyle :compinstall filename '/Users/soneil/.zshrc'
+autoload -Uz compinit
+compinit
+
 # Antibody ZSH plugin manager
 source <(antibody init)
 antibody bundle < $HOME/.zsh_plugins
