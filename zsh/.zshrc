@@ -17,8 +17,6 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=$HOME/.zsh_history
 
-export BASE16_SHELL="$XDG_CONFIG_HOME/base16-shell/"
-
 # start autojump
 source /usr/share/autojump/autojump.sh
 
