@@ -40,7 +40,7 @@ dpi=${xrdb:Xft.dpi:-1}
 
 modules-left = bspwm
 modules-center = date
-modules-right = backlight battery wlan powermenu
+modules-right = pulseaudio backlight battery wlan powermenu
 
 ;tray-position =
 ;tray-padding =
@@ -182,6 +182,21 @@ animation-discharging-4 = 
 animation-discharging-font = 2
 ; Framerate in milliseconds
 animation-discharging-framerate = 500
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
+; If not, uses default sink
+sink = alsa_output.cras
+
+; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
+; Default: true
+use-ui-max = true
+
+; Interval for volume increase/decrease (in percent points)
+; Default: 5
+interval = 5
 
 [module/date]
 type = internal/date
