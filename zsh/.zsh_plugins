@@ -1,0 +1,11 @@
+mafredri/zsh-async
+sindresorhus/pure
+
+zsh-users/zsh-completions
+
+gradle/gradle-completion
+
+kiurchv/asdf.plugin.zsh
+
+# zsh-syntax-highlighting has to be the last bundle in the list
+zsh-users/zsh-syntax-highlighting
