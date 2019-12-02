@@ -1,5 +1,5 @@
 # ZSH completion
-zstyle :compinstall filename '/Users/soneil/.zshrc'
+zstyle :compinstall filename $HOME/.zshrc
 autoload -Uz compinit
 compinit
 
