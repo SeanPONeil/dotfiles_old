@@ -23,9 +23,6 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=$HOME/.zsh_history
 
-# start autojump
-source /usr/share/autojump/autojump.sh
-
 # helps Android Studio/IntelliJ behave better in tiling window managers
 export _JAVA_AWT_WM_NONREPARTENTING=1
 

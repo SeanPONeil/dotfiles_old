@@ -7,5 +7,7 @@ gradle/gradle-completion
 
 kiurchv/asdf.plugin.zsh
 
+robbyrussell/oh-my-zsh path:plugins/autojump
+
 # zsh-syntax-highlighting has to be the last bundle in the list
 zsh-users/zsh-syntax-highlighting
