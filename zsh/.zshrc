@@ -1,11 +1,10 @@
-# ZSH completion
-zstyle :compinstall filename $HOME/.zshrc
-autoload -Uz compinit
-compinit
-
 # Antibody ZSH plugin manager
 source <(antibody init)
 antibody bundle < $HOME/.zsh_plugins
+
+# ZSH completion
+autoload -Uz compinit
+compinit
 
 source $HOME/.aliases
 source $HOME/.aliases-`uname`
