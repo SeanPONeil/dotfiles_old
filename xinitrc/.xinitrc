@@ -47,5 +47,4 @@ mopidy &
 $HOME/.fehbg &
 sxhkd &
 $XDG_CONFIG_HOME/polybar/launch.sh
-exec bspwm
-
+exec ssh-agent bspwm
