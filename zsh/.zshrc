@@ -36,7 +36,7 @@ export PATH=$HOME/.npm-global/bin:$PATH
 export EDITOR=nvim
 export SYSTEMD_EDITOR=mvim
 export VISUAL=nvim
-export PAGER=/bin/less
+export PAGER=/usr/bin/less
 
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
