@@ -46,5 +46,3 @@ export PAGER=/usr/bin/less
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
 source $HOME/.zshrc-`uname`
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
