@@ -9,7 +9,7 @@ alert = ${xrdb:color4:#222}
 
 [bar/mybar]
 width = 100%
-height = 40dp
+height = 50dp
 radius = 0
 fixed-center = true
 
@@ -30,8 +30,8 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = GohuFont Nerd Font:size=10;3
-font-1 = FontAwesome:style=Regular:size=10;3
+font-0 = GohuFont Nerd Font:pixelsize=14;3
+font-1 = FontAwesome:style=Regular:pixelsize=14;3
 ;font-2 = FontAwesome:style=Regular:pixelsize=14
 ;font-3 = FontAwesome:style=Regular:pixelsize=14
 ;font-4 = FontAwesome:style=Regular:pixelsize=14
@@ -358,7 +358,8 @@ bar-progress-fill = ─
 bar-progress-empty = ─
 
 [module/backlight]
-type = internal/xbacklight
+type = internal/backlight
+card = intel_backlight
 
 [settings]
 screenchange-reload = true
