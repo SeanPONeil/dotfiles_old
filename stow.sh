@@ -1,3 +1,5 @@
+#!/bin/bash
+
 stow asdf
 stow bin
 stow bspwm
