@@ -1,7 +1,2 @@
-export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
-export ANDROID_SDK=/usr/local/share/android-sdk
-export ANDROID_HOME=/usr/local/share/android-sdk
-
-
 # Use gnu-sed as sed
 PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
