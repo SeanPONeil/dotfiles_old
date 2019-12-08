@@ -1,0 +1,6 @@
+configuration {
+  theme: "$HOME/.cache/wal/colors-rofi-dark.rasi";
+}
+
+
+/* vim:ft=css
