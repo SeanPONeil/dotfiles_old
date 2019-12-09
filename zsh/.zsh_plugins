@@ -10,5 +10,7 @@ kiurchv/asdf.plugin.zsh
 robbyrussell/oh-my-zsh path:plugins/ssh-agent
 robbyrussell/oh-my-zsh path:plugins/autojump
 
+lukechilds/zsh-nvm
+
 # zsh-syntax-highlighting has to be the last bundle in the list
 zsh-users/zsh-syntax-highlighting
