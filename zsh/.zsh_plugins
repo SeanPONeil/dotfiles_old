@@ -9,6 +9,7 @@ kiurchv/asdf.plugin.zsh
 
 robbyrussell/oh-my-zsh path:plugins/ssh-agent
 robbyrussell/oh-my-zsh path:plugins/autojump
+robbyrussell/oh-my-zsh path:plugins/jenv
 
 lukechilds/zsh-nvm
 
