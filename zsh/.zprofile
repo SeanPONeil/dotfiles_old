@@ -17,3 +17,10 @@ source $HOME/.config/user-dirs.dirs
 if [ -d "/home/linuxbrew" ] ; then
   eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 fi
+export ANDROID_SDK=$HOME/Android/Sdk
+export ANDROID_SDK_ROOT=$ANDROID_SDK
+export ANDROID_HOME=$ANDROID_SDK
+
+export PATH=$PATH:$ANDROID_SDK/platform-tools
+export PATH=$PATH:$ANDROID_SDK/tools
+

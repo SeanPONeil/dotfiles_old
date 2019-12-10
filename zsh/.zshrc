@@ -27,19 +27,13 @@ export GOPATH=$(go env GOPATH)
 # add all $GOPATH/bin directories to PATH
 export PATH=$PATH:${GOPATH//://bin:}/bin
 
-export PATH=$PATH:$HOME/.local/bin
-export PATH=$PATH:$HOME/bin
 export PATH=$HOME/.npm-global/bin:$PATH
-export ANDROID_SDK_ROOT=$HOME/Android/Sdk
-export ANDROID_SDK=$HOME/Android/Sdk
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_SDK/platform-tools
-export PATH=$PATH:$ANDROID_SDK/tools
 export EDITOR=nvim
-export SYSTEMD_EDITOR=mvim
+export SYSTEMD_EDITOR=nvim
 export VISUAL=nvim
 export PAGER=/usr/bin/less
 
+export FZF_DEFAULT_COMMAND='ag -g --hidden --ignore .git ""'
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
 source $HOME/.zshrc-`uname`
