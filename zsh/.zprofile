@@ -24,3 +24,4 @@ export ANDROID_HOME=$ANDROID_SDK
 export PATH=$PATH:$ANDROID_SDK/platform-tools
 export PATH=$PATH:$ANDROID_SDK/tools
 
+export PATH=$PATH:$HOME/.fzf/bin
