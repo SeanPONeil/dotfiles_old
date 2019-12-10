@@ -31,6 +31,9 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 " open NERDTree with ctrl + n
 map <C-n> :NERDTreeToggle<CR>
 
+" Map fzf to ctrl + p
+nnoremap <c-p> :Files<CR>
+
 " all extra windows pop up at the bottom
 set splitbelow
 

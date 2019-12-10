@@ -33,6 +33,7 @@ export SYSTEMD_EDITOR=nvim
 export VISUAL=nvim
 export PAGER=/usr/bin/less
 
+export FZF_DEFAULT_COMMAND='ag -g --hidden --ignore .git ""'
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
 source $HOME/.zshrc-`uname`
