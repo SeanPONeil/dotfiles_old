@@ -10,7 +10,7 @@
   status = auto
 [merge]
   keepBackup = false;
-  tool = p4merge
+  tool = kdiff3
 [mergetool]
   prompt = false
 [mergetool "p4merge"]
