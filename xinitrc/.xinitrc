@@ -24,8 +24,7 @@ export _JAVA_AWT_WM_NONREPARENTING=
 #xset +fp /usr/share/fonts/svg
 #xset +fp /usr/share/fonts/eot
 #xset +fp /usr/share/fonts/truetype
-xset +fp $XDG_DATA_HOME/fonts
-xset +fp $XDG_DATA_HOME/fonts/NerdFonts
+xset +fp $HOME/.local/share/fonts
 xset fp rehash
 xrdb -merge $HOME/.Xresources
 xrdb -merge $XDG_CACHE_HOME/wal/colors.Xresources
