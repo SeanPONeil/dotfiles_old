@@ -51,11 +51,6 @@ panel[type="autocomplete"], panel[type="autocomplete-richlistbox"], .autocomplet
   --tabs-border: transparent !important; /* Remove borders from active tab and below tabs */
 }
 
-#navigator-toolbox {
-display:block;
-}
-
-
 /* Tab bar customization */
 
 :root:-moz-lwtheme-brighttext
@@ -65,31 +60,6 @@ display:block;
  --chrome-secondary-background-color: var(--background) !important;
  /* --toolbox-border-bottom-color: #232324 !important; */
  --toolbox-border-bottom-color: var(--background) !important;
-}
-
-/*
-.tabbrowser-tab[visuallyselected="true"]:-moz-lwtheme
-{
-  color: #dddddd !important;
-}
-*/
-
-
-/* Fixing tabGroups menu */
-
-#tabGroups-tabview-button .toolbarbutton-text 
-{
-  max-height: inherit !important;
-}
-
-toolbar 
-{
-  min-height: 37px !important;
-}
-
-toolbar .toolbarbutton-1 
-{
-  padding: 3px 2px !important;
 }
 
 
