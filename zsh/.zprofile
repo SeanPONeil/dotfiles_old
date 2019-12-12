@@ -25,3 +25,5 @@ export PATH=$PATH:$ANDROID_SDK/platform-tools
 export PATH=$PATH:$ANDROID_SDK/tools
 
 export PATH=$PATH:$HOME/.fzf/bin
+
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
