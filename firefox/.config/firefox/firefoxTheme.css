@@ -51,6 +51,10 @@ panel[type="autocomplete"], panel[type="autocomplete-richlistbox"], .autocomplet
   --tabs-border: transparent !important; /* Remove borders from active tab and below tabs */
 }
 
+#navigator-toolbox {
+display:block;
+}
+
 
 /* Tab bar customization */
 
