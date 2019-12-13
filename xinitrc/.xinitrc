@@ -35,6 +35,7 @@ numlockx &
 unclutter &
 #light-locker &
 mopidy &
+dunst &
 #xbindkeys &
 #nitrogen --restore &
 #lxpolkit &
