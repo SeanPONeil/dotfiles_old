@@ -15,6 +15,7 @@ common=(
 linux=(
   "stow bspwm"
   "stow compton"
+  "stow dunst"
   "stow fehbg"
   "stow polybar"
   "stow rofi"
