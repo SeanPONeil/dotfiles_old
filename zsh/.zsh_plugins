@@ -5,11 +5,8 @@ zsh-users/zsh-completions
 
 gradle/gradle-completion
 
-kiurchv/asdf.plugin.zsh
-
 robbyrussell/oh-my-zsh path:plugins/jenv
 robbyrussell/oh-my-zsh path:plugins/autojump
-robbyrussell/oh-my-zsh path:plugins/jenv
 
 lukechilds/zsh-nvm
 
