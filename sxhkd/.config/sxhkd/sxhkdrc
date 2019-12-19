@@ -137,11 +137,11 @@ super + f
   bspc window -t "$state"
 
 # increase brightness
-F6
+XF86MonBrightnessUp
   xbacklight -inc 5
 
 # decrease brightness
-F5
+XF86MonBrightnessDown
   xbacklight -dec 5
 
 # increase keyboard brightness
