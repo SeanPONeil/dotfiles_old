@@ -49,6 +49,8 @@ syntax on
 set modeline
 filetype plugin indent on
 
+set nofoldenable
+
 " Escape
 inoremap jk <esc>
 inoremap JK <esc>
