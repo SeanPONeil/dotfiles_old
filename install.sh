@@ -35,8 +35,8 @@ echo "Installing common dotfiles..."
 
 for dotfiles in "${common[@]}"
 do
-  echo $dotfiles
-  eval $dotfiles
+  echo "$dotfiles"
+  eval "$dotfiles"
 done
 
 os=$(uname)
@@ -56,8 +56,8 @@ fi
 
 for dotfiles in "${osDotfiles[@]}"
 do
-  echo $dotfiles
-  eval $dotfiles
+  echo "$dotfiles"
+  eval "$dotfiles"
 done
 
 
