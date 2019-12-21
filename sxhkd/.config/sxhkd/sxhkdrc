@@ -145,11 +145,11 @@ XF86MonBrightnessDown
   xbacklight -dec 5
 
 # increase keyboard brightness
-super + F6
+super + XF86MonBrightnessUp
   /usr/local/bin/eve-keyboard-brightness.sh +10
 
 # decrease keyboard brightness
-super + F5
+super + XF86MonBrightnessDown
   /usr/local/bin/eve-keyboard-brightness.sh -10
 
 # decrease volume
