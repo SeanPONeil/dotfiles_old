@@ -29,3 +29,6 @@ export PATH=$PATH:$HOME/.fzf/bin
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# Nix Installer
+source $HOME/.nix-profile/etc/profile.d/nix.sh
