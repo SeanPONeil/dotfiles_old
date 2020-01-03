@@ -7,6 +7,16 @@ compinit
 source <(antibody init)
 antibody bundle < $HOME/.zsh_plugins
 
+# setup PATH
+export PATH=$HOME/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$ANDROID_SDK/platform-tools:$PATH
+export PATH=$ANDROID_SDK/tools:$PATH
+export PATH=$HOME/.fzf/bin:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
+export PATH=${GOPATH//://bin:}/bin:$PATH
+export PATH=$HOME/.npm-global/bin:$PATH
+
 source $HOME/.aliases
 source $HOME/.aliases-`uname`
 
@@ -20,14 +30,6 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=$HOME/.zsh_history
 
-# helps Android Studio/IntelliJ behave better in tiling window managers
-export _JAVA_AWT_WM_NONREPARTENTING=1
-
-export GOPATH=$(go env GOPATH)
-# add all $GOPATH/bin directories to PATH
-export PATH=$PATH:${GOPATH//://bin:}/bin
-
-export PATH=$HOME/.npm-global/bin:$PATH
 export EDITOR=nvim
 export SYSTEMD_EDITOR=nvim
 export VISUAL=nvim
