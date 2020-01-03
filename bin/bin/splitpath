@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+xargs -n1 -d: <<< $PATH
