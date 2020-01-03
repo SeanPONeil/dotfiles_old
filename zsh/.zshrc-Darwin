@@ -1,2 +1,5 @@
-# Use gnu-sed as sed
-PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+# Use gnu-sed without the 'g' prefix
+export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
+
+# Use GNU findutils without the 'g' prefix
+export PATH=/usr/local/opt/findutils/libexec/gnubin:$PATH
