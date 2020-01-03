@@ -17,6 +17,3 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # helps Android Studio/IntelliJ behave better in tiling window managers
 export _JAVA_AWT_WM_NONREPARENTTING=1
-
-# Nix Installer
-source $HOME/.nix-profile/etc/profile.d/nix.sh
