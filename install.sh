@@ -8,6 +8,7 @@ common=(
   "stow git"
   "stow kitty"
   "stow nvim"
+  "stow ssh"
   "stow wal"
   "stow wallpaper"
   "stow zsh"
