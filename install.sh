@@ -23,8 +23,8 @@ linux=(
   "stow rofi"
   "stow sxhkd"
   "stow xinitrc"
-  "sudo stow xorg -t /usr/share/X11/xorg.conf.d"
-  "sudo stow timezone -t /etc/NetworkManager/dispatcher.d"
+#  "sudo stow xorg -t /usr/share/X11/xorg.conf.d"
+#  "sudo stow timezone -t /etc/NetworkManager/dispatcher.d"
 )
 
 darwin=(
