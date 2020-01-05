@@ -38,3 +38,5 @@ export PAGER=/usr/bin/less
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
 source $HOME/.zshrc-`uname`
+
+[[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"

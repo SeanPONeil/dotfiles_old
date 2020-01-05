@@ -13,6 +13,8 @@ export ANDROID_HOME=$ANDROID_SDK
 
 export GOPATH=$(go env GOPATH)
 
+export N_PREFIX=$XDG_DATA_HOME/n
+
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # helps Android Studio/IntelliJ behave better in tiling window managers
