@@ -30,9 +30,9 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = GohuFont Nerd Font Mono:pixelsize=12;3
-font-1 = FontAwesome:style=Regular:pixelsize=12;3
-;font-2 = FontAwesome:style=Regular:pixelsize=14
+font-0 = GohuFont Nerd Font Mono:size=12;3
+font-1 = FontAwesome:style=Regular:size=12;3
+font-2 = GohuFont Nerd Font Mono:size=20;3
 ;font-3 = FontAwesome:style=Regular:pixelsize=14
 ;font-4 = FontAwesome:style=Regular:pixelsize=14
 
@@ -81,7 +81,7 @@ label-connected = %essid%
 
 format-disconnected =
 
-ramp-signal-font = 2
+ramp-signal-font = 3
 ramp-signal-0 = 
 ramp-signal-1 = 
 ramp-signal-2 = 
@@ -150,7 +150,7 @@ label-discharging = %percentage%%
 ; Available tokens:
 ;   %percentage% (default)
 label-full = 
-label-full-font = 2
+label-full-font = 3
 
 ; Only applies if <ramp-capacity> is used
 ramp-capacity-0 = 
@@ -158,7 +158,7 @@ ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
-ramp-capacity-font = 2
+ramp-capacity-font = 3
 
 ; Only applies if <bar-capacity> is used
 bar-capacity-width = 10
@@ -169,7 +169,7 @@ animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-4 = 
-animation-charging-font = 2
+animation-charging-font = 3
 ; Framerate in milliseconds
 animation-charging-framerate = 750
 
@@ -179,7 +179,7 @@ animation-discharging-1 = 
 animation-discharging-2 = 
 animation-discharging-3 = 
 animation-discharging-4 = 
-animation-discharging-font = 2
+animation-discharging-font = 3
 ; Framerate in milliseconds
 animation-discharging-framerate = 500
 
@@ -224,7 +224,7 @@ expand-right = true
 format-spacing = 1
 
 label-open = 
-label-open-font = 2
+label-open-font = 3
 label-open-foreground = ${colors.foreground}
 ;label-close = 
 label-close = cancel
@@ -333,7 +333,7 @@ label-song = 𝄞 %artist% - %title%
 label-offline = 🎜 mpd is offline
 
 ; Only applies if <icon-X> is used
-icon-font = 2
+icon-font = 3
 icon-play = ⏵
 icon-pause = ⏸
 icon-stop = ⏹
