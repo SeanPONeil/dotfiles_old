@@ -21,6 +21,7 @@ linux=(
   "stow fehbg"
   "stow mpv"
   "stow polybar"
+  "stow rice"
   "stow rofi"
   "stow sxhkd"
   "stow xinitrc"
