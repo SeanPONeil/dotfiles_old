@@ -3,7 +3,7 @@
 # select a color with mouse and with it
 # create a small rectangle window
 #
-# deps: colorpicker (https://github.com/ym1234/colorpicker)
+# deps: colorpicker (https://github.com/ancurio/colorpicker)
 #       feh
 #
 
