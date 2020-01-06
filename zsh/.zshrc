@@ -40,3 +40,4 @@ export PAGER=/usr/bin/less
 source $HOME/.zshrc-`uname`
 
 [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn

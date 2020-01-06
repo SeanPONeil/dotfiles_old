@@ -3,8 +3,6 @@ sindresorhus/pure
 
 zsh-users/zsh-completions
 
-gradle/gradle-completion
-
 chrissicool/zsh-256color
 
 zpm-zsh/clipboard
