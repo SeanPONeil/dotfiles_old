@@ -19,6 +19,7 @@ linux=(
   "stow compton"
   "stow dunst"
   "stow fehbg"
+  "stow mpv"
   "stow polybar"
   "stow rofi"
   "stow sxhkd"
