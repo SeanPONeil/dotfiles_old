@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-scale '/home/enoch/dotfiles/wallpaper/wallpaper/polyhedron.png' 
+feh --no-fehbg --bg-tile '/home/enoch/tmp/wallgen-7382.png' 
