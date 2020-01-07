@@ -4,7 +4,7 @@ Plug 'tpope/vim-sensible' " sets some normal standards
 Plug 'itchyny/lightline.vim' " status bar
 Plug 'raimondi/delimitmate' " auto closing brackets/quotes/...
 Plug 'scrooloose/nerdtree'  " file explorer
-Plug 'ap/vim-css-color'  " hex colors
+Plug 'gko/vim-coloresque' " hex colors
 Plug 'tfnico/vim-gradle' " groovylang syntax highlighting
 Plug 'serpent7776/vim-logcat' " logcat highlighting
 Plug 'dylanaraps/wal.vim'  " pywal colorscheme
