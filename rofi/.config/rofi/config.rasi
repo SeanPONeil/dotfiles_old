@@ -1,6 +1,6 @@
 configuration {
   theme: "~/.cache/wal/colors-rofi-dark.rasi";
-  font: "GohuFont Nerd Font Mono 18";
+  font: "GohuFont 18";
 }
 
 
