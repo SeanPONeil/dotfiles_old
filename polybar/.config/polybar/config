@@ -203,7 +203,7 @@ interval = 5
 ;   <ramp-volume>
 ;   <bar-volume>
 format-volume = <ramp-volume> <label-volume>
-format-volume-font = 2
+;format-volume-font = 2
 ; Available tags:
 ;   <label-muted> (default)
 ;   <ramp-volume>
@@ -226,7 +226,8 @@ label-muted-font = 2
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 =  
-label-volume-font = 2
+ramp-volume-font = 2
+label-volume-font = 1
 
 ; Right and Middle click (unreleased)
 click-right = pavucontrol &
