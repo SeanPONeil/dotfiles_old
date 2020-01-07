@@ -1,8 +1,9 @@
 [colors]
 ;background = ${xrdb:color0:#222}
 ;background-alt = ${xrdb:color3:#222}
-background = #00
-background-alt = #00
+transparent = #00
+background = ${colors.transparent}
+background-alt = ${colors.transparent}
 foreground = ${xrdb:color7:#222}
 foreground-alt = ${xrdb:color2:#222}
 highlight = ${xrdb:color2:#222}
@@ -10,8 +11,9 @@ primary = ${xrdb:color6:#222}
 alert = ${xrdb:color4:#222}
 
 [bar/mybar]
-width = 100%
+width = 99%
 height = 40dp
+offset-x = 0.5%
 radius = 0
 fixed-center = true
 
@@ -26,11 +28,9 @@ line-color =
 border-size = 0
 border-color =
 
-padding-left = 0
-padding-right = 2
+padding-right = 1
 
-module-margin-left = 1
-module-margin-right = 2
+module-margin = 1
 
 font-0 = GohuFont:pixelsize=12;3
 font-1 = Font Awesome 5 Free:style=Solid:pixelsize=10;3
