@@ -155,12 +155,12 @@ super + XF86MonBrightnessDown
 
 # decrease volume
 F9
-  amixer -q sset Master 3%-
+  pactl set-sink-volume @DEFAULT_SINK@ -1%
 
 # increase volume
 F10
-  amixer -q sset Master 3%+
+  pactl set-sink-volume @DEFAULT_SINK@ +1%
 
 # toggle mute volume
 F8
-  amixer -q sset Master toggle
+  pactl set-sink-mute @DEFAULT_SINK@ toggle
