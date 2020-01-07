@@ -11,6 +11,8 @@ export ANDROID_SDK=$HOME/Android/Sdk
 export ANDROID_SDK_ROOT=$ANDROID_SDK
 export ANDROID_HOME=$ANDROID_SDK
 
+export JAVA_HOME=$HOME/.sdkman/candidates/java
+
 export GOPATH=$(go env GOPATH)
 
 export N_PREFIX=$XDG_DATA_HOME/n

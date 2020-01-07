@@ -8,7 +8,6 @@ chrissicool/zsh-256color
 
 zpm-zsh/clipboard
 
-robbyrussell/oh-my-zsh path:plugins/jenv
 robbyrussell/oh-my-zsh path:plugins/autojump
 robbyrussell/oh-my-zsh path:plugins/mosh
 robbyrussell/oh-my-zsh path:plugins/adb
