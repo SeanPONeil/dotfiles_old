@@ -17,8 +17,8 @@ call plug#end()
 " set background=light
 " let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 " set termguicolors
-colorscheme wal
 
+colorscheme wal
 set noshowmode
 
 " enable line numbers
@@ -31,8 +31,8 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 " open NERDTree with ctrl + n
 map <C-n> :NERDTreeToggle<CR>
 
-" Map fzf to ctrl + p
-nnoremap <c-p> :Files<CR>
+" Map fzf to ctrl + p, and use silver searcher
+nnoremap <c-p> :Ag<CR>
 
 " all extra windows pop up at the bottom
 set splitbelow
