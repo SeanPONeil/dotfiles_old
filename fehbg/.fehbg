@@ -1,2 +1,0 @@
-#!/bin/sh
-feh --no-fehbg --bg-tile '/home/enoch/tmp/wallgen-7382.png' 

@@ -18,7 +18,6 @@ linux=(
   "stow bspwm"
   "stow compton"
   "stow dunst"
-  "stow fehbg"
   "stow mpv"
   "stow polybar"
   "stow rice"
