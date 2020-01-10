@@ -41,7 +41,7 @@ dpi=${xrdb:Xft.dpi:-1}
 
 modules-left = bspwm
 modules-center = date
-modules-right = pulseaudio backlight battery wlan powermenu
+modules-right = pulseaudio backlight battery wlan nordvpn powermenu
 
 ;tray-position =
 ;tray-padding =
@@ -388,6 +388,10 @@ bar-progress-empty = ─
 [module/backlight]
 type = internal/xbacklight
 enable-scroll = true
+
+[module/nordvpn]
+type = custom/script
+exec = $XDG_CONFIG_HOME/polybar/scripts/vpn-nordvpn-status.sh
 
 [settings]
 screenchange-reload = true
