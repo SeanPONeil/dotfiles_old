@@ -11,6 +11,7 @@ Plug 'dylanaraps/wal.vim'  " pywal colorscheme
 Plug 'airblade/vim-gitgutter'  " Better editing files managed by git
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'chrisbra/unicode.vim'
 call plug#end()
 
 " set backgrounds
