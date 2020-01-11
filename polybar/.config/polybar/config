@@ -77,7 +77,7 @@ interface = wlp1s0
 interval = 3.0
 
 format-connected-font = 1
-format-connected = <ramp-signal> <label-connected>
+format-connected = <ramp-signal>
 label-connected = %essid%
 
 format-disconnected =
