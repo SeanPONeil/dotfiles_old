@@ -9,7 +9,8 @@ set -x
 #[ -z "$1" ] && read inp && set -- $inp
 [ -z "$1" ] && set -- $(color)
 
-f="${HOME}/tmp/wallgen-$$.png"
+[[ -d "$HOME/tmp" ]] | mkdir $HOME/tmp
+f="${HOME}/tmp/wallgen.png"
 
 convert -size 128x128 xc:"$1" -separate -seed 1000 \
     -attenuate 0.13 +noise gaussian -combine -colorspace sRGB "$f"
