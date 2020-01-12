@@ -10,7 +10,7 @@ highlight = ${xrdb:color2:#222}
 primary = ${xrdb:color6:#222}
 alert = ${xrdb:color4:#222}
 
-[bar/mybar]
+[bar/eve]
 width = 99%
 height = 40dp
 offset-x = 0.5%
