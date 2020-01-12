@@ -40,7 +40,7 @@ set undodir=~/.config/nvim/undodir
 set undofile
 
 " set tab as 2 spaces
-set tabstop=4 softtabstop=0 expandtab shiftwidth=2 smarttab
+set tabstop=4 expandtab shiftwidth=2 smarttab
 
 set autoindent
 syntax on
@@ -56,7 +56,6 @@ inoremap Jk <esc>
 vnoremap jk <esc>
 vnoremap JK <esc>
 vnoremap Jk <esc>
-
 
 " window switching
 noremap <c-h> <c-w>h
@@ -86,4 +85,3 @@ autocmd FileType go nmap <leader>r :call ReuseVimGoTerm('GoRun')<Return>
 
 " Close the GoRun window
 autocmd FileType go nmap <leader>q :call ReuseVimGoTerm('')<Return>
-
