@@ -16,4 +16,4 @@ XOFF=0
 FIELDS=SSID,SECURITY,BARS
 
 #font
-FONT="GohuFont 18"
+FONT="GohuFont 16"
