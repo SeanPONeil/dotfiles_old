@@ -1,5 +1,4 @@
 call plug#begin()
-Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-sensible' " sets some normal standards
 Plug 'itchyny/lightline.vim' " status bar
 Plug 'raimondi/delimitmate' " auto closing brackets/quotes/...
@@ -12,6 +11,9 @@ Plug 'airblade/vim-gitgutter'  " Better editing files managed by git
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'chrisbra/unicode.vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'ervandew/supertab'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 " set backgrounds
@@ -66,3 +68,25 @@ noremap <c-h> <c-w>h
 noremap <c-j> <c-w>j
 noremap <c-k> <c-w>k
 noremap <c-l> <c-w>l
+
+" :GoRun results in multiple panes being created. The following
+" puts the result of :GoRun in a preview window
+function! ReuseVimGoTerm(cmd) abort
+    for w in nvim_list_wins()
+        if "goterm" == nvim_buf_get_option(nvim_win_get_buf(w), 'filetype')
+            call nvim_win_close(w, v:true)
+            break
+        endif
+    endfor
+    execute a:cmd
+endfunction
+
+let g:go_term_enabled = 1
+let g:go_term_mode = "silent keepalt rightbelow 15 split"
+let g:go_def_reuse_buffer = 1
+
+autocmd FileType go nmap <leader>r :call ReuseVimGoTerm('GoRun')<Return>
+
+" Close the GoRun window
+autocmd FileType go nmap <leader>q :call ReuseVimGoTerm('')<Return>
+
