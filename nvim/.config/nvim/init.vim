@@ -1,7 +1,7 @@
 call plug#begin()
 Plug 'tpope/vim-sensible' " sets some normal standards
 Plug 'itchyny/lightline.vim' " status bar
-Plug 'raimondi/delimitmate' " auto closing brackets/quotes/...
+Plug 'jiangmiao/auto-pairs' " auto closing brackets/quotes/...
 Plug 'scrooloose/nerdtree'  " file explorer
 Plug 'gko/vim-coloresque' " hex colors
 Plug 'tfnico/vim-gradle' " groovylang syntax highlighting
@@ -11,15 +11,10 @@ Plug 'airblade/vim-gitgutter'  " Better editing files managed by git
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'chrisbra/unicode.vim'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'ervandew/supertab'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " golang support
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " autocomplete
 Plug 'sheerun/vim-polyglot'
 call plug#end()
-
-" set backgrounds
-" set background=light
-" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-" set termguicolors
 
 colorscheme wal
 set noshowmode
@@ -68,6 +63,8 @@ noremap <c-h> <c-w>h
 noremap <c-j> <c-w>j
 noremap <c-k> <c-w>k
 noremap <c-l> <c-w>l
+
+let g:deoplete#enable_at_startup = 1
 
 " :GoRun results in multiple panes being created. The following
 " puts the result of :GoRun in a preview window
