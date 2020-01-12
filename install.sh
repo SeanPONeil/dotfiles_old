@@ -10,7 +10,6 @@ common=(
   "stow nvim"
   "stow ssh"
   "stow wal"
-  "stow wallpaper"
   "stow zsh"
 )
 
