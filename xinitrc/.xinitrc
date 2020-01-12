@@ -44,5 +44,5 @@ dunst &
 
 $HOME/.fehbg &
 sxhkd &
-$HOME/bin/restartPolybar
+$HOME/bin/launchPolybar
 exec ssh-agent bspwm
