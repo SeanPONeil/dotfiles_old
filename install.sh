@@ -10,6 +10,7 @@ common=(
   "stow nvim"
   "stow ssh"
   "stow wal"
+  "stow wallgen"
   "stow zsh"
 )
 
@@ -19,7 +20,6 @@ linux=(
   "stow dunst"
   "stow mpv"
   "stow polybar"
-  "stow rice"
   "stow rofi"
   "stow sxhkd"
   "stow util"
