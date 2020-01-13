@@ -18,13 +18,11 @@ set +a
 # fixes issue where Android Studio/IntelliJ won't start in bspwm
 export _JAVA_AWT_WM_NONREPARENTING=
 
-#xset +fp /usr/share/fonts/local
-#xset +fp /usr/share/fonts/woff
-#xset +fp /usr/share/fonts/opentype
-#xset +fp /usr/share/fonts/svg
-#xset +fp /usr/share/fonts/eot
-#xset +fp /usr/share/fonts/truetype
-xset +fp $HOME/.local/share/fonts
+xset +fp /usr/share/fonts/opentype/
+xset +fp /usr/share/fonts/truetype/
+xset +fp /usr/share/fonts/
+xset +fp $HOME/.local/share/fonts/
+
 xset fp rehash
 xrdb -merge $HOME/.Xresources
 xrdb -merge $XDG_CACHE_HOME/wal/colors.Xresources
@@ -46,5 +44,5 @@ dunst &
 
 $HOME/.fehbg &
 sxhkd &
-$HOME/bin/restartPolybar
+$HOME/bin/launchPolybar
 exec ssh-agent bspwm

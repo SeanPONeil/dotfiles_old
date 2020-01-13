@@ -2,13 +2,16 @@ mafredri/zsh-async
 sindresorhus/pure
 
 zsh-users/zsh-completions
-
 gradle/gradle-completion
 
-robbyrussell/oh-my-zsh path:plugins/jenv
-robbyrussell/oh-my-zsh path:plugins/autojump
+chrissicool/zsh-256color
 
-lukechilds/zsh-nvm
+zpm-zsh/clipboard
+
+robbyrussell/oh-my-zsh path:plugins/autojump
+robbyrussell/oh-my-zsh path:plugins/mosh
+robbyrussell/oh-my-zsh path:plugins/adb
+robbyrussell/oh-my-zsh path:plugins/gradle
 
 # zsh-syntax-highlighting has to be the last bundle in the list
 zsh-users/zsh-syntax-highlighting

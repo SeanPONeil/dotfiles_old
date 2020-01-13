@@ -10,7 +10,6 @@ common=(
   "stow nvim"
   "stow ssh"
   "stow wal"
-  "stow wallpaper"
   "stow zsh"
 )
 
@@ -18,10 +17,12 @@ linux=(
   "stow bspwm"
   "stow compton"
   "stow dunst"
-  "stow fehbg"
+  "stow mpv"
   "stow polybar"
+  "stow rice"
   "stow rofi"
   "stow sxhkd"
+  "stow util"
   "stow xinitrc"
 #  "sudo stow xorg -t /usr/share/X11/xorg.conf.d"
 #  "sudo stow timezone -t /etc/NetworkManager/dispatcher.d"

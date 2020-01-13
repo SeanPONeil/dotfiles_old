@@ -1,22 +1,26 @@
 [colors]
-background = ${xrdb:color0:#222}
-background-alt = ${xrdb:color3:#222}
+;background = ${xrdb:color0:#222}
+;background-alt = ${xrdb:color3:#222}
+transparent = #00
+background = ${colors.transparent}
+background-alt = ${colors.transparent}
 foreground = ${xrdb:color7:#222}
 foreground-alt = ${xrdb:color2:#222}
 highlight = ${xrdb:color2:#222}
 primary = ${xrdb:color6:#222}
 alert = ${xrdb:color4:#222}
 
-[bar/mybar]
-width = 100%
+[bar/eve]
+width = 99%
 height = 40dp
+offset-x = 0.5%
 radius = 0
 fixed-center = true
 
 enable-ipc = true
 
 background = ${colors.background}
-foreground = ${colors.foreground}
+foreground = ${colors.foreground-alt}
 
 line-size = 3
 line-color =
@@ -24,23 +28,20 @@ line-color =
 border-size = 0
 border-color =
 
-padding-left = 0
-padding-right = 2
+padding-right = 1
 
-module-margin-left = 1
-module-margin-right = 2
+module-margin = 1
 
-font-0 = GohuFont Nerd Font Mono:pixelsize=12;3
-font-1 = FontAwesome:style=Regular:pixelsize=12;3
-;font-2 = FontAwesome:style=Regular:pixelsize=14
-;font-3 = FontAwesome:style=Regular:pixelsize=14
+font-0 = GohuFont:pixelsize=12;3
+font-1 = boxicons:size=13;3
+;font-2 = Material Design Icons:style=Regular:pixelsize=14
 ;font-4 = FontAwesome:style=Regular:pixelsize=14
 
 dpi=${xrdb:Xft.dpi:-1}
 
 modules-left = bspwm
 modules-center = date
-modules-right = pulseaudio backlight battery wlan powermenu
+modules-right = pulseaudio backlight battery wlan nordvpn powermenu
 
 ;tray-position =
 ;tray-padding =
@@ -55,10 +56,12 @@ format = <label-state> <label-mode>
 label-focused = %index%
 ; label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
+label-focused-foreground = ${colors.foreground}
 label-focused-padding = 2
 
 label-occupied = %index%
 label-occupied-padding = 2
+label-occupied-foreground = ${colors.foreground}
 
 label-urgent = %index%!
 label-urgent-background = ${colors.alert}
@@ -73,21 +76,17 @@ type = internal/network
 interface = wlp1s0
 interval = 3.0
 
-format-connected = <ramp-signal> <label-connected>
-format-connected-foreground = ${colors.foreground}
-format-connected-background = ${colors.background}
-format-connected-padding = 4
-label-connected = %essid%
+format-connected-font = 2
+format-connected = <ramp-signal>
 
-format-disconnected =
+format-disconnected = <label-disconnected>
+label-disconnected = 
 
 ramp-signal-font = 2
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground}
+ramp-signal-0 = %{A1:$HOME/.config/polybar/scripts/rofi-wifi-menu:}%{A}
+ramp-signal-1 = %{A1:$HOME/.config/polybar/scripts/rofi-wifi-menu:}%{A}
+ramp-signal-2 = %{A1:$HOME/.config/polybar/scripts/rofi-wifi-menu:}%{A}
+ramp-signal-3 = %{A1:$HOME/.config/polybar/scripts/rofi-wifi-menu:}%{A}
 
 [module/battery]
 type = internal/battery
@@ -120,14 +119,14 @@ time-format = %H:%M
 ;   <bar-capacity>
 ;   <ramp-capacity>
 ;   <animation-charging>
-format-charging = <ramp-capacity> <label-charging>
+format-charging = <label-charging>
 
 ; Available tags:
 ;   <label-discharging> (default)
 ;   <bar-capacity>
 ;   <ramp-capacity>
 ;   <animation-discharging>
-format-discharging = <ramp-capacity> <label-discharging>
+format-discharging = <label-discharging>
 
 ; Available tags:
 ;   <label-full> (default)
@@ -139,17 +138,16 @@ format-discharging = <ramp-capacity> <label-discharging>
 ;   %percentage% (default)
 ;   %time%
 ;   %consumption% (shows current charge rate in watts)
-label-charging = %percentage%%
-
+label-charging =  %percentage%%
 ; Available tokens:
 ;   %percentage% (default)
 ;   %time%
 ;   %consumption% (shows current discharge rate in watts)
-label-discharging = %percentage%%
+label-discharging =  %percentage%%
 
 ; Available tokens:
 ;   %percentage% (default)
-label-full = 
+label-full = 
 label-full-font = 2
 
 ; Only applies if <ramp-capacity> is used
@@ -198,6 +196,41 @@ use-ui-max = true
 ; Default: 5
 interval = 5
 
+; Available tags:
+;   <label-volume> (default)
+;   <ramp-volume>
+;   <bar-volume>
+format-volume = <ramp-volume> <label-volume>
+;format-volume-font = 2
+; Available tags:
+;   <label-muted> (default)
+;   <ramp-volume>
+;   <bar-volume>
+;format-muted = <label-muted>
+
+; Available tokens:
+;   %percentage% (default)
+;   %decibels% (unreleased)
+;label-volume = %percentage%%
+
+; Available tokens:
+;   %percentage% (default)
+;   %decibels% (unreleased)
+label-muted = 
+label-muted-font = 2
+
+; Only applies if <ramp-volume> is used
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 =  
+ramp-volume-font = 2
+
+label-volume-font = 1
+
+; Right and Middle click (unreleased)
+click-right = pavucontrol &
+; click-middle = 
+
 [module/date]
 type = internal/date
 interval = 5
@@ -210,8 +243,6 @@ time-alt = %H:%M:%S
 
 ;format-prefix = 
 ;format-prefix-font = 2
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
 format-padding = 2
 
 label = %date% %time%
@@ -223,15 +254,11 @@ expand-right = true
 
 format-spacing = 1
 
-label-open = 
+label-open = 
 label-open-font = 2
-label-open-foreground = ${colors.foreground}
 ;label-close = 
 label-close = cancel
-label-close-foreground = ${colors.foreground}
 label-separator = |
-label-separator-foreground = ${colors.foreground}
-
 
 menu-0-0 = reboot
 menu-0-0-exec = menu-open-1
@@ -360,6 +387,10 @@ bar-progress-empty = ─
 [module/backlight]
 type = internal/xbacklight
 enable-scroll = true
+
+[module/nordvpn]
+type = custom/script
+exec = $XDG_CONFIG_HOME/polybar/scripts/vpn-nordvpn-status.sh
 
 [settings]
 screenchange-reload = true
