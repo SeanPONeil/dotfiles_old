@@ -1,5 +1,4 @@
-# Use gnu-sed without the 'g' prefix
+# Use GNU tools without g prefix
 export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
-
-# Use GNU findutils without the 'g' prefix
+export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 export PATH=/usr/local/opt/findutils/libexec/gnubin:$PATH

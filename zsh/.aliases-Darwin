@@ -1,1 +1,1 @@
-alias ls="gls --color=always"
+alias ls="ls --color=auto"
