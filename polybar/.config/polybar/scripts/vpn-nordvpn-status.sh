@@ -1,15 +1,15 @@
 #!/bin/sh
 
 status() {
-  echo "$(nordvpn status | grep Status | tr -d ' ' | cut -d ':' -f2)"
+  echo "$($HOME/go/bin/nordvpn-status)"
 }
 
 city() {
-  echo "$(nordvpn status | grep City | cut -d ':' -f2)"
+  echo "$($HOME/go/bin/nordvpn-status city)"
 }
 
 if [ "$(status)" = "Connected" ]; then
-    echo "%{A1:nordvpn d:}$(city)%{A}"
+    echo "%{A1:nordvpn d:} $(city)%{A}"
 else
     echo "%{A1:nordvpn c:}%{A}"
 fi
