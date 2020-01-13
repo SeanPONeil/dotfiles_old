@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # ZSH completion
 zstyle :compinstall filename $HOME/.zshrc
 autoload -Uz compinit
