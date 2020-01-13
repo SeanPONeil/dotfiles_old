@@ -40,14 +40,24 @@ set undodir=~/.config/nvim/undodir
 set undofile
 
 " set tab as 2 spaces
-set tabstop=4 expandtab shiftwidth=2 smarttab
+filetype plugin indent on
+" On pressing tab, insert 2 spaces
+set expandtab
+" show existing tab with 2 spaces width
+set tabstop=2
+set softtabstop=2
+" when indenting with '>', use 2 spaces width
+set shiftwidth=2
 
-set autoindent
 syntax on
 set modeline
 filetype plugin indent on
 
 set nofoldenable
+
+" golang specific rules
+autocmd FileType go compiler go
+call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
 
 " Escape
 inoremap jk <esc>
