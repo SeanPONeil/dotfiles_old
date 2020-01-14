@@ -41,6 +41,14 @@ export PAGER=/usr/bin/less
 
 source $HOME/.zshrc-`uname`
 
+# source extra shell scripts if they exist
+if [[ -d "$HOME/.zshrc.d" ]]; then
+  for file in $HOME/.zshrc.d/*.zsh; do
+    source "$file"
+  done
+fi
+
+
 [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 
