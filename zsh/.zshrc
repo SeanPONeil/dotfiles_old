@@ -13,11 +13,12 @@ antibody bundle < $HOME/.zsh_plugins
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$ANDROID_SDK/platform-tools:$PATH
-export PATH=$ANDROID_SDK/tools:$PATH
-export PATH=$HOME/.fzf/bin:$PATH
-export PATH=$HOME/.cargo/bin:$PATH
-export PATH=${GOPATH//://bin:}/bin:$PATH
-export PATH=$HOME/.npm-global/bin:$PATH
+export PATH=$ANDROID_SDK/tools:$PATH            
+export PATH=$HOME/.fzf/bin:$PATH                # fzf fuzzy finder
+export PATH=$HOME/.cargo/bin:$PATH              # rust scripts
+export PATH=${GOPATH//://bin:}/bin:$PATH        # go binaries
+export PATH=$HOME/.npm-global/bin:$PATH         # npm scripts
+export PATH=".:$PATH"                           # required for ./gradlew completion
 
 source $HOME/.aliases
 source $HOME/.aliases-`uname`
