@@ -41,6 +41,9 @@ export PAGER=/usr/bin/less
 
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
+export FZF_DEFAULT_OPTS="--layout=reverse --inline-info"
+
 source $HOME/.zshrc-`uname`
 
 # source extra shell scripts if they exist
