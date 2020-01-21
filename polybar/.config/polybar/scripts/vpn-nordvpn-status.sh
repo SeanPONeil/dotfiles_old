@@ -5,7 +5,7 @@ status() {
 }
 
 city() {
-  echo "$($HOME/go/bin/nordvpn-status city)"
+  echo "$($HOME/go/bin/nordvpn-status --city)"
 }
 
 if [ "$(status)" = "Connected" ]; then
