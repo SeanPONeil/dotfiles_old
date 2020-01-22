@@ -96,3 +96,6 @@ autocmd FileType go nmap <leader>r :call ReuseVimGoTerm('GoRun')<Return>
 
 " Close the GoRun window
 autocmd FileType go nmap <leader>q :call ReuseVimGoTerm('')<Return>
+
+" Automatically switch buffer name when target is not readable or writable
+let g:suda_smart_edit = 1
