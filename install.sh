@@ -7,6 +7,7 @@ common=(
   "stow fonts"
   "stow git"
   "stow kitty"
+  "stow neofetch"
   "stow nvim"
   "stow ssh"
   "stow wal"
