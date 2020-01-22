@@ -20,6 +20,7 @@ linux=(
   "stow dunst"
   "stow mpv"
   "stow polybar"
+  "stow redshift"
   "stow rofi"
   "stow sxhkd"
   "stow util"
