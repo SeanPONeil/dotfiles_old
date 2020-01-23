@@ -14,6 +14,7 @@ Plug 'chrisbra/unicode.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " golang support
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " autocomplete
 Plug 'sheerun/vim-polyglot'
+Plug 'OmniSharp/omnisharp-vim' " C# autocomplete and other neat stuff
 call plug#end()
 
 colorscheme wal
