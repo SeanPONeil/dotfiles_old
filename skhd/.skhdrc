@@ -16,16 +16,16 @@ hyper - l : yabai -m window --focus east
 
 
 # swap window
-hyper + alt - h : yabai -m window --swap west
-hyper + alt - j : yabai -m window --swap south
-hyper + alt - k : yabai -m window --swap north
-hyper + alt - l : yabai -m window --swap east
+cmd + alt - h : yabai -m window --swap west
+cmd + alt - j : yabai -m window --swap south
+cmd + alt - k : yabai -m window --swap north
+cmd + alt - l : yabai -m window --swap east
 
 # move window
-hyper + cmd - h : yabai -m window --warp west
-hyper + cmd - j : yabai -m window --warp south
-hyper + cmd - k : yabai -m window --warp north
-hyper + cmd - l : yabai -m window --warp east
+cmd + shift - h : yabai -m window --warp west
+cmd + shift - j : yabai -m window --warp south
+cmd + shift - k : yabai -m window --warp north
+cmd + shift - l : yabai -m window --warp east
 
 # balance size of windows
 hyper + alt - 0 : yabai -m space --balance
