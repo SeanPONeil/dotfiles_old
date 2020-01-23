@@ -1,5 +1,6 @@
 call plug#begin()
 Plug 'tpope/vim-sensible' " sets some normal standards
+Plug 'tpope/vim-fugitive' " git
 Plug 'itchyny/lightline.vim' " status bar
 Plug 'jiangmiao/auto-pairs' " auto closing brackets/quotes/...
 Plug 'scrooloose/nerdtree'  " file explorer
@@ -16,6 +17,17 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " autocomplete
 Plug 'sheerun/vim-polyglot'
 Plug 'OmniSharp/omnisharp-vim' " C# autocomplete and other neat stuff
 call plug#end()
+
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ }
 
 colorscheme wal
 set noshowmode
@@ -79,13 +91,13 @@ let g:deoplete#enable_at_startup = 1
 " :GoRun results in multiple panes being created. The following
 " puts the result of :GoRun in a preview window
 function! ReuseVimGoTerm(cmd) abort
-    for w in nvim_list_wins()
-        if "goterm" == nvim_buf_get_option(nvim_win_get_buf(w), 'filetype')
-            call nvim_win_close(w, v:true)
-            break
-        endif
-    endfor
-    execute a:cmd
+  for w in nvim_list_wins()
+    if "goterm" == nvim_buf_get_option(nvim_win_get_buf(w), 'filetype')
+      call nvim_win_close(w, v:true)
+      break
+    endif
+  endfor
+  execute a:cmd
 endfunction
 
 let g:go_term_enabled = 1
