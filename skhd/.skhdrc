@@ -9,6 +9,8 @@ hyper - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance 
 #		  brew services restart skhd;) &
 
 # focus window
+alt - 0x21 : yabai -m window --focus prev
+alt - 0x1E : yabai -m window --focus next
 alt - h : yabai -m window --focus west
 alt - j : yabai -m window --focus south
 alt - k : yabai -m window --focus north
