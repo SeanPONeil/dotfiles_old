@@ -14,6 +14,7 @@ export ANDROID_HOME=$ANDROID_SDK
 export JAVA_HOME=$HOME/.sdkman/candidates/java
 
 export GOPATH=$(go env GOPATH)
+export GOBIN=$GOPATH/bin
 
 export N_PREFIX=$XDG_DATA_HOME/n
 
