@@ -18,12 +18,16 @@ alt - l : yabai -m window --focus east
 
 
 # swap window
+cmd + alt - 0x21 : yabai -m window --swap prev
+cmd + alt - 0x1E : yabai -m window --swap next
 cmd + alt - h : yabai -m window --swap west
 cmd + alt - j : yabai -m window --swap south
 cmd + alt - k : yabai -m window --swap north
 cmd + alt - l : yabai -m window --swap east
 
 # move window
+cmd + shift - 0x21 : yabai -m window --warp prev
+cmd + shift - 0x1E : yabai -m window --warp next
 cmd + shift - h : yabai -m window --warp west
 cmd + shift - j : yabai -m window --warp south
 cmd + shift - k : yabai -m window --warp north
