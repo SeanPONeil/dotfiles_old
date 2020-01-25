@@ -12,6 +12,7 @@ common=(
   "stow ssh"
   "stow wal"
   "stow wallgen"
+  "stow youtube-dl"
   "stow zsh"
 )
 
