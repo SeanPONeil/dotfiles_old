@@ -16,6 +16,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " golang support
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " autocomplete
 Plug 'sheerun/vim-polyglot'
 Plug 'OmniSharp/omnisharp-vim' " C# autocomplete and other neat stuff
+Plug 'editorconfig/editorconfig-vim' " .editorconfig linter
 call plug#end()
 
 let g:lightline = {
