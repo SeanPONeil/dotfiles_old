@@ -10,6 +10,7 @@ common=(
   "stow neofetch"
   "stow nvim"
   "stow ssh"
+  "stow tmux"
   "stow wal"
   "stow wallgen"
   "stow youtube-dl"
