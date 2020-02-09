@@ -19,6 +19,11 @@ Plug 'OmniSharp/omnisharp-vim' " C# autocomplete and other neat stuff
 Plug 'editorconfig/editorconfig-vim' " .editorconfig linter
 call plug#end()
 
+let g:python3_host_prog = "/usr/bin/python3"
+let g:python_host_prog = "/usr/bin/python2"
+
+let g:deoplete#enable_at_startup = 1
+
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
