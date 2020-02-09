@@ -41,7 +41,7 @@ dpi=${xrdb:Xft.dpi:-1}
 
 modules-left = bspwm
 modules-center = date
-modules-right = pulseaudio backlight battery wlan nordvpn powermenu
+modules-right = pulseaudio backlight battery wlan powermenu
 
 ;tray-position =
 ;tray-padding =
