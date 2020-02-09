@@ -1,6 +1,6 @@
 configuration {
   theme: "~/.cache/wal/colors-rofi-light.rasi";
-  font: "GohuFont 14";
+  font: "GohuFont 12";
 }
 
 
