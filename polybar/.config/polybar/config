@@ -37,8 +37,6 @@ font-1 = boxicons:size=13;3
 ;font-2 = Material Design Icons:style=Regular:pixelsize=14
 ;font-4 = FontAwesome:style=Regular:pixelsize=14
 
-dpi=${xrdb:Xft.dpi:-1}
-
 modules-left = bspwm
 modules-center = date
 modules-right = pulseaudio backlight battery wlan powermenu
@@ -73,7 +71,7 @@ label-empty-padding = 2
 
 [module/wlan]
 type = internal/network
-interface = wlp1s0
+interface = wlp2s0
 interval = 3.0
 
 format-connected-font = 2
