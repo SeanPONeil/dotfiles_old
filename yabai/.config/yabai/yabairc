@@ -26,7 +26,7 @@ yabai -m config mouse_follows_focus          on
 yabai -m config focus_follows_mouse          on
 yabai -m config window_placement             second_child
 yabai -m config window_topmost               off
-yabai -m config window_opacity               on
+yabai -m config window_opacity               off
 yabai -m config window_shadow                off
 yabai -m config window_border                on
 yabai -m config window_border_width          1
@@ -34,7 +34,7 @@ yabai -m config active_window_border_color   0xffeff0eb
 yabai -m config normal_window_border_color   0xff686868
 yabai -m config insert_window_border_color   0xffeff0eb
 yabai -m config active_window_opacity        1.0
-yabai -m config normal_window_opacity        0.90
+yabai -m config normal_window_opacity        1.0
 yabai -m config split_ratio                  0.50
 yabai -m config auto_balance                 on
 yabai -m config mouse_modifier               fn
@@ -50,7 +50,7 @@ yabai -m config right_padding                10
 yabai -m config window_gap                   10
 
 # application rules
-yabai -m rule --add app="Firefox" opacity=1.0
-yabai -m rule --add app="kitty" opacity=0.95
+# yabai -m rule --add app="Firefox" opacity=1.0
+# yabai -m rule --add app="kitty" opacity=0.95
 
 echo "yabai configuration loaded.."
