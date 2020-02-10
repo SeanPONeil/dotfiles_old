@@ -127,7 +127,7 @@ super + {Left,Down,Up,Right}
 
 # miscellaneous
 # Make the gaps bigger and smaller
-super + {KP_Add,KP_Subtract,KP_Multiply}
+super + {plus,minus,asterisk}
   CURRENT_SIZE=$(bspc config window_gap); \
   bspc config window_gap {$((CURRENT_SIZE + 2)),$((CURRENT_SIZE - 2)),2}
 
