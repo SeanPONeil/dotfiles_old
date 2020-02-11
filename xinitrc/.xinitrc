@@ -34,6 +34,7 @@ xsetroot -cursor_name left_ptr
 compton -b
 numlockx &
 unclutter &
+redshift &
 #light-locker &
 #mopidy &
 dunst &
@@ -50,4 +51,4 @@ setxkbmap -option caps:super
 $HOME/.fehbg &
 sxhkd &
 $HOME/bin/launchPolybar
-exec bspwm
+exec ssh-agent bspwm
