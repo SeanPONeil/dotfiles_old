@@ -18,9 +18,17 @@ set +a
 # fixes issue where Android Studio/IntelliJ won't start in bspwm
 export _JAVA_AWT_WM_NONREPARENTING=
 
-#xset +fp /usr/share/fonts/opentype/
-#xset +fp /usr/share/fonts/truetype/
-xset +fp /usr/share/fonts/
+# include all fonts in /usr/share/fonts
+for dir in /usr/share/fonts ; do
+  if [ -d "$dir"  ]; then
+    pushd $dir
+    xset +fp "$PWD"
+    #mkfontscale
+    #mkfontdir
+    popd
+  fi
+done
+
 xset +fp $HOME/.local/share/fonts/
 
 xset fp rehash
@@ -32,7 +40,6 @@ xsetroot -cursor_name left_ptr
 #export SSH_AUTH_SOCK
 
 compton -b
-numlockx &
 unclutter &
 redshift &
 #light-locker &
