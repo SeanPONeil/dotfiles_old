@@ -10,6 +10,7 @@ source <(antibody init)
 antibody bundle < $HOME/.zsh_plugins
 
 # setup PATH
+export PATH=/usr/local/sbin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$ANDROID_SDK/platform-tools:$PATH
@@ -39,8 +40,6 @@ export SYSTEMD_EDITOR=nvim
 export VISUAL=nvim
 export PAGER=/usr/bin/less
 
-[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
-
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
 export FZF_DEFAULT_OPTS="--layout=reverse --inline-info"
 
@@ -65,3 +64,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
 export PATH="$NVM_DIR/versions/node/$(<$NVM_DIR/alias/default)/bin:$PATH"
 alias nvm="unalias nvm; [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"; nvm $@"
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
