@@ -26,6 +26,7 @@ linux=(
   "stow polybar"
   "stow redshift"
   "stow rofi"
+  "stow ssh-agent-systemd"
   "stow sxhkd"
   "stow util"
   "stow xinitrc"
