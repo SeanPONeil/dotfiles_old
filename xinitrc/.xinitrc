@@ -56,6 +56,16 @@ setxkbmap -option caps:super
 #exec herbstluftwm --locked
 
 $HOME/.fehbg &
-sxhkd &
 $HOME/bin/launchPolybar
-exec ssh-agent bspwm
+
+# bspwm is default desktop environment
+session=${1:-bspwm}
+
+case $session in
+  bspwm         ) exec bspwm;;
+  i3|i3wm       ) exec i3;;
+  kde           ) exec startplaxma-x11;;
+  xfce|xfce4    ) exec startxfce4;;
+  # No known session, try to run it as command
+  *             ) exec $1;;
+esac
