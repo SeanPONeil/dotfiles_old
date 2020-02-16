@@ -56,7 +56,6 @@ setxkbmap -option caps:super
 #exec herbstluftwm --locked
 
 $HOME/.fehbg &
-$HOME/bin/launchPolybar
 
 # bspwm is default desktop environment
 session=${1:-bspwm}
