@@ -3,6 +3,7 @@
 common=(
   "stow ag"
   "stow bin"
+  "stow curl"
   "stow firefox"
   "stow fonts"
   "stow git"
@@ -10,6 +11,7 @@ common=(
   "stow mitmproxy"
   "stow neofetch"
   "stow nvim"
+  "stow ranger"
   "stow ssh"
   "stow tmux"
   "stow wal"
