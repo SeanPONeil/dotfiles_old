@@ -41,7 +41,6 @@ export SSH_AUTH_SOCK
 
 compton -b
 unclutter &
-redshift &
 #light-locker &
 #mopidy &
 dunst &
