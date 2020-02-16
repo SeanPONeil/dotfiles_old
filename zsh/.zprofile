@@ -22,3 +22,8 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # helps Android Studio/IntelliJ behave better in tiling window managers
 export _JAVA_AWT_WM_NONREPARENTTING=1
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
