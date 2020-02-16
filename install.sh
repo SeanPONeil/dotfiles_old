@@ -23,6 +23,7 @@ linux=(
   "stow compton"
   "stow dunst"
   "stow mpv"
+  "stow keychain-systemd"
   "stow polybar"
   "stow redshift"
   "stow rofi"
