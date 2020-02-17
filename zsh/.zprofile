@@ -14,7 +14,7 @@ export ANDROID_HOME=$ANDROID_SDK
 unameOut="$(uname -s)"
 case "${unameOut}" in
   Linux*)   export JAVA_HOME=/usr/lib/jvm/default;;
-  Darwin*)  export JAVA_HOME=/usr/libexec/java_home;;
+  Darwin*)  export JAVA_HOME="$(/usr/libexec/java_home)";;
   *)        export JAVA_HOME=JAVA_HOME
 esac
 
