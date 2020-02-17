@@ -22,11 +22,11 @@ common=(
 
 linux=(
   "stow bspwm"
-  "stow compton"
   "stow dunst"
   "stow gnome-keyring"
   "stow mpv"
   "stow keychain-systemd"
+  "stow picom"
   "stow polybar"
   "stow redshift"
   "stow rofi"
