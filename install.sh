@@ -3,6 +3,7 @@
 common=(
   "stow ag"
   "stow bin"
+  "stow curl"
   "stow firefox"
   "stow fonts"
   "stow git"
@@ -10,6 +11,7 @@ common=(
   "stow mitmproxy"
   "stow neofetch"
   "stow nvim"
+  "stow ranger"
   "stow ssh"
   "stow tmux"
   "stow wal"
@@ -20,12 +22,15 @@ common=(
 
 linux=(
   "stow bspwm"
-  "stow compton"
   "stow dunst"
+  "stow gnome-keyring"
   "stow mpv"
+  "stow keychain-systemd"
+  "stow picom"
   "stow polybar"
   "stow redshift"
   "stow rofi"
+  "stow ssh-agent-systemd"
   "stow sxhkd"
   "stow util"
   "stow xinitrc"

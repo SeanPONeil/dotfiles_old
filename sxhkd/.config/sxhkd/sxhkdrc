@@ -145,22 +145,14 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
   xbacklight -dec 5
 
-# increase keyboard brightness
-super + XF86MonBrightnessUp
-  /usr/local/bin/eve-keyboard-brightness.sh +10
-
-# decrease keyboard brightness
-super + XF86MonBrightnessDown
-  /usr/local/bin/eve-keyboard-brightness.sh -10
-
 # decrease volume
-F9
-  pactl set-sink-volume @DEFAULT_SINK@ -1%
+XF86AudioLowerVolume
+  pactl set-sink-mute 0 false ; pactl set-sink-volume 0 -1%
 
 # increase volume
-F10
-  pactl set-sink-volume @DEFAULT_SINK@ +1%
+XF86AudioRaiseVolume
+  pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ +1%
 
 # toggle mute volume
-F8
+XF86AudioMute
   pactl set-sink-mute @DEFAULT_SINK@ toggle

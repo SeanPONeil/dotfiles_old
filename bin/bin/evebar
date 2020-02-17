@@ -3,7 +3,7 @@
 polybar-msg cmd quit > /dev/null
 
 echo "---" >> /tmp/polybar_eve.log
-polybar eve >> /tmp/polybar_eve.log 2>&1 &
+nohup polybar eve >> /tmp/polybar_eve.log 2>&1 &
 echo "$(date): polybar eve launched" >> /tmp/polybar_eve.log
 
 # create symlink to polybar IPC channel for easier messaging

@@ -1,0 +1,10 @@
+[Unit]
+Description=Keychain
+Requires=ssh-agent.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/keychain --inherit any --systemd --noask --agents "gpg,ssh"
+
+[Install]
+WantedBy=default.target

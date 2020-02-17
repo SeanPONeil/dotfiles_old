@@ -15,16 +15,14 @@ set -a
 . $HOME/.config/user-dirs.dirs
 set +a
 
-# fixes issue where Android Studio/IntelliJ won't start in bspwm
-export _JAVA_AWT_WM_NONREPARENTING=
+# fixes issues with Java GUIs in i3/bspwm
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 # include all fonts in /usr/share/fonts
 for dir in /usr/share/fonts ; do
   if [ -d "$dir"  ]; then
     pushd $dir
     xset +fp "$PWD"
-    #mkfontscale
-    #mkfontdir
     popd
   fi
 done
@@ -36,12 +34,11 @@ xrdb -merge $HOME/.Xresources
 xrdb -merge $XDG_CACHE_HOME/wal/colors.Xresources
 xsetroot -cursor_name left_ptr
 
-#eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
-#export SSH_AUTH_SOCK
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
 
-compton -b
+picom --experimental-backends &
 unclutter &
-redshift &
 #light-locker &
 #mopidy &
 dunst &
@@ -56,6 +53,15 @@ setxkbmap -option caps:super
 #exec herbstluftwm --locked
 
 $HOME/.fehbg &
-sxhkd &
-$HOME/bin/launchPolybar
-exec ssh-agent bspwm
+
+# bspwm is default desktop environment
+session=${1:-bspwm}
+
+case $session in
+  bspwm         ) exec bspwm;;
+  i3|i3wm       ) exec i3;;
+  kde           ) exec startplaxma-x11;;
+  xfce|xfce4    ) exec startxfce4;;
+  # No known session, try to run it as command
+  *             ) exec $1;;
+esac
