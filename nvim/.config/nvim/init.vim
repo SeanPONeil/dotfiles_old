@@ -6,7 +6,7 @@ Plug 'jiangmiao/auto-pairs' " auto closing brackets/quotes/...
 Plug 'scrooloose/nerdtree'  " file explorer
 Plug 'gko/vim-coloresque' " hex colors
 Plug 'tfnico/vim-gradle' " groovylang syntax highlighting
-Plug 'serpent7776/vim-logcat' " logcat highlighting
+Plug 'gburca/vim-logcat' " logcat highlighting
 Plug 'dylanaraps/wal.vim'  " pywal colorscheme
 Plug 'airblade/vim-gitgutter'  " Better editing files managed by git
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -19,8 +19,8 @@ Plug 'OmniSharp/omnisharp-vim' " C# autocomplete and other neat stuff
 Plug 'editorconfig/editorconfig-vim' " .editorconfig linter
 call plug#end()
 
-let g:python3_host_prog = "/usr/bin/python3"
-let g:python_host_prog = "/usr/bin/python2"
+let g:python3_host_prog = "/usr/local/bin/python3"
+let g:python_host_prog = "/usr/local/bin/python2"
 
 let g:deoplete#enable_at_startup = 1
 
