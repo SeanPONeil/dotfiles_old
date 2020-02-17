@@ -11,7 +11,12 @@ export ANDROID_SDK=$HOME/Android/Sdk
 export ANDROID_SDK_ROOT=$ANDROID_SDK
 export ANDROID_HOME=$ANDROID_SDK
 
-export JAVA_HOME=/usr/lib/jvm/default
+unameOut="$(uname -s)"
+case "${unameOut}" in
+  Linux*)   export JAVA_HOME=/usr/lib/jvm/default;;
+  Darwin*)  export JAVA_HOME=/usr/libexec/java_home;;
+  *)        export JAVA_HOME=JAVA_HOME
+esac
 
 export GOPATH=$(go env GOPATH)
 export GOBIN=$GOPATH/bin
