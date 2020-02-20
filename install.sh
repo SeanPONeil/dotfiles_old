@@ -12,6 +12,7 @@ common=(
   "stow neofetch"
   "stow nvim"
   "stow ranger"
+  "stow spotifyd"
   "stow ssh"
   "stow tmux"
   "stow wal"
