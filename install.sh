@@ -41,6 +41,7 @@ linux=(
 
 darwin=(
   "stow alfred"
+  "stow brewfile"
   "stow karabiner"
   "stow skhd"
   "stow yabai"
