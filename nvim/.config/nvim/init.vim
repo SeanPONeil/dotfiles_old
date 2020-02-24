@@ -123,3 +123,5 @@ let g:OmniSharp_server_stdio = 1
 let g:NERDTreeHijackNetrw = 0
 " Open ranger when vim opens a directory
 let g:ranger_replace_netrw = 1
+" Display hidden files with ranger by default
+let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
