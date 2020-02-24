@@ -387,8 +387,13 @@ type = internal/xbacklight
 enable-scroll = true
 
 [module/nordvpn]
-type = custom/script
-exec = $XDG_CONFIG_HOME/polybar/scripts/vpn-nordvpn-status.sh
+type = custom/ipc
+hook-0 = nordvpn-status
+hook-1 = nordvpn-status --city
+initial = 1
+
+click-left = polybar-msg -p %pid% hook nordvpn 1
+click-right = polybar-msg -p %pid% hook nordvpn 2
 
 [settings]
 screenchange-reload = true
