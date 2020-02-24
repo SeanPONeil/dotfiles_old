@@ -34,6 +34,7 @@ brew coreutils
 brew dialog
 brew diffutils
 brew docker
+brew docker-compose
 brew ed
 brew emacs
 brew exa
@@ -61,6 +62,7 @@ brew gdbm
 brew gdk-pixbuf
 brew gettext
 brew gflags
+brew gh
 brew giflib
 brew git
 brew git-hooks
@@ -389,7 +391,6 @@ tap cjbassi/gotop
 tap getantibody/tap
 
 tap github/gh
-brew gh
 
 tap koekeishiya/formulae
 brew skhd
