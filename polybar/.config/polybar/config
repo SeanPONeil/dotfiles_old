@@ -39,7 +39,7 @@ font-1 = boxicons:size=13;3
 
 modules-left = bspwm
 modules-center = date
-modules-right = pulseaudio backlight battery wlan powermenu
+modules-right = pulseaudio backlight battery nordvpn wlan powermenu
 
 ;tray-position =
 ;tray-padding =
