@@ -44,7 +44,7 @@ set noshowmode
 set number
 
 " open NERDTree automatically when opening a directory
-autocmd StdinReadPre * let s:std_in=1
+"autocmd StdinReadPre * let s:std_in=1
 "autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 
 " open NERDTree with ctrl + n
