@@ -34,7 +34,6 @@ brew coreutils
 brew dbus
 brew dialog
 brew diffutils
-brew docker
 brew docker-compose
 brew ed
 brew emacs
