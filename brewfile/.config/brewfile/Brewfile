@@ -31,6 +31,7 @@ brew cairo
 brew cmake
 brew cmatrix
 brew coreutils
+brew dbus
 brew dialog
 brew diffutils
 brew docker
