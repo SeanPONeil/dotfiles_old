@@ -356,6 +356,7 @@ cask growlnotify
 cask intellij-idea
 cask iterm2
 cask java
+cask jetbrains-toolbox
 cask karabiner-elements
 cask keybase
 cask kitty
