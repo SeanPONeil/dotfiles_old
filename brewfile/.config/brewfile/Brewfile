@@ -212,6 +212,7 @@ brew nginx
 brew ninja
 brew nmap
 brew nnn
+brew node
 brew npth
 brew oniguruma
 brew open-mpi
@@ -311,6 +312,7 @@ brew x265
 brew xvid
 brew xz
 brew yara
+brew yarn
 brew youtube-dl
 brew zimg
 brew zlib
