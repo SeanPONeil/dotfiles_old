@@ -44,6 +44,7 @@ darwin=(
   "stow brewfile"
   "stow karabiner"
   "stow skhd"
+  "stow spotifyd-plist"
   "stow yabai"
 )
 
