@@ -23,8 +23,6 @@ export GOBIN=$GOPATH/bin
 
 export N_PREFIX=$XDG_DATA_HOME/n
 
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-
 # Make `pip3 install --user` install packages to .local on os x`
 export PYTHONUSERBASE=~/.local
 

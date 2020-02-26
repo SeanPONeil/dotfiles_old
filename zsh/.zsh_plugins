@@ -11,6 +11,6 @@ zpm-zsh/clipboard
 robbyrussell/oh-my-zsh path:plugins/autojump
 robbyrussell/oh-my-zsh path:plugins/mosh
 robbyrussell/oh-my-zsh path:plugins/adb
-
+robbyrussell/oh-my-zsh path:plugins/colored-man-pages
 # zsh-syntax-highlighting has to be the last bundle in the list
 zsh-users/zsh-syntax-highlighting
