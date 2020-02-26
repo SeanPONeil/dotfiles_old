@@ -3,7 +3,8 @@ Plug 'tpope/vim-sensible' " sets some normal standards
 Plug 'tpope/vim-fugitive' " git
 Plug 'itchyny/lightline.vim' " status bar
 Plug 'jiangmiao/auto-pairs' " auto closing brackets/quotes/...
-" Plug 'scrooloose/nerdtree'  " file explorer
+Plug 'scrooloose/nerdtree'  " file explorer
+Plug 'Xuyuanp/nerdtree-git-plugin' " git status in nerdtree
 Plug 'gko/vim-coloresque' " hex colors
 Plug 'tfnico/vim-gradle' " groovylang syntax highlighting
 Plug 'gburca/vim-logcat' " logcat highlighting
@@ -24,8 +25,6 @@ endif
 Plug 'sheerun/vim-polyglot'
 Plug 'OmniSharp/omnisharp-vim' " C# autocomplete and other neat stuff
 Plug 'editorconfig/editorconfig-vim' " .editorconfig linter
-Plug 'francoiscabrol/ranger.vim' " Ranger plugin
-Plug 'rbgrouleff/bclose.vim' " delete a buffer without closing the window
 call plug#end()
 
 let g:python3_host_prog = "/usr/local/bin/python3"
@@ -50,12 +49,12 @@ set noshowmode
 " enable line numbers
 set number
 
-" open NERDTree automatically when opening a directory
-"autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
-
+" open a NERDTree automatically when vim starts up
+autocmd vimenter * NERDTree
 " open NERDTree with ctrl + n
-"map <C-n> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
+" close vim if the only window left open is NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Map fzf to ctrl + p, and use silver searcher
 nnoremap <c-p> :Ag<CR>
@@ -123,10 +122,3 @@ autocmd FileType go nmap <leader>r :call ReuseVimGoTerm('GoRun')<Return>
 autocmd FileType go nmap <leader>q :call ReuseVimGoTerm('')<Return>
 
 let g:OmniSharp_server_stdio = 1
-
-" don't let nerdtree hijack netrw from ranger 
-let g:NERDTreeHijackNetrw = 0
-" Open ranger when vim opens a directory
-let g:ranger_replace_netrw = 1
-" Display hidden files with ranger by default
-let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
