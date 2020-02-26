@@ -4,7 +4,7 @@ Plug 'tpope/vim-fugitive' " git
 Plug 'itchyny/lightline.vim' " status bar
 Plug 'jiangmiao/auto-pairs' " auto closing brackets/quotes/...
 Plug 'scrooloose/nerdtree'  " file explorer
-Plug 'Xuyuanp/nerdtree-git-plugin' " git status in nerdtree
+" Plug 'Xuyuanp/nerdtree-git-plugin' " git status in nerdtree
 Plug 'gko/vim-coloresque' " hex colors
 Plug 'tfnico/vim-gradle' " groovylang syntax highlighting
 Plug 'gburca/vim-logcat' " logcat highlighting
@@ -49,8 +49,10 @@ set noshowmode
 " enable line numbers
 set number
 
-" open a NERDTree automatically when vim starts up
-autocmd vimenter * NERDTree
+" open NERDTree automatically when vim starts up on opening a directory
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+
 " open NERDTree with ctrl + n
 map <C-n> :NERDTreeToggle<CR>
 " close vim if the only window left open is NERDTree
