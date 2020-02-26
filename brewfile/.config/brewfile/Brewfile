@@ -348,6 +348,7 @@ cask burp-suite
 cask charles
 cask cool-retro-term
 cask docker
+cask dotnet-sdk
 cask dropbox
 cask fing
 cask firefox
