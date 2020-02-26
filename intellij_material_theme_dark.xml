@@ -1,0 +1,25 @@
+<mtTheme>
+  <id>mt-wal</id>
+  <editorColorsScheme>mt-wal</editorColorsScheme>
+  <dark>true</dark>
+  <name>Material Theme Pywal</name>
+  <colors>
+    <color id="background" value="{background.strip}"/>
+    <color id="foreground" value="{foreground.strip}"/>
+    <color id="text" value="eaeaeaff"/>
+    <color id="highlight" value="eb3d51ff"/>
+    <color id="selectionBackground" value="eb3d51ff"/>
+    <color id="selectionForeground" value="191919ff"/>
+    <color id="button" value="66b61aff"/>
+    <color id="secondaryBackground" value="808080ff"/>
+    <color id="disabled" value="eaeaeaff"/>
+    <color id="contrast" value="eb3d51ff"/>
+    <color id="tableSelected" value="314549ff"/>
+    <color id="secondBorder" value="eb3d51ff"/>
+    <color id="treeSelection" value="eaeaeaff"/>
+    <color id="notifications" value="323232ff"/>
+    <color id="accent" value="009688ff"/>
+    <color id="excluded" value="2e3c43ff"/>
+  </colors>
+  <themeId>custom_test</themeId>
+</mtTheme>
