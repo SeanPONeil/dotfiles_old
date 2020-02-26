@@ -200,6 +200,7 @@ brew mujs
 brew mysql@5.7
 brew nano
 brew ncdu
+brew ncftp
 brew ncmpcpp
 brew ncurses
 brew neofetch
