@@ -17,7 +17,8 @@ super + @space
 
 # make sxhkd reload its configuration files:
 super + Escape
-	pkill -USR1 -x sxhkd
+	pkill -USR1 -x sxhkd; \
+  notify-send "sxhkd" "Reloaded configuration"
 
 #
 # bspwm hotkeys
@@ -139,11 +140,11 @@ super + f
 
 # increase brightness
 XF86MonBrightnessUp
-  xbacklight -inc 5
+  xbacklight -inc 1
 
 # decrease brightness
 XF86MonBrightnessDown
-  xbacklight -dec 5
+  xbacklight -dec 1
 
 # decrease volume
 XF86AudioLowerVolume
