@@ -11,3 +11,4 @@ bspc config gapless_monocle      true
 
 bspc config ignore_ewmh_focus true
 evebar
+sxhkd &
