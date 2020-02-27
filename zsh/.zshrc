@@ -18,7 +18,7 @@ export PATH=$ANDROID_SDK/tools/emulator:$PATH
 export PATH=$ANDROID_SDK/tools/bin:$PATH
 export PATH=$HOME/.fzf/bin:$PATH                # fzf fuzzy finder
 export PATH=$HOME/.cargo/bin:$PATH              # rust scripts
-export PATH=${GOPATH//://bin:}/bin:$PATH        # go binaries
+export PATH=$GOBIN:$PATH        # go binaries
 export PATH=$HOME/.npm-global/bin:$PATH         # npm scripts
 export PATH=".:$PATH"                           # required for ./gradlew completion
 
