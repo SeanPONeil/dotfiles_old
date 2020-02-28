@@ -2,6 +2,7 @@
 
 common=(
   "stow ag"
+  "stow alacritty"
   "stow bin"
   "stow curl"
   "stow firefox"
