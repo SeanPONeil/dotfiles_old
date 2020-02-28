@@ -26,6 +26,7 @@ Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'sheerun/vim-polyglot'
 Plug 'OmniSharp/omnisharp-vim' " C# autocomplete and other neat stuff
 Plug 'editorconfig/editorconfig-vim' " .editorconfig linter
+Plug 'preservim/nerdcommenter' 
 call plug#end()
 
 let g:python3_host_prog = "/usr/local/bin/python3"
