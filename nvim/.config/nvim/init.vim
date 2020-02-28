@@ -22,6 +22,7 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
+Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'sheerun/vim-polyglot'
 Plug 'OmniSharp/omnisharp-vim' " C# autocomplete and other neat stuff
 Plug 'editorconfig/editorconfig-vim' " .editorconfig linter
@@ -31,6 +32,7 @@ let g:python3_host_prog = "/usr/local/bin/python3"
 let g:python_host_prog = "/usr/local/bin/python2"
 
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#auto_complete=1
 
 let g:lightline = {
       \ 'colorscheme': 'wombat',
