@@ -1,3 +1,0 @@
-export KITTY_FONT="TerminessTTF Nerd Font Mono Medium"
-launchctl setenv KITTY_FONT $KITTY_FONT
-launchctl setenv PLATFORM $PLATFORM
