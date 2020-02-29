@@ -20,6 +20,10 @@ super + Escape
 	pkill -USR1 -x sxhkd; \
   notify-send "sxhkd" "Reloaded configuration"
 
+# switch monitors
+super + alt + bracket{left,right}
+  bspc monitor -f {prev,next}
+
 #
 # bspwm hotkeys
 #
