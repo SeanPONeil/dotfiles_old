@@ -23,6 +23,7 @@ common=(
 )
 
 linux=(
+  "stow autorandr"
   "stow bspwm"
   "stow dunst"
   "stow gnome-keyring"
