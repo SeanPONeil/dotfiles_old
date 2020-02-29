@@ -379,12 +379,12 @@ bar-progress-fill = ─
 bar-progress-empty = ─
 
 [module/backlight]
-type = internal/xbacklight
+type = internal/backlight
 enable-scroll = true
 
 [module/nordvpn]
 type = custom/script
-exec = $XDG_CONFIG_HOME/polybar/scripts/vpn-nordvpn-status.sh
+exec = $HOME/.config/polybar/scripts/vpn-nordvpn-status.sh
 
 [settings]
 screenchange-reload = true
