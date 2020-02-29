@@ -380,6 +380,7 @@ bar-progress-empty = ─
 
 [module/backlight]
 type = internal/backlight
+card = intel_backlight
 enable-scroll = true
 
 [module/nordvpn]
