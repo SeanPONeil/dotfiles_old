@@ -11,4 +11,8 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 bspc config ignore_ewmh_focus true
-evebar
+
+# launch polybar
+
+polybar eve > /tmp/polybar_eve.log 2> /tmp/polybar_eve.log </dev/null &
+echo "$(date): polybar eve launched from bspwmrc" >> /tmp/polybar_eve.log
