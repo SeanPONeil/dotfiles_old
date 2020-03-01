@@ -1,7 +1,12 @@
 #! /bin/sh
 
-bspc monitor eDP-1 -d I II III IV V VI
-bspc monitor DP-1 -d VII VIII IX X
+primary=$(xrandr -q | grep primary | cut -d " " -f1)
+bspc monitor $primary -d I II III IV V VI
+
+others=$(xrandr -q | grep connected | grep -v primary | cut -d " " -f1)
+for m in $others; do
+  bspc monitor $m -d $m
+done
 
 bspc config border_width         2
 bspc config window_gap          12
