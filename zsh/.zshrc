@@ -48,7 +48,6 @@ export PATH=$HOME/.fzf/bin:$PATH                # fzf fuzzy finder
 export PATH=$HOME/.cargo/bin:$PATH              # rust scripts
 export PATH=$GOBIN:$PATH        # go binaries
 export PATH=$HOME/.npm-global/bin:$PATH         # npm scripts
-export PATH=".:$PATH"                           # required for ./gradlew completion
 
 source $HOME/.aliases
 source $HOME/.aliases-`uname`
