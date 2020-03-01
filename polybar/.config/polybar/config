@@ -11,6 +11,7 @@ primary = ${xrdb:color6:#222}
 alert = ${xrdb:color4:#222}
 
 [bar/eve]
+monitor = ${env:MONITOR:}
 width = 99%
 height = 30dp
 offset-x = 0.5%
