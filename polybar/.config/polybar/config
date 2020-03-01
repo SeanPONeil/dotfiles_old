@@ -1,9 +1,9 @@
 [colors]
-;background = ${xrdb:color0:#222}
-;background-alt = ${xrdb:color3:#222}
+background = ${xrdb:color0:#222}
+background-alt = ${xrdb:color3:#222}
 transparent = #00
-background = ${colors.transparent}
-background-alt = ${colors.transparent}
+;background = ${colors.transparent}
+;background-alt = ${colors.transparent}
 foreground = ${xrdb:color7:#222}
 foreground-alt = ${xrdb:color2:#222}
 highlight = ${xrdb:color2:#222}
@@ -14,6 +14,10 @@ alert = ${xrdb:color4:#222}
 height = 25dp
 font-0 = Terminus (TTF):pixelsize=10;3
 font-1 = boxicons:size=12;3
+
+[bar/bspwm]
+height = ${base.height}
+enable-ipc = true
 
 [bar/eve]
 monitor = ${env:MONITOR:}
@@ -45,9 +49,9 @@ modules-left = bspwm
 modules-center = date
 modules-right = pulseaudio backlight battery nordvpn wlan powermenu
 
-;tray-position =
+;tray-position = right
 ;tray-padding =
-
+wm-restack = true
 cursor-click = pointer
 cursor-scroll = ns-resize
 
