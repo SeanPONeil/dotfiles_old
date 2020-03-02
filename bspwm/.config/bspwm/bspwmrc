@@ -1,5 +1,7 @@
 #! /bin/sh
 
+wmname compiz
+
 primary=$(xrandr -q | grep primary | cut -d " " -f1)
 bspc monitor $primary -d I II III IV V VI
 
