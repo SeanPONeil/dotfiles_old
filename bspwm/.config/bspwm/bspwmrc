@@ -5,7 +5,7 @@ wmname compiz
 primary=$(xrandr -q | grep primary | cut -d " " -f1)
 bspc monitor $primary -d I II III IV V VI
 
-others=$(xrandr -q | grep connected | grep -v primary | cut -d " " -f1)
+others=$(xrandr -q | grep " connected" | grep -v primary | cut -d " " -f1)
 for m in $others; do
   bspc monitor $m -d $m
 done
