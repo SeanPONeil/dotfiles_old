@@ -48,8 +48,6 @@ dunst &
 #parcellite &
 #urxvtd -q -o -f
 
-setxkbmap -option caps:super
-
 #exec herbstluftwm --locked
 
 $HOME/.fehbg &
