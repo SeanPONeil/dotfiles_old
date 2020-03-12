@@ -330,7 +330,6 @@ cask font-terminus-nerd-font-mono
 
 tap homebrew/cask-versions
 cask adoptopenjdk8
-cask android-studio-preview
 cask microsoft-edge-beta
 
 tap homebrew/services
