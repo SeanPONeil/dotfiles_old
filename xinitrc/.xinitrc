@@ -53,7 +53,7 @@ dunst &
 $HOME/.fehbg &
 
 # bspwm is default desktop environment
-session=${1:-bspwm}
+session=${2:-bspwm}
 
 case $session in
   bspwm         ) exec bspwm;;
@@ -61,5 +61,5 @@ case $session in
   kde           ) exec startplasma-x11;;
   xfce|xfce4    ) exec startxfce4;;
   # No known session, try to run it as command
-  *             ) exec $1;;
+  *             ) exec $2;;
 esac
