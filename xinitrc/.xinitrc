@@ -13,10 +13,9 @@ fi
 
 set -a
 . $HOME/.config/user-dirs.dirs
+_JAVA_AWT_WM_NONREPARENTING=1
+export _JAVA_AWT_WM_NONREPARENTING
 set +a
-
-# fixes issues with Java GUIs in i3/bspwm
-export _JAVA_AWT_WM_NONREPARENTING=1
 
 # include all fonts in /usr/share/fonts
 for dir in /usr/share/fonts ; do
