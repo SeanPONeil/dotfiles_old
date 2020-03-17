@@ -1,6 +1,5 @@
 [Unit]
 Description=Keychain
-Requires=ssh-agent.service
 
 [Service]
 Type=oneshot
