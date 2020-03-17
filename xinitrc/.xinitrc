@@ -33,6 +33,9 @@ xrdb -merge $HOME/.Xresources
 xrdb -merge $XDG_CACHE_HOME/wal/colors.Xresources
 xsetroot -cursor_name left_ptr
 
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
+export SSH_AUTH_SOCK
+
 picom --experimental-backends -b -C
 unclutter &
 #light-locker &
