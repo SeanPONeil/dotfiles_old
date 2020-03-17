@@ -27,7 +27,6 @@ linux=(
   "stow bspwm"
   "stow dunst"
   "stow mpv"
-  "stow keychain-systemd"
   "stow kitty-font-linux"
   "stow picom"
   "stow polybar"
