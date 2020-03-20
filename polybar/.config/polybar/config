@@ -47,7 +47,7 @@ font-1 = ${base.font-1}
 
 modules-left = bspwm
 modules-center = date
-modules-right = pulseaudio backlight battery nordvpn wlan powermenu
+modules-right = pulseaudio backlight battery wlan powermenu
 
 ;tray-position = right
 ;tray-padding =
