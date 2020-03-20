@@ -344,7 +344,6 @@ cask android-studio
 cask autodmg
 cask balenaetcher
 cask barrier
-cask burp-suite
 cask charles
 cask cool-retro-term
 cask docker
@@ -358,7 +357,6 @@ cask gpg-suite
 cask growlnotify
 cask intellij-idea
 cask iterm2
-cask java
 cask jetbrains-toolbox
 cask karabiner-elements
 cask keybase
@@ -385,6 +383,7 @@ cask vmware-fusion
 cask vnc-viewer
 cask xquartz
 cask yakyak
+cask zoom
 
 tap adoptopenjdk/openjdk
 cask adoptopenjdk11
