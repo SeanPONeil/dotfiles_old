@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if pgrep -x "bspwm" > /dev/null
+then
+  ~/.config/bspwm/bspwmrc
+fi
+
+$HOME/.fehbg
