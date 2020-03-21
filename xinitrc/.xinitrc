@@ -47,8 +47,6 @@ dunst &
 #parcellite &
 #urxvtd -q -o -f
 
-imwheel -k
-
 $HOME/.fehbg &
 
 # bspwm is default desktop environment
