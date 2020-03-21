@@ -4,5 +4,3 @@ if pgrep -x "bspwm" > /dev/null
 then
   $HOME/.config/bspwm/bspwmrc
 fi
-
-$HOME/.fehbg
