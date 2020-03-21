@@ -47,7 +47,7 @@ dunst &
 #parcellite &
 #urxvtd -q -o -f
 
-#exec herbstluftwm --locked
+imwheel -k
 
 $HOME/.fehbg &
 
