@@ -2,5 +2,7 @@
 
 if pgrep -x "bspwm" > /dev/null
 then
+  echo "BSPWM is running, reloading bspwmrc"
   $HOME/.config/bspwm/bspwmrc
+  echo "bspwmrc reloaded!"
 fi
