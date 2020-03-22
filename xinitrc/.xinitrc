@@ -42,12 +42,11 @@ unclutter &
 #mopidy &
 dunst &
 #xbindkeys &
-#nitrogen --restore &
 #lxpolkit &
 #parcellite &
 #urxvtd -q -o -f
 
-$HOME/.fehbg &
+nitrogen --restore &
 
 # bspwm is default desktop environment
 session=${2:-bspwm}
