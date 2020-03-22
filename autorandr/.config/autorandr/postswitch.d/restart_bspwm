@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
-
+echo "restart_bspwm postswitch script"
 if pgrep -x "bspwm" > /dev/null
 then
   echo "BSPWM is running, reloading bspwmrc"
   $HOME/.config/bspwm/bspwmrc
   echo "bspwmrc reloaded!"
+else
+  echo "BSPWM not running, not reloading bspwmrc"
 fi
