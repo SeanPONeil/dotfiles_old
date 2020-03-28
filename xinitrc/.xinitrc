@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 #
 # ~/.xinitrc
 #
@@ -33,10 +33,12 @@ xrdb -merge $HOME/.Xresources
 xrdb -merge $XDG_CACHE_HOME/wal/colors.Xresources
 xsetroot -cursor_name left_ptr
 
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
-export SSH_AUTH_SOCK
+setxkbmap -option caps:super
 
-picom --experimental-backends -b -C
+#eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
+#export SSH_AUTH_SOCK
+
+picom -b -C
 unclutter &
 #light-locker &
 #mopidy &
