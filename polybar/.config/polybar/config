@@ -405,8 +405,7 @@ bar-progress-fill = ─
 bar-progress-empty = ─
 
 [module/backlight]
-type = internal/backlight
-card = intel_backlight
+type = internal/xbacklight
 enable-scroll = true
 
 [module/nordvpn]
