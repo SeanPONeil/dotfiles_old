@@ -1,12 +1,12 @@
-output DP-2
+output DP2
 off
-output eDP-1
+output eDP1
 crtc 1
 gamma 1.0:0.909:0.909
 mode 1920x1080
 pos 0x0
 rate 60.03
-output DP-1
+output DP1
 crtc 0
 gamma 1.0:0.909:0.909
 mode 3840x2160
