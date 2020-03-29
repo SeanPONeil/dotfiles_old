@@ -97,7 +97,7 @@ label-marked = M
 
 [module/wlan]
 type = internal/network
-interface = wlp2s0
+interface = wlan0
 interval = 3.0
 
 format-connected-font = 2
