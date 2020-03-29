@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
-convert $(configparser ~/.config/nitrogen/bg-saved.cfg xin_-1 file) -blur 0x5 /tmp/screenshotblur.png
-i3lock -i /tmp/screenshotblur.png
+image_path=$(shuf -n1 -e $HOME/.local/share/wallpapers/*)
+image=$(basename image)
+convert $image_path -blur 0x5 /tmp/$image
+i3lock -i /tmp/$image
