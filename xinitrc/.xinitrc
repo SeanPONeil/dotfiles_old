@@ -35,18 +35,14 @@ xsetroot -cursor_name left_ptr
 
 setxkbmap -option caps:super
 
-#eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
-#export SSH_AUTH_SOCK
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
+export SSH_AUTH_SOCK
+
+betterlockscreen -u $HOME/.local/share/wallpapers &
 
 picom -b -C
 unclutter &
-#light-locker &
-#mopidy &
 dunst &
-#xbindkeys &
-#lxpolkit &
-#parcellite &
-#urxvtd -q -o -f
 
 nitrogen --restore &
 
