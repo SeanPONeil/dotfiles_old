@@ -2,6 +2,8 @@ output DP1
 off
 output DP2
 off
+output VIRTUAL1
+off
 output eDP1
 crtc 0
 gamma 1.0:0.909:0.909

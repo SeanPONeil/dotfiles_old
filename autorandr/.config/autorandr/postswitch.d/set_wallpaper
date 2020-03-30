@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-echo "set_wallpaper postswitch script"
-
-nitrogen --restore &
