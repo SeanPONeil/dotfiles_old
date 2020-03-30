@@ -21,9 +21,8 @@ enable-ipc = true
 
 [bar/eve]
 monitor = ${env:MONITOR:}
-width = 99%
+width = 100%
 height = ${base.height}
-offset-x = 0.5%
 radius = 0
 fixed-center = true
 
