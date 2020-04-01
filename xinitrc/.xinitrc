@@ -44,8 +44,6 @@ picom -b -C
 unclutter &
 dunst &
 
-nitrogen --restore &
-
 # bspwm is default desktop environment
 session=${2:-bspwm}
 

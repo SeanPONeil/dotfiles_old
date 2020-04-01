@@ -26,4 +26,6 @@ else
   sxhkd &
 fi
 
+autorandr --change
+
 launch_polybar
