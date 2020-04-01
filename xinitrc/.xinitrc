@@ -43,17 +43,6 @@ betterlockscreen -u $HOME/.local/share/wallpapers &
 picom -b -C
 unclutter &
 dunst &
+$HOME/.fehbg &
 
-autorandr --change
-
-# bspwm is default desktop environment
-session=${2:-bspwm}
-
-case $session in
-  bspwm         ) exec bspwm;;
-  i3|i3wm       ) exec i3;;
-  kde           ) exec startplasma-x11;;
-  xfce|xfce4    ) exec startxfce4;;
-  # No known session, try to run it as command
-  *             ) exec $2;;
-esac
+exec bspwm
