@@ -6,7 +6,7 @@ output VIRTUAL1
 off
 output DP1
 crtc 0
-gamma 1.075:0.909:0.833
+gamma 1.064:0.909:0.833
 mode 3840x2160
 pos 0x0
 primary
