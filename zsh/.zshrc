@@ -1,3 +1,13 @@
+source ~/.cache/wal/colors.sh
+(cat ~/.cache/wal/sequences &)
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # ZSH completion
 zstyle :compinstall filename $HOME/.zshrc
 autoload -Uz compinit
@@ -50,9 +60,6 @@ export PATH=$HOME/.npm-global/bin:$PATH         # npm scripts
 
 source $HOME/.aliases
 source $HOME/.aliases-`uname`
-
-# PyWal colors
-source $XDG_CACHE_HOME/wal/colors.sh
 
 setopt histignorealldups sharehistory
 
