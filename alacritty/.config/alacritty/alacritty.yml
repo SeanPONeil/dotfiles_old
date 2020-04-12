@@ -33,9 +33,9 @@ window:
   #
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
-  #padding:
-  #  x: 0
-  #  y: 0
+  padding:
+    x: 10 
+    y: 10
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -94,7 +94,7 @@ scrolling:
 # Some applications, like Emacs, rely on knowing about the width of a tab.
 # To prevent unexpected behavior in these applications, it's also required to
 # change the `it` value in terminfo when altering this setting.
-tabspaces: 4
+#tabspaces: 4
 
 # Font configuration
 font:
@@ -147,25 +147,25 @@ font:
 #draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night Bright)
-colors:
-  primary:
-    background: '#eee8d5'
-    foreground: '#002b36'
-  normal:
-    black: '#eee8d5'
-    red: '#dc322f'
-    green: '#859900'
-    yellow: '#b58900'
-    blue: '#268bd2'
-    magenta: '#d33682'
-    cyan: '#2aa198'
-    white: '#073642'
-  bright:
-    black: '#6c7c80'
-    red: '#dc322f'
-    green: '#859900'
-    yellow: '#b58900'
-    blue: '#268bd2'
-    magenta: '#d33682'
-    cyan: '#2aa198'
-    white: '#073642'
+#colors:
+#  primary:
+#    background: '#eee8d5'
+#    foreground: '#002b36'
+#  normal:
+#    black: '#eee8d5'
+#    red: '#dc322f'
+#    green: '#859900'
+#    yellow: '#b58900'
+#    blue: '#268bd2'
+#    magenta: '#d33682'
+#    cyan: '#2aa198'
+#    white: '#073642'
+#  bright:
+#    black: '#6c7c80'
+#    red: '#dc322f'
+#    green: '#859900'
+#    yellow: '#b58900'
+#    blue: '#268bd2'
+#    magenta: '#d33682'
+#    cyan: '#2aa198'
+#    white: '#073642'
