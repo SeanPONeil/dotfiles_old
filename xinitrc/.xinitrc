@@ -43,6 +43,7 @@ betterlockscreen -u $HOME/.local/share/wallpapers &
 picom -b -C
 unclutter &
 dunst &
+mopidy &
 $HOME/.fehbg &
 
 exec bspwm

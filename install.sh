@@ -10,6 +10,7 @@ common=(
   "stow git"
   "stow kitty"
   "stow mitmproxy"
+  "stow mopidy"
   "stow neofetch"
   "stow nvim"
   "stow ranger"

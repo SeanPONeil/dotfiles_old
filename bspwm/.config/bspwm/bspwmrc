@@ -7,7 +7,7 @@ bspc monitor $primary -d I II III IV V VI
 
 others=$(xrandr -q | grep " connected" | grep -v primary | cut -d " " -f1)
 for m in $others; do
-  bspc monitor $m -d $m
+  bspc monitor $m -d I II
 done
 
 bspc config border_width         2
