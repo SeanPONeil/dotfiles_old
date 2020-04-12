@@ -1,4 +1,5 @@
 mafredri/zsh-async
+sindresorhus/pure
 
 zsh-users/zsh-completions
 gradle/gradle-completion

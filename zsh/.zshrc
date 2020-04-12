@@ -1,12 +1,10 @@
+# PyWal
 source ~/.cache/wal/colors.sh
 (cat ~/.cache/wal/sequences &)
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# Pure prompt customization
+export PURE_PROMPT_SYMBOL=">"
+export PURE_PROMPT_VICMD_SYMBOL="<"
 
 # ZSH completion
 zstyle :compinstall filename $HOME/.zshrc
