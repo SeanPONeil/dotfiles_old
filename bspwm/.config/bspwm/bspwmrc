@@ -19,6 +19,10 @@ bspc config gapless_monocle      true
 
 bspc config ignore_ewmh_focus true
 
+bspc config pointer_action1 move
+bspc config pointer_action2 resize_side
+bspc config pointer_action3 resize_corner
+
 if pgrep -x "sxhkd" > /dev/null
 then
   pkill -USR1 -x sxhkd;
