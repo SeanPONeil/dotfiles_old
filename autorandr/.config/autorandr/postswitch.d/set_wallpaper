@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+echo "Setting wallpaper..."
+
+$HOME/.fehbg
+
+echo "Wallpaper set!"
