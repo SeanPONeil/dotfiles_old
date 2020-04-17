@@ -43,8 +43,8 @@ export SSH_AUTH_SOCK
 picom -b -C
 unclutter &
 dunst &
-# mopidy &
+mopidy &
 $HOME/.fehbg &
 wal -R
 
-exec bspwm
+exec bspwm 
