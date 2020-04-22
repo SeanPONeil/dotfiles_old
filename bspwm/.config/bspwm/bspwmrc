@@ -1,13 +1,18 @@
 #!/usr/bin/env bash
 
+set -xv
+
 wmname compiz
 
+xsetroot -cursor_name left_ptr
+setxkbmap -option caps:super
+
 primary=$(xrandr -q | grep primary | cut -d " " -f1)
-bspc monitor $primary -d I II III IV V VI
+bspc monitor $primary -d I II III IV V VI VII VIII
 
 others=$(xrandr -q | grep " connected" | grep -v primary | cut -d " " -f1)
 for m in $others; do
-  bspc monitor $m -d I II
+  bspc monitor $m -d IX X
 done
 
 bspc config border_width         2
@@ -22,6 +27,8 @@ bspc config ignore_ewmh_focus true
 bspc config pointer_action1 move
 bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
+
+bspc config focus_follows_pointer true
 
 if pgrep -x "sxhkd" > /dev/null
 then
