@@ -1,8 +1,8 @@
-output DP1
+output DP2
 off
 output VIRTUAL1
 off
-output DP2
+output DP1
 crtc 0
 gamma 1.0:0.909:0.909
 mode 3840x2160
@@ -13,5 +13,5 @@ output eDP1
 crtc 1
 gamma 1.0:0.909:0.909
 mode 1920x1080
-pos 0x1704
+pos 0x1469
 rate 60.03
