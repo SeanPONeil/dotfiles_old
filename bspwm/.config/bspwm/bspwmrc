@@ -41,6 +41,6 @@ else
   sxhkd &
 fi
 
-launch_polybar
+$HOME/bin/launch_polybar
 
 echo "bspwm configured!"
