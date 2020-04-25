@@ -32,14 +32,10 @@ xset fp rehash
 xrdb -merge $HOME/.Xresources
 xrdb -merge $XDG_CACHE_HOME/wal/colors.Xresources
 
+[ -f /etc/xprofile ] && . /etc/xprofile
+[ -f ~/.xprofile ] && . $HOME/.xprofile
+
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
 export SSH_AUTH_SOCK
-
-picom -b -C
-unclutter &
-dunst &
-mopidy &
-$HOME/.fehbg &
-wal -R
 
 exec bspwm 
