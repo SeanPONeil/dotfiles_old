@@ -2,10 +2,12 @@
 
 echo "Configuring bspwm..."
 
-# wmname compiz
-
 # xsetroot -cursor_name left_ptr
 # setxkbmap -option caps:super
+
+# Fixes IntelliJ gray screen issue
+export _JAVA_AWT_WM_NONREPARTENTING=1
+wmname LG3D
 
 autorandr_current=$(autorandr --current)
 
