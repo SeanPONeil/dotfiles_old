@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 picom -b -C
+light-locker &
 unclutter &
 dunst &
 mopidy &
