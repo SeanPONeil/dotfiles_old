@@ -2,10 +2,10 @@
 
 echo "Configuring bspwm..."
 
-wmname compiz
+# wmname compiz
 
-xsetroot -cursor_name left_ptr
-setxkbmap -option caps:super
+# xsetroot -cursor_name left_ptr
+# setxkbmap -option caps:super
 
 autorandr_current=$(autorandr --current)
 
