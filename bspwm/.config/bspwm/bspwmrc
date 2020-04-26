@@ -10,6 +10,7 @@ export _JAVA_AWT_WM_NONREPARTENTING=1
 wmname LG3D
 
 autorandr_current=$(autorandr --current)
+echo "autorandr --current: $autorandr_current"
 
 if [[ $autorandr_current == "home_eDP1_left_of_DP1" ]]
 then
@@ -29,7 +30,6 @@ else
 fi
 
 bspc config border_width         2
-bspc config window_gap          10
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
