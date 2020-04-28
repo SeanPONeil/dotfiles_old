@@ -29,7 +29,7 @@ super + alt + bracket{left,right}
 #
 
 # lock screen
-super + l
+super + alt + l
   light-locker-command --lock
 
 # quit bspwm normally
