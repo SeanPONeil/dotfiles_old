@@ -24,7 +24,7 @@ then
   bspc monitor DP1 -d 1 2 3 4 5 6 7 8 9 10
   bspc config window_gap 40
 else
-  echo "Setting bspc values for mobile"
+  echo "Setting bspc values for default"
   bspc monitor eDP1 -d 1 2 3 4 5 6 7 8 9 10
   bspc config window_gap 10
 fi
@@ -42,6 +42,10 @@ bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
 
 bspc config focus_follows_pointer true
+
+bspc config remove_unplugged_monitors true
+bspc config remove_disabled_monitors true
+bspc config merge_overlapping_monitors true
 
 if pgrep -x "sxhkd" > /dev/null
 then
