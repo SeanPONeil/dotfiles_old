@@ -20,7 +20,6 @@ common=(
   "stow tmux"
   "stow wal"
   "stow wallgen"
-  "stow wallpapers"
   "stow youtube-dl"
   "stow zsh"
 )
