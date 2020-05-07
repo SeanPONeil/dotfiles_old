@@ -2,4 +2,6 @@
 
 $HOME/.fehbg
 
-notify-send "Wallpaper set!"
+if [[ $(pidof dunst) ]]; then
+  notify-send "Wallpaper set!"
+fi

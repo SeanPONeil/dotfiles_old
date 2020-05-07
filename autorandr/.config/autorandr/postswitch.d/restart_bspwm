@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-if pgrep -x "bspwm" > /dev/null
-then
-  $HOME/.config/bspwm/bspwmrc
-fi
+# if pgrep -x "bspwm" > /dev/null
+# then
+#   $HOME/.config/bspwm/bspwmrc
+# fi
