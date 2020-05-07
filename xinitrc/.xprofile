@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-picom -b -C
+xsettingsd &
+picom -b --dbus
+lxpolkit &
 light-locker &
 unclutter &
 dunst &
