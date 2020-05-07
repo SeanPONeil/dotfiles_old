@@ -152,11 +152,11 @@ super + f
 
 # increase brightness
 XF86MonBrightnessUp
-  intelbacklight -inc 5000
+  xbacklight -inc 3
 
 # decrease brightness
 XF86MonBrightnessDown
-  intelbacklight -dec 5000
+  xbacklight -dec 3
 
 # decrease volume
 XF86AudioLowerVolume
