@@ -146,9 +146,7 @@ super + {plus,minus,asterisk}
 
 # toggle fullscreen
 super + f
-  state=fullscreen; \
-  bspc query -W -w "focused.$state" && state=$(bspc query -T -w | jshon -e client -e lastState -u); \
-  bspc window -t "$state"
+  bspc window -t fullscreen
 
 # increase brightness
 XF86MonBrightnessUp
