@@ -12,22 +12,8 @@ wmname LG3D
 autorandr_current=$(autorandr --current)
 echo "autorandr --current: $autorandr_current"
 
-if [[ $autorandr_current == "home_eDP1_left_of_DP1" ]]
-then
-  echo "Setting bspc values for home_eDP1_left_of_DP1"
-  bspc monitor eDP1 -d 1 2
-  bspc monitor DP1 -d 3 4 5 6 7 8 9 10
-  bspc config window_gap 40
-elif [[ $autorandr_current == "home_DP1" ]]
-then
-  echo "Setting bspc values for home_DP1"
-  bspc monitor DP1 -d 1 2 3 4 5 6 7 8 9 10
-  bspc config window_gap 40
-else
-  echo "Setting bspc values for default"
-  bspc monitor eDP1 -d 1 2 3 4 5 6 7 8 9 10
-  bspc config window_gap 10
-fi
+bspc monitor primary -d 1 2 3 4 5 6 7 8 9 10
+bspc config window_gap 10
 
 bspc config border_width         2
 
@@ -58,6 +44,9 @@ else
   sxhkd &
 fi
 
+blueman-applet &
 $HOME/bin/launch_polybar
 
-notify-send "BSPWM configured for $autorandr_current"
+if [[ $(pidof dunst) ]]; then
+  notify-send "BSPWM configured for $autorandr_current"
+fi
