@@ -18,7 +18,6 @@ common=(
   "stow ssh"
   "stow tmux"
   "stow wal"
-  "stow wallgen"
   "stow youtube-dl"
   "stow zsh"
 )
