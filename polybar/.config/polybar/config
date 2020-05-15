@@ -12,8 +12,8 @@ alert = ${xrdb:color4:#222}
 
 [base]
 height = 25dp
-font-0 = Terminus (TTF):pixelsize=10;3
-font-1 = boxicons:size=12;3
+font-0 = Misc Tamsyn:size=13;3
+font-1 = boxicons:pixelsize=12;3
 
 [bar/bspwm]
 height = ${base.height}
