@@ -167,3 +167,7 @@ XF86AudioRaiseVolume
 # toggle mute volume
 XF86AudioMute
   pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# Screenshot
+Print
+  scrot -e 'mv -n $f $HOME/Pictures'
