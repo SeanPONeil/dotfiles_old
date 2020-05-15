@@ -36,7 +36,6 @@ linux=(
   "stow redshift"
   "stow rofi"
   "stow sxhkd"
-  "stow util"
   "stow xinitrc"
 )
 
