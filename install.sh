@@ -6,7 +6,6 @@ common=(
   "stow bin"
   "stow code"
   "stow curl"
-  "stow firefox"
   "stow fonts"
   "stow git"
   "stow kitty"
