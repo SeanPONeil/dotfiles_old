@@ -2,7 +2,7 @@
 
 echo "Configuring bspwm..."
 
-# xsetroot -cursor_name left_ptr
+xsetroot -cursor_name left_ptr &
 # setxkbmap -option caps:super
 
 # Fixes IntelliJ gray screen issue
