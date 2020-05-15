@@ -26,7 +26,6 @@ common=(
 
 linux=(
   "stow autorandr"
-  "stow bin-linux"
   "stow bspwm"
   "stow dunst"
   "stow mpv"
