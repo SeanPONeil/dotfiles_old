@@ -1,0 +1,12 @@
+[Match]
+Name=w*
+
+[Network]
+DHCP=yes
+DNS=1.1.1.1
+DNS=1.0.0.1
+MulticastDNS=true
+LLMNR=true
+
+[DHCP]
+RouteMetric=20
