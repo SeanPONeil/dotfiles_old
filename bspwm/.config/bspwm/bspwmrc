@@ -7,12 +7,12 @@ xsetroot -cursor_name left_ptr &
 
 # Fixes IntelliJ gray screen issue
 export _JAVA_AWT_WM_NONREPARTENTING=1
-wmname LG3D
+# wmname LG3D
 
 autorandr_current=$(autorandr --current)
 echo "autorandr --current: $autorandr_current"
 
-bspc monitor primary -d 1 2 3 4 5 6 7 8 9 10
+bspc monitor primary -d slack music firefox 4 5 6 7 8 9 10
 bspc config window_gap 10
 
 bspc config border_width         2

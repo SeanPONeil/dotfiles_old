@@ -59,24 +59,30 @@ cursor-scroll = ns-resize
 type = internal/bspwm
 pin-workspaces = true
 format = <label-state> <label-mode>
+fuzzy-match = true
 
-label-focused = %name%
+ws-icon-0 = slack;
+ws-icon-1 = firefox;
+ws-icon-2 = music;
+ws-icon-default = 
+
+label-focused = %icon%
 ; label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
 label-focused-foreground = ${colors.foreground}
-label-focused-padding = 2
+label-focused-padding = 1
 
-label-occupied = %name%
-label-occupied-padding = 2
+label-occupied = %icon%
+label-occupied-padding = 1
 label-occupied-foreground = ${colors.foreground}
 
-label-urgent = %name%!
+label-urgent = %icon%
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-padding = 1
 
-label-empty = %name%
+label-empty = %icon%
 label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
+label-empty-padding = 1
 
 
 ; The following labels will be used to indicate the layout/mode
@@ -84,7 +90,7 @@ label-empty-padding = 2
 ;
 ; Available tokens:
 ;   None
-label-monocle = monocle
+label-monocle = monocle 
 label-tiled = tiled
 label-fullscreen = fullscreen 
 label-floating = floating 
