@@ -9,7 +9,7 @@ super + Return
 
 # firefox
 super + {shift + Return}
-	firefox
+	firefox-developer-edition
 
 # program launcher
 super + @space
