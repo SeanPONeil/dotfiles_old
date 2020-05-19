@@ -6,6 +6,5 @@ lxpolkit &
 light-locker &
 unclutter &
 dunst &
-mopidy &
 $HOME/.fehbg &
 wal -R
