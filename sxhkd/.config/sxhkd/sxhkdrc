@@ -168,6 +168,18 @@ XF86AudioRaiseVolume
 XF86AudioMute
   pactl set-sink-mute @DEFAULT_SINK@ toggle
 
+# Play/Pause
+XF86AudioPlay
+  playerctl play-pause
+
+# Previous song
+XF86AudioPrev
+  playerctl previous
+
+# Next song
+XF86AudioNext
+  playerctl next
+
 # Screenshot
 Print
   scrot -e 'mv -n $f $HOME/Pictures'
