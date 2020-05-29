@@ -4,7 +4,9 @@ Plug 'tpope/vim-fugitive' " git
 Plug 'itchyny/lightline.vim' " status bar
 Plug 'jiangmiao/auto-pairs' " auto closing brackets/quotes/...
 Plug 'scrooloose/nerdtree'  " file explorer
-" Plug 'Xuyuanp/nerdtree-git-plugin' " git status in nerdtree
+Plug 'vim-syntastic/syntastic' " syntastic
+Plug 'jakski/vim-yaml', { 'do': ':UpdateRemotePlugins' }
+Plug 'Xuyuanp/nerdtree-git-plugin' " git status in nerdtree
 Plug 'gko/vim-coloresque' " hex colors
 Plug 'tfnico/vim-gradle' " groovylang syntax highlighting
 Plug 'gburca/vim-logcat' " logcat highlighting
@@ -13,6 +15,7 @@ Plug 'airblade/vim-gitgutter'  " Better editing files managed by git
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'chrisbra/unicode.vim'
+Plug 'cespare/vim-toml' " toml syntax highlighting
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " golang support
 " deoplete
 if has('nvim')
