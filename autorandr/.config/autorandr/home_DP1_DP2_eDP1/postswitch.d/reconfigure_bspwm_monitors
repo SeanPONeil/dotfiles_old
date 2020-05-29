@@ -3,7 +3,7 @@
 echo "Setting bspwm values for home_DP1_DP2_eDP1"
 
 # reorder monitors
-bspc wm -O eDP1 DP2 DP1
+bspc wm -O eDP1 DP1 DP2
 
 bspc monitor eDP1 -d slack
 bspc monitor DP2 -d 2 3
