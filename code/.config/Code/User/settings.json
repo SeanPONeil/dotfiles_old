@@ -3,5 +3,28 @@
     "files.autoSave": "afterDelay",
     "window.autoDetectColorScheme": true,
     "window.menuBarVisibility": "toggle",
-    "editor.fontFamily": "Terminus (TTF)"
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "editor.multiCursorModifier": "alt",
+    "java.semanticHighlighting.enabled": true,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "java.imports.gradle.wrapper.checksums": [
+        {
+            "sha256": "3dc39ad650d40f6c029bd8ff605c6d95865d657dbfdeacdb079db0ddfffedf9f",
+            "allowed": true
+        }
+    ],
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "yaml.schemas": {
+        "file:///toc.schema.json": "/toc\\.yml/i"
+    },
+    "explorer.confirmDelete": false,
+    "editor.fontFamily": "monospace"
 }
