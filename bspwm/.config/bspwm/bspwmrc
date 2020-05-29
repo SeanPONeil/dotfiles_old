@@ -44,7 +44,6 @@ else
   sxhkd &
 fi
 
-blueman-applet &
 $HOME/bin/launch_polybar
 
 if [[ $(pidof dunst) ]]; then
