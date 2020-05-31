@@ -3,7 +3,6 @@
 xsettingsd &
 picom -b --dbus
 lxpolkit &
-light-locker &
 unclutter &
 dunst &
 $HOME/.fehbg &

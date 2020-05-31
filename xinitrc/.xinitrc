@@ -1,21 +1,32 @@
 #!/usr/bin/env bash
-#
-# ~/.xinitrc
-#
-# Executed by startx (run your window manager from here)
+
+user_resources=$HOME/.Xresources
+user_modmap=$HOME/.Xmodmap
+sys_resources=/etc/X11/xinit/.Xresources
+sys_modmap=/etc/X11/xinit/.Xmodmap
+
+if [ -f $sys_resources ]; then
+  xrdb -merge $sys_resources
+fi
+
+if [ -f $sys_modmap ]; then
+  xmodmap $sys_modmap
+fi
+
+if [ -f "$user_resources" ]; then
+  xrdb - merge "$user_resources"
+fi
+
+if [ -f "$user_modmap" ]; then
+  xmodmap "$user_modmap"
+fi
 
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
-  for f in /etc/X11/xinit/xinitrc.d/*; do
+  for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
     [ -x "$f" ] && . "$f"
   done
   unset f
 fi
-
-set -a
-. $HOME/.config/user-dirs.dirs
-_JAVA_AWT_WM_NONREPARENTING=1
-export _JAVA_AWT_WM_NONREPARENTING
-set +a
 
 # include all fonts in /usr/share/fonts
 for dir in /usr/share/fonts ; do
