@@ -1,6 +1,6 @@
 configuration {
   theme: "~/.cache/wal/colors-rofi-light.rasi";
-  font: "Terminus (TTF) 12";
+  font: "TerminessTTF Nerd Font 12";
 }
 
 
