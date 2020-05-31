@@ -7,7 +7,9 @@ xsetroot -cursor_name left_ptr &
 
 # Fixes IntelliJ gray screen issue
 export _JAVA_AWT_WM_NONREPARTENTING=1
-# wmname LG3D
+
+# Fix Java programs that assume they are in a reparenting window manager
+wmname LG3D
 
 autorandr_current=$(autorandr --current)
 echo "autorandr --current: $autorandr_current"
