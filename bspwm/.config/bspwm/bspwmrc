@@ -11,11 +11,10 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # Fix Java programs that assume they are in a reparenting window manager
 wmname compiz
 
+# Create desktops based on autorandr profile
 autorandr_current=$(autorandr --current)
-echo "autorandr --current: $autorandr_current"
-
-bspc monitor primary -d slack music firefox 4 5 6 7 8 9 10
-bspc config window_gap 10
+echo "autorandr --current value: $autorandr_current"
+$HOME/.config/bspwm/desktops.d/"${autorandr_current:-default}"
 
 bspc config border_width         2
 
