@@ -5,5 +5,6 @@ picom -b --dbus
 lxpolkit &
 unclutter &
 dunst &
+networkd-notify &
 $HOME/.fehbg &
 wal -R
