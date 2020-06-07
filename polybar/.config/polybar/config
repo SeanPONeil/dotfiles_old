@@ -13,8 +13,8 @@ alert = ${xrdb:color4:#222}
 
 [base]
 height = 25dp
-font-0 = TerminessTTF Nerd Font:size=10;2
-font-1 = boxicons:pixelsize=12;3
+font-0 = Misc Tamsyn:size=13;2
+font-1 = boxicons:size=12;3
 
 [bar/bspwm]
 height = ${base.height}
@@ -49,12 +49,27 @@ font-1 = ${base.font-1}
 
 modules-left = bspwm
 modules-center = date
-modules-right = pulseaudio backlight battery wlan powermenu
+modules-right = pulseaudio-control backlight battery wlan powermenu
 
-tray-position = right
+# tray-position = right
 ;tray-padding =
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+[module/pulseaudio-control]
+type = custom/script
+tail = true
+label=%output%
+# format-underline = ${colors.primary}
+
+exec = ~/.config/polybar/scripts/pulseaudio-control listen
+click-right = exec pavucontrol &
+click-left = ~/.config/polybar/scripts/pulseaudio-control togmute
+click-middle = ~/.config/polybar/scripts/pulseaudio-control next-sink
+scroll-up = ~/.config/polybar/scripts/pulseaudio-control up
+scroll-down = ~/.config/polybar/scripts/pulseaudio-control down
+label-padding = 2
+label-foreground = ${colors.foreground}
 
 [module/bspwm]
 type = internal/bspwm
@@ -67,21 +82,21 @@ ws-icon-1 = firefox;
 ws-icon-2 = music;
 ws-icon-default = 
 
-label-focused = %icon%
+label-focused = %name%
 ; label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
 label-focused-foreground = ${colors.foreground}
 label-focused-padding = 1
 
-label-occupied = %icon%
+label-occupied = %name%
 label-occupied-padding = 1
 label-occupied-foreground = ${colors.foreground}
 
-label-urgent = %icon%
+label-urgent = %name%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 1
 
-label-empty = %icon%
+label-empty = %name%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 1
 
