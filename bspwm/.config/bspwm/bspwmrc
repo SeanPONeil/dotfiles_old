@@ -13,8 +13,7 @@ wmname compiz
 
 # Create desktops based on autorandr profile
 autorandr_current=$(autorandr --current)
-echo "autorandr --current value: $autorandr_current"
-$HOME/.config/bspwm/desktops.d/"${autorandr_current:-default}"
+. $HOME/.config/bspwm/desktops.d/"${autorandr_current:-default}"
 
 bspc config border_width         2
 
@@ -45,7 +44,7 @@ else
   sxhkd &
 fi
 
-$HOME/bin/launch_polybar
+. $HOME/bin/launch_polybar
 
 if [[ $(pidof dunst) ]]; then
   notify-send "BSPWM configured for $autorandr_current"
