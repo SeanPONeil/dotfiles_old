@@ -2,7 +2,7 @@
 meh - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~
 
 # open firefox
-#cmd + shift - return : /Applications/Firefox.app/Contents/MacOS/firefox-bin -new-window about:home
+cmd + shift - return : /Applications/Firefox\ Developer\ Edition.app/Contents/MacOS/firefox-bin -new-window about:home
 
 # restart yabai and skhd
 #cmd + shift - r : (brew services restart yabai;\
@@ -48,16 +48,16 @@ meh + cmd - right  : yabai -m window --grid 1:2:1:0:1:1
 # fast focus desktop
 meh - 0x21 : yabai -m space --focus prev
 meh - 0x1E : yabai -m space --focus next
-cmd + alt - 1 : yabai -m space --focus 1
-cmd + alt - 2 : yabai -m space --focus 2
-cmd + alt - 3 : yabai -m space --focus 3
-cmd + alt - 4 : yabai -m space --focus 4
-cmd + alt - 5 : yabai -m space --focus 5
-cmd + alt - 6 : yabai -m space --focus 6
-cmd + alt - 7 : yabai -m space --focus 7
-cmd + alt - 8 : yabai -m space --focus 8
-cmd + alt - 9 : yabai -m space --focus 9
-cmd + alt - 0 : yabai -m space --focus 10
+meh - 1 : yabai -m space --focus 1
+meh - 2 : yabai -m space --focus 2
+meh - 3 : yabai -m space --focus 3
+meh - 4 : yabai -m space --focus 4
+meh - 5 : yabai -m space --focus 5
+meh - 6 : yabai -m space --focus 6
+meh - 7 : yabai -m space --focus 7
+meh - 8 : yabai -m space --focus 8
+meh - 9 : yabai -m space --focus 9
+meh - 0 : yabai -m space --focus 10
 
 # send window to desktop and follow focus
 shift + cmd - 0x21 : yabai -m window --space prev; yabai -m space --focus prev
