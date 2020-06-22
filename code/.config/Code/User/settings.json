@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Wal Bordered",
+    "workbench.colorTheme": "Wal",
     "files.autoSave": "afterDelay",
     "window.autoDetectColorScheme": true,
     "window.menuBarVisibility": "toggle",
@@ -26,5 +26,21 @@
         "file:///toc.schema.json": "/toc\\.yml/i"
     },
     "explorer.confirmDelete": false,
-    "editor.fontFamily": "monospace"
+    "editor.fontFamily": "monospace",
+    "python.jediEnabled": false,
+    "java.requirements.JDK11Warning": false,
+    "vs-kubernetes": {
+        "vs-kubernetes.minikube-path.linux": "/home/sean/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
+    },
+    "apklab.apktoolPath": "/home/sean/.apklab/apktool_2.4.1.jar",
+    "apklab.apkSignerPath": "/home/sean/.apklab/uber-apk-signer-1.1.0.jar",
+    "editor.fontSize": 12,
+    "editor.tabSize": 2,
+    "editor.smoothScrolling": true,
+    "window.openFilesInNewWindow": "on",
+    "extensions.closeExtensionDetailsOnViewChange": true,
+    "window.closeWhenEmpty": true,
+    "workbench.iconTheme": "vs-minimal",
+    "workbench.preferredLightColorTheme": "Wal",
+    "workbench.preferredDarkColorTheme": "Wal"
 }

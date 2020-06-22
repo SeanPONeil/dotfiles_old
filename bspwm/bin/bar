@@ -1,0 +1,109 @@
+#!/usr/bin/env gorun
+
+package main
+
+import (
+	"log"
+	"os"
+	"os/exec"
+
+	"github.com/BurntSushi/xgb"
+	"github.com/BurntSushi/xgb/randr"
+	"github.com/BurntSushi/xgb/xproto"
+)
+
+type resolution struct {
+	x int
+	y int
+}
+
+func launchPolybar(monitor string, bar string) error {
+	cmd := exec.Command("polybar", bar)
+	cmd.Env = append(os.Environ(), "MONITOR=" + monitor)
+
+	cmd.Stdout, _ = os.Create("/tmp/" + monitor + "_polybar_" + bar + ".log")
+	cmd.Stderr, _ = os.Create("/tmp/" + monitor + "_polybar_" + bar + ".log")
+	return cmd.Start()
+}
+
+func main() {
+
+	// kill polybar, restart command doesn't always work well
+	if err := exec.Command("pkill", "polybar").Run(); err != nil {
+		log.Fatal(err)
+	}
+
+
+	// monitorsCmd := exec.Command("polybar", "--list-monitors")
+	// monitorsOut, err := monitorsCmd.Output()
+	// if err != nil {
+	// 	panic(err)
+	// }
+	// fmt.Println("> polybar --list-monitors")
+	// fmt.Println(string(monitorsOut))
+
+	// monitors := make(map[string]*resolution)
+
+	// scanner := bufio.NewScanner(bytes.NewReader(monitorsOut))
+
+	// for scanner.Scan() {
+	// 	s := strings.Split(scanner.Text(), ":")
+	// 	monitor, resolution := s[0], getResolution(s[1])
+	// 	monitors[monitor] = resolution
+	// }
+
+	// fmt.Println("> printing map")
+	// for k, v := range monitors {
+	// 	fmt.Printf("%s: %+v\n", k, v)
+	// }
+
+	X, _ := xgb.NewConn()
+
+	// Initialize randr extension
+	err := randr.Init(X)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// Get the root window on the default screen
+	root := xproto.Setup(X).DefaultScreen(X).Root
+
+	// Gets the current screen resources. Screen resources contains a list
+	// of names, crtcs, outputs and modes, among other things.
+	resources, err := randr.GetScreenResources(X, root).Reply()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// Iterate through all of the outputs and show some of their info.
+	for _, output := range resources.Outputs {
+		info, err := randr.GetOutputInfo(X, output, 0).Reply()
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		if info.Connection == randr.ConnectionConnected {
+			bestMode := info.Modes[0]
+			for _, mode := range resources.Modes {
+				if mode.Id == uint32(bestMode) {
+
+					log.Printf("Monitor %s height: %d\n", info.Name, mode.Height)
+					if mode.Height > 1080 {
+						log.Printf("Launching Polybar 'retina' on %s\n", info.Name)
+						err := launchPolybar(string(info.Name), "retina")
+						if err != nil {
+							log.Fatal(err)
+						}
+					} else {
+						log.Printf("Launching Polybar 'standard' on %s\n", info.Name)
+						err := launchPolybar(string(info.Name), "standard")
+						if err != nil {
+							log.Fatal(err)
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
