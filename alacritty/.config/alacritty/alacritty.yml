@@ -88,8 +88,8 @@ scrolling:
   multiplier: 3
 
 dpi:
-  x: 196 
-  y: 196
+  x: 168 
+  y: 171
 
 # Font configuration
 font:
