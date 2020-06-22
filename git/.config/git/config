@@ -3,7 +3,8 @@
   pager   = diff-so-fancy | less -FXR1   
 [user]
   name = Sean O'Neil
-  email = sean.oneil@logicgate.com
+  email = oneilse14@gmail.com
+  signingkey = B0E130EFBEED643BD2E1567541727E9DEE5EA218
 [color]
   ui = true
   diff = true
@@ -32,5 +33,5 @@
 	gpgsign = true
 [pull]
 	ff = only
-[include]
-	path = ~/.config/git/config-local
+[includeIf "gitdir:~/logicgate/"]
+	path = ~/.config/git/config-logicgate
