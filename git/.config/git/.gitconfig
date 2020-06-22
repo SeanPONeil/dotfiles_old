@@ -3,7 +3,7 @@
   pager   = diff-so-fancy | less -FXR1   
 [user]
   name = Sean O'Neil
-  email = oneilse14@gmail.com
+  email = sean.oneil@logicgate.com
 [color]
   ui = true
   diff = true
@@ -32,3 +32,5 @@
 	gpgsign = true
 [pull]
 	ff = only
+[include]
+	path = ~/.config/git/config-local
