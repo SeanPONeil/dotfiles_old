@@ -7,13 +7,14 @@ export PURE_PROMPT_SYMBOL=">"
 export PURE_PROMPT_VICMD_SYMBOL="<"
 
 # ZSH completion
-zstyle :compinstall filename $HOME/.zshrc
-autoload -Uz compinit
-compinit
+# zstyle :compinstall filename $HOME/.zshrc
+autoload -Uz compinit && compinit -i
 
 # Antibody ZSH plugin manager
 source <(antibody init)
 antibody bundle < $HOME/.zsh_plugins
+
+autoload -Uz compinit && compinit -i
 
 source $HOME/.config/user-dirs.dirs
 export XDG_DATA_HOME="$HOME/.local/share"
