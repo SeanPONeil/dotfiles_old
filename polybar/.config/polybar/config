@@ -12,18 +12,8 @@ secondary = $(xrdb:color2:#222)
 alert = ${xrdb:color4:#222}
 
 [base]
-height = 25dp
-font-0 = Misc Tamsyn:size=13;2
-font-1 = boxicons:size=12;3
-
-[bar/bspwm]
-height = ${base.height}
-enable-ipc = true
-
-[bar/eve]
 monitor = ${env:MONITOR:}
 width = 100%
-height = ${base.height}
 radius = 0
 fixed-center = true
 
@@ -44,9 +34,6 @@ padding-right = 1
 
 module-margin = 1
 
-font-0 = ${base.font-0}
-font-1 = ${base.font-1}
-
 modules-left = bspwm
 modules-center = date
 modules-right = pulseaudio-control backlight battery wlan powermenu
@@ -55,6 +42,20 @@ modules-right = pulseaudio-control backlight battery wlan powermenu
 ;tray-padding =
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+[bar/standard]
+inherit = base
+dpi = 96
+height = 2.5%
+font-0 = Misc Tamsyn:size=13;2
+font-1 = boxicons:size=12;3
+
+[bar/retina]
+inherit = base
+dpi = 144
+height = 1.5%
+font-0 = Misc Tamsyn:size=13;2
+font-1 = boxicons:scale=15;5
 
 [module/pulseaudio-control]
 type = custom/script

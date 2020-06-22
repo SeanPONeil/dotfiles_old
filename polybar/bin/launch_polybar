@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+pkill polybar
 for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-  FC_DEBUG=1 MONITOR=$m polybar --reload eve > /tmp/polybar_eve.log 2> /tmp/polybar_eve.log </dev/null &
+  FC_DEBUG=1 MONITOR=$m polybar standard > /tmp/standard_polybar.log 2> /tmp/standard_polybar.log </dev/null &
 done
