@@ -6,7 +6,6 @@ common=(
   "stow bin"
   "stow code"
   "stow curl"
-  "stow fonts"
   "stow git"
   "stow kitty"
   "stow mitmproxy"
@@ -37,7 +36,6 @@ linux=(
 
 darwin=(
   "stow alfred"
-  "stow brewfile"
   "stow karabiner"
   "stow kitty-font-osx"
   "stow skhd"
