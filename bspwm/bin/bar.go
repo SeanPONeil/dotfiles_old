@@ -1,15 +1,17 @@
 #!/usr/bin/env gorun
-
 package main
 
 import (
+	"io"
 	"log"
 	"os"
 	"os/exec"
+	"syscall"
 
 	"github.com/BurntSushi/xgb"
 	"github.com/BurntSushi/xgb/randr"
 	"github.com/BurntSushi/xgb/xproto"
+	"k8s.io/kubernetes/pkg/util/procfs"
 )
 
 type resolution struct {
@@ -17,45 +19,35 @@ type resolution struct {
 	y int
 }
 
-func launchPolybar(monitor string, bar string) error {
-	cmd := exec.Command("polybar", bar)
-	cmd.Env = append(os.Environ(), "MONITOR=" + monitor)
+func logFile() *os.File {
+	f, err := os.OpenFile("/tmp/polybar.log", os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0666)
+	if err != nil {
+		log.Fatalf("error opening log file: %v", err)
+	}
 
-	cmd.Stdout, _ = os.Create("/tmp/" + monitor + "_polybar_" + bar + ".log")
-	cmd.Stderr, _ = os.Create("/tmp/" + monitor + "_polybar_" + bar + ".log")
+	return f
+}
+
+func launchPolybar(monitor string, bar string) error {
+
+	cmd := exec.Command("polybar", bar)
+	cmd.Env = append(os.Environ(), "MONITOR="+monitor)
+
+	cmd.Stdout = logFile()
+	cmd.Stderr = logFile()
+
 	return cmd.Start()
 }
 
 func main() {
 
-	// kill polybar, restart command doesn't always work well
-	if err := exec.Command("pkill", "polybar").Run(); err != nil {
-		log.Fatal(err)
-	}
+	logFile := logFile()
+	defer logFile.Close()
 
+	log.SetOutput(io.MultiWriter(os.Stdout, logFile))
 
-	// monitorsCmd := exec.Command("polybar", "--list-monitors")
-	// monitorsOut, err := monitorsCmd.Output()
-	// if err != nil {
-	// 	panic(err)
-	// }
-	// fmt.Println("> polybar --list-monitors")
-	// fmt.Println(string(monitorsOut))
-
-	// monitors := make(map[string]*resolution)
-
-	// scanner := bufio.NewScanner(bytes.NewReader(monitorsOut))
-
-	// for scanner.Scan() {
-	// 	s := strings.Split(scanner.Text(), ":")
-	// 	monitor, resolution := s[0], getResolution(s[1])
-	// 	monitors[monitor] = resolution
-	// }
-
-	// fmt.Println("> printing map")
-	// for k, v := range monitors {
-	// 	fmt.Printf("%s: %+v\n", k, v)
-	// }
+	// Kill existing polybar processes
+	procfs.PKill("polybar", syscall.SIGABRT)
 
 	X, _ := xgb.NewConn()
 
