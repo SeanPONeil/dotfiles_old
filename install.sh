@@ -39,7 +39,6 @@ darwin=(
   "stow karabiner"
   "stow kitty-font-osx"
   "stow skhd"
-  "stow spotifyd-plist"
   "stow yabai"
 )
 
