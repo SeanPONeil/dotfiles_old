@@ -5,8 +5,8 @@ meh - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d
 cmd + shift - return : /Applications/Firefox\ Developer\ Edition.app/Contents/MacOS/firefox-bin -new-window about:home
 
 # restart yabai and skhd
-#cmd + shift - r : (brew services restart yabai;\
-#		  brew services restart skhd;) &
+meh - escape : (brew services restart koekeishiya/formulae/yabai;\
+		  brew services restart seanponeil/formulae/skhd;) &
 
 # focus window
 alt - 0x21 : yabai -m window --focus prev
