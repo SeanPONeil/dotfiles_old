@@ -34,7 +34,7 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 10 
+    x: 10
     y: 10
 
   # Spread additional padding evenly around the terminal content.
@@ -87,9 +87,9 @@ scrolling:
   # scrollback is enabled (history > 0).
   multiplier: 3
 
-dpi:
-  x: 168 
-  y: 171
+  # dpi:
+  # x: 96
+  # y: 96
 
 # Font configuration
 font:
@@ -101,11 +101,16 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Misc Tamsyn 
+    family: Tamzen7x14
+    style: Regular
+
+  bold:
+    family: Tamzen7x14
+    style: Regular
 
 
   # Point size
-  size: 12.0
+  size: 14.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -134,10 +139,10 @@ font:
   #
   # This is a global setting and will require a log out or restart to take
   # effect.
-  use_thin_strokes: true
+  use_thin_strokes: false
 
 # If `true`, bold text is drawn using the bright color variants.
-#draw_bold_text_with_bright_colors: false
+draw_bold_text_with_bright_colors: true 
 
 # Colors (Tomorrow Night Bright)
 #colors:
@@ -162,3 +167,25 @@ font:
 #    magenta: '#d33682'
 #    cyan: '#2aa198'
 #    white: '#073642'
+colors:
+  primary:
+    background: '#073642'
+    foreground: '#fdf6e3'
+  normal:
+    black: '#073642'
+    red: '#dc322f'
+    green: '#859900'
+    yellow: '#b58900'
+    blue: '#268bd2'
+    magenta: '#d33682'
+    cyan: '#2aa198'
+    white: '#eee8d5'
+  bright:
+    black: '#6c7c80'
+    red: '#dc322f'
+    green: '#859900'
+    yellow: '#b58900'
+    blue: '#268bd2'
+    magenta: '#d33682'
+    cyan: '#2aa198'
+    white: '#eee8d5'
