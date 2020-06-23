@@ -18,7 +18,7 @@
                     {
                         "manipulators": [
                             {
-                                "description": "Change caps_lock to skhd meh hotkey (shift + alt + control)",
+                                "description": "Change caps_lock to seanponeil/skhd meh hotkey (control + alt + cmd)",
                                 "from": {
                                     "key_code": "caps_lock",
                                     "modifiers": {
@@ -29,7 +29,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "left_shift",
+                                        "key_code": "left_command",
                                         "modifiers": [
                                             "left_control",
                                             "left_option"
