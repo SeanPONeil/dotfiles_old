@@ -39,11 +39,6 @@ export N_PREFIX=$XDG_DATA_HOME/n
 # Make `pip3 install --user` install packages to .local on os x`
 export PYTHONUSERBASE=$HOME/.local
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 export PLATFORM=$(uname)
 
 # setup PATH
@@ -52,11 +47,11 @@ export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$ANDROID_SDK/platform-tools:$PATH
 export PATH=$ANDROID_SDK/cmdline-tools/latest/bin:$PATH
-export PATH=$HOME/.fzf/bin:$PATH                # fzf fuzzy finder
-export PATH=$HOME/.cargo/bin:$PATH              # rust scripts
-export PATH=$GOBIN:$PATH        # go binaries
-export PATH=$HOME/.npm-global/bin:$PATH         # npm scripts
-export PATH=$HOME/.yarn/bin:$PATH               # yarn global bin
+export PATH=$HOME/.fzf/bin:$PATH                        # fzf fuzzy finder
+export PATH=$HOME/.cargo/bin:$PATH                      # rust scripts
+export PATH=$GOBIN:$PATH                                # go binaries
+export PATH="$(yarn global bin)":$PATH                  # yarn global bin
+export PATH="$(ruby -e 'puts Gem.user_dir')/bin":$PATH  # RubyGems
 
 source $HOME/.aliases
 source $HOME/.aliases-`uname`
