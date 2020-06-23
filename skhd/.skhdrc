@@ -9,41 +9,20 @@ meh - escape : (brew services restart koekeishiya/formulae/yabai;\
 		  brew services restart seanponeil/formulae/skhd;) &
 
 # focus window
-alt - 0x21 : yabai -m window --focus prev
-alt - 0x1E : yabai -m window --focus next
-alt - h : yabai -m window --focus west
-alt - j : yabai -m window --focus south
-alt - k : yabai -m window --focus north
-alt - l : yabai -m window --focus east
-
-
-# swap window
-cmd + alt - 0x21 : yabai -m window --swap prev
-cmd + alt - 0x1E : yabai -m window --swap next
-cmd + alt - h : yabai -m window --swap west
-cmd + alt - j : yabai -m window --swap south
-cmd + alt - k : yabai -m window --swap north
-cmd + alt - l : yabai -m window --swap east
+meh - 0x21 : yabai -m window --focus prev
+meh - 0x1E : yabai -m window --focus next
+meh - h : yabai -m window --focus west
+meh - j : yabai -m window --focus south
+meh - k : yabai -m window --focus north
+meh - l : yabai -m window --focus east
 
 # move window
-cmd + shift - 0x21 : yabai -m window --warp prev
-cmd + shift - 0x1E : yabai -m window --warp next
-cmd + shift - h : yabai -m window --warp west
-cmd + shift - j : yabai -m window --warp south
-cmd + shift - k : yabai -m window --warp north
-cmd + shift - l : yabai -m window --warp east
-
-# balance size of windows
-meh + cmd - 0 : yabai -m space --balance
-
-# make floating window fill screen
-meh + cmd - up     : yabai -m window --grid 1:1:0:0:1:1
-
-# make floating window fill left-half of screen
-meh + cmd - left   : yabai -m window --grid 1:2:0:0:1:1
-
-# make floating window fill right-half of screen
-meh + cmd - right  : yabai -m window --grid 1:2:1:0:1:1
+meh + shift - 0x21 : yabai -m window --warp prev
+meh + shift - 0x1E : yabai -m window --warp next
+meh + shift - h : yabai -m window --warp west
+meh + shift - j : yabai -m window --warp south
+meh + shift - k : yabai -m window --warp north
+meh + shift - l : yabai -m window --warp east
 
 # fast focus desktop
 meh - 0x21 : yabai -m space --focus prev
