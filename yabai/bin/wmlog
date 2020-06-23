@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+tail -f /usr/local/var/log/yabai/* /usr/local/var/log/skhd/*
