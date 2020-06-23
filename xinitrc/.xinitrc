@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 user_resources=$HOME/.Xresources
+pywal_resources=$HOME/.cache/wal/colors.Xresources
 user_modmap=$HOME/.Xmodmap
 sys_resources=/etc/X11/xinit/.Xresources
 sys_modmap=/etc/X11/xinit/.Xmodmap
@@ -14,7 +15,11 @@ if [ -f $sys_modmap ]; then
 fi
 
 if [ -f "$user_resources" ]; then
-  xrdb - merge "$user_resources"
+  xrdb -merge "$user_resources"
+fi
+
+if [ -f "$pywal_resources" ]; then
+  xrdb -merge "$pywal_resources"
 fi
 
 if [ -f "$user_modmap" ]; then
@@ -40,8 +45,6 @@ done
 xset +fp $HOME/.local/share/fonts/
 
 xset fp rehash
-xrdb -merge $HOME/.Xresources
-xrdb -merge $XDG_CACHE_HOME/wal/colors.Xresources
 
 [ -f /etc/xprofile ] && . /etc/xprofile
 [ -f ~/.xprofile ] && . $HOME/.xprofile
