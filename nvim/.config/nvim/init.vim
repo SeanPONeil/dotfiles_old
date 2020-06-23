@@ -17,15 +17,16 @@ Plug 'junegunn/fzf.vim'
 Plug 'chrisbra/unicode.vim'
 Plug 'cespare/vim-toml' " toml syntax highlighting
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " golang support
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " deoplete
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-Plug 'deoplete-plugins/deoplete-jedi'
+" if has('nvim')
+"   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" else
+"   Plug 'Shougo/deoplete.nvim'
+"   Plug 'roxma/nvim-yarp'
+"   Plug 'roxma/vim-hug-neovim-rpc'
+" endif
+" Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'sheerun/vim-polyglot'
 Plug 'OmniSharp/omnisharp-vim' " C# autocomplete and other neat stuff
 Plug 'editorconfig/editorconfig-vim' " .editorconfig linter
@@ -35,8 +36,8 @@ call plug#end()
 let g:python3_host_prog = "/usr/local/bin/python3"
 let g:python_host_prog = "/usr/local/bin/python2"
 
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#auto_complete=1
+" let g:deoplete#enable_at_startup = 1
+" let g:deoplete#auto_complete=1
 
 let g:lightline = {
       \ 'colorscheme': 'wombat',
@@ -94,7 +95,8 @@ set nofoldenable
 
 " golang specific rules
 autocmd FileType go compiler go
-call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
+let g:go_auto_sameids = 1
+" call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
 
 " Escape
 inoremap jk <esc>
