@@ -2,7 +2,7 @@
 meh - return : /Applications/Alacritty.app/Contents/MacOS/alacritty --live-config-reload
 
 # open firefox
-meh + shift - return : /Applications/Firefox\ Developer\ Edition.app/Contents/MacOS/firefox-bin --browser 
+#meh + shift - return : /Applications/Firefox\ Developer\ Edition.app/Contents/MacOS/firefox-bin -P dev-edition-default  
 
 # restart yabai and skhd
 meh - escape : (brew services restart koekeishiya/formulae/yabai;\
