@@ -45,14 +45,16 @@ cursor-scroll = ns-resize
 
 [bar/standard]
 inherit = base
-dpi = 96
+# dpi = 96
+dpi = 0
 height = 2.5%
 font-0 = Misc Tamsyn:size=13;2
 font-1 = boxicons:size=12;3
 
 [bar/retina]
 inherit = base
-dpi = 144
+# dpi = 144
+dpi = 0
 height = 1.5%
 font-0 = Misc Tamsyn:size=13;2
 font-1 = boxicons:scale=15;5
