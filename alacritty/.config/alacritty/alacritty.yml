@@ -101,16 +101,10 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Tamsyn7x14 
-    style: Regular
-
-  bold:
-    family: Tamsyn7x14
-    style: Regular
-
+    family: ProggyCleanTT Nerd Font Mono 
 
   # Point size
-  size: 14.0
+  size: 16.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -139,7 +133,7 @@ font:
   #
   # This is a global setting and will require a log out or restart to take
   # effect.
-  use_thin_strokes: false
+  use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true 
