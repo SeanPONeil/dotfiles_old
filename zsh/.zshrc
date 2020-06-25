@@ -19,14 +19,21 @@ antibody bundle < $HOME/.zsh_plugins
 
 autoload -Uz compinit && compinit -i
 
+setopt null_glob
 source $HOME/.exports
-for f in ~/.exports.d/*; do source $f; done
+for f in ~/.exports.d/*; do
+	[[ ! -e $f ]] && continue  # continue, if file does not exist
+	source $f;
+done
 
 source $HOME/.aliases
 source $HOME/.aliases-`uname`
-for f in ~/.aliases.d/*; do source $f; done
+for f in ~/.aliases.d/*; do
+	[[ ! -e $f ]] && continue  # continue, if file does not exist
+	source $f; 
+done
 
-setopt histignorealldups sharehistory
+setopt histignorealldups sharehistory nomatch
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
