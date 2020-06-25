@@ -2,7 +2,6 @@ call plug#begin()
 Plug 'tpope/vim-sensible' " sets some normal standards
 Plug 'tpope/vim-fugitive' " git
 Plug 'itchyny/lightline.vim' " status bar
-Plug 'jiangmiao/auto-pairs' " auto closing brackets/quotes/...
 Plug 'scrooloose/nerdtree'  " file explorer
 Plug 'vim-syntastic/syntastic' " syntastic
 Plug 'jakski/vim-yaml', { 'do': ':UpdateRemotePlugins' }
@@ -15,7 +14,6 @@ Plug 'airblade/vim-gitgutter'  " Better editing files managed by git
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'chrisbra/unicode.vim'
-Plug 'cespare/vim-toml' " toml syntax highlighting
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " golang support
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " deoplete
