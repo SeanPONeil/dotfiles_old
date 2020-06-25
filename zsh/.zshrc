@@ -1,3 +1,7 @@
+zmodload zsh/zprof
+
+export DOTFILES="$HOME/dotfiles"
+
 # PyWal
 source ~/.cache/wal/colors.sh
 (cat ~/.cache/wal/sequences &)
@@ -11,14 +15,10 @@ export NVM_LAZY_LOAD=true
 
 # ZSH completion
 # zstyle :compinstall filename $HOME/.zshrc
-autoload -Uz compinit && compinit -i
+autoload -Uz compinit
 
-# Antibody ZSH plugin manager
-source <(antibody init)
-antibody bundle < $HOME/.zsh_plugins
-
-autoload -Uz compinit && compinit -i
-
+# Load antibody plugins
+source $HOME/.zsh_plugins
 setopt null_glob
 source $HOME/.exports
 for f in ~/.exports.d/*; do
@@ -67,3 +67,5 @@ fi
 # export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+zprof

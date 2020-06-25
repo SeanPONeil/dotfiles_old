@@ -1,0 +1,16 @@
+lukechilds/zsh-nvm
+
+
+zsh-users/zsh-completions
+zsh-users/zsh-autosuggestions
+
+chrissicool/zsh-256color
+
+zpm-zsh/clipboard
+
+robbyrussell/oh-my-zsh path:plugins/autojump
+
+# these have to be last
+mafredri/zsh-async
+sindresorhus/pure
+zsh-users/zsh-syntax-highlighting
