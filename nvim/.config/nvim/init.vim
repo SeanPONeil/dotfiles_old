@@ -72,7 +72,7 @@ nnoremap <c-p> :Ag<CR>
 set splitbelow
 
 " persistent undo
-set undodir=~/.config/nvim/undodir
+set undodir=$HOME/.config/nvim/undodir
 set undofile
 
 " set tab as 2 spaces
