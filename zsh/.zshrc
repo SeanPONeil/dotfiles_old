@@ -1,3 +1,5 @@
+# zmodload zsh/zprof
+
 export DOTFILES="$HOME/dotfiles"
 
 # PyWal
@@ -8,15 +10,17 @@ source ~/.cache/wal/colors.sh
 export PURE_PROMPT_SYMBOL="$"
 export PURE_PROMPT_VICMD_SYMBOL="%"
 
-# Don't lag shell startup with nvm
-export NVM_LAZY_LOAD=true
-
 # ZSH completion
 # zstyle :compinstall filename $HOME/.zshrc
-autoload -Uz compinit
+#autoload -Uz compinit
 
 # Load antibody plugins
+export NVM_NO_USE=true
 source $HOME/.zsh_plugins
+
+# ZSH completion
+autoload -Uz compinit
+
 setopt null_glob
 source $HOME/.exports
 for f in ~/.exports.d/*; do
@@ -56,10 +60,6 @@ if [[ -d "$HOME/.zshrc.d" ]]; then
   done
 fi
 
-# NVM lazy initialization
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
-# export PATH="$NVM_DIR/versions/node/$(<$NVM_DIR/alias/default)/bin:$PATH"
-# alias nvm="unalias nvm; [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"; nvm $@"
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# zprof

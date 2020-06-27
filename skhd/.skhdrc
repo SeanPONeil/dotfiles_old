@@ -36,19 +36,23 @@ meh - 8 : yabai -m space --focus 8
 meh - 9 : yabai -m space --focus 9
 meh - 0 : yabai -m space --focus 10
 
-# send window to desktop and follow focus
-meh + shift - 0x21 : yabai -m window --space prev; yabai -m space --focus prev
-meh + shift - 0x1E : yabai -m window --space next; yabai -m space --focus next
-meh + shift - 1 : yabai -m window --space  1; yabai -m space --focus 1
-meh + shift - 2 : yabai -m window --space  2; yabai -m space --focus 2
-meh + shift - 3 : yabai -m window --space  3; yabai -m space --focus 3
-meh + shift - 4 : yabai -m window --space  4; yabai -m space --focus 4
-meh + shift - 5 : yabai -m window --space  5; yabai -m space --focus 5
-meh + shift - 6 : yabai -m window --space  6; yabai -m space --focus 6
-meh + shift - 7 : yabai -m window --space  7; yabai -m space --focus 7
-meh + shift - 8 : yabai -m window --space  8; yabai -m space --focus 8
-meh + shift - 9 : yabai -m window --space  9; yabai -m space --focus 9
-meh + shift - 0 : yabai -m window --space 10; yabai -m space --focus 10
+# send wndow to desktop and follow focus
+#  
+# meh + shift - 1 : yabai -m window --space  1; yabai -m space --focus 1
+
+# send window to desktop
+meh + shift - 0x21 : yabai -m window --space prev;
+meh + shift - 0x1E : yabai -m window --space next;
+meh + shift - 1 : yabai -m window --space  1;
+meh + shift - 2 : yabai -m window --space  2;
+meh + shift - 3 : yabai -m window --space  3;
+meh + shift - 4 : yabai -m window --space  4;
+meh + shift - 5 : yabai -m window --space  5;
+meh + shift - 6 : yabai -m window --space  6;
+meh + shift - 7 : yabai -m window --space  7;
+meh + shift - 8 : yabai -m window --space  8;
+meh + shift - 9 : yabai -m window --space  9;
+meh + shift - 0 : yabai -m window --space 10;
 
 # send window to monitor and follow focus
 ctrl + cmd - 0x21  : yabai -m window --display prev; yabai -m display --focus prev
