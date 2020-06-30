@@ -44,7 +44,7 @@ else
   sxhkd &
 fi
 
-$HOME/bin/bar.go
+gorun $HOME/bin/bar.go
 
 if [[ $(pidof dunst) ]]; then
   notify-send "BSPWM configured for $autorandr_current"

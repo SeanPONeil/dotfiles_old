@@ -26,7 +26,7 @@
         "file:///toc.schema.json": "/toc\\.yml/i"
     },
     "explorer.confirmDelete": false,
-    "editor.fontFamily": "monospace",
+    "editor.fontFamily": "ProggyCleanTT Nerd Font Mono, monospace",
     "python.jediEnabled": false,
     "java.requirements.JDK11Warning": false,
     "vs-kubernetes": {
@@ -34,7 +34,7 @@
     },
     "apklab.apktoolPath": "/home/sean/.apklab/apktool_2.4.1.jar",
     "apklab.apkSignerPath": "/home/sean/.apklab/uber-apk-signer-1.1.0.jar",
-    "editor.fontSize": 12,
+    "editor.fontSize": 18,
     "editor.tabSize": 2,
     "editor.smoothScrolling": true,
     "window.openFilesInNewWindow": "on",

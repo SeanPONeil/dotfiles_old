@@ -1,4 +1,4 @@
-#!/usr/bin/env gorun
+//#!/usr/bin/env gorun
 package main
 
 import (
@@ -39,16 +39,7 @@ func launchPolybar(monitor string, bar string) error {
 	return cmd.Start()
 }
 
-func main() {
-
-	logFile := logFile()
-	defer logFile.Close()
-
-	log.SetOutput(io.MultiWriter(os.Stdout, logFile))
-
-	// Kill existing polybar processes
-	procfs.PKill("polybar", syscall.SIGABRT)
-
+func launchPolybarBasedOnScreenDimensions() {
 	X, _ := xgb.NewConn()
 
 	// Initialize randr extension
@@ -75,27 +66,47 @@ func main() {
 		}
 
 		if info.Connection == randr.ConnectionConnected {
+			log.Printf("info: %+v", info)
 			bestMode := info.Modes[0]
 			for _, mode := range resources.Modes {
 				if mode.Id == uint32(bestMode) {
 
 					log.Printf("Monitor %s height: %d\n", info.Name, mode.Height)
-					if mode.Height > 1080 {
-						log.Printf("Launching Polybar 'retina' on %s\n", info.Name)
-						err := launchPolybar(string(info.Name), "retina")
-						if err != nil {
-							log.Fatal(err)
-						}
-					} else {
-						log.Printf("Launching Polybar 'standard' on %s\n", info.Name)
-						err := launchPolybar(string(info.Name), "standard")
-						if err != nil {
-							log.Fatal(err)
-						}
+					//if mode.Height > 1080 {
+					//	log.Printf("Launching Polybar 'retina' on %s\n", info.Name)
+					//	err := launchPolybar(string(info.Name), "retina")
+					//	if err != nil {
+					//		log.Fatal(err)
+					//	}
+					//} else {
+					//	log.Printf("Launching Polybar 'standard' on %s\n", info.Name)
+					//	err := launchPolybar(string(info.Name), "standard")
+					//	if err != nil {
+					//		log.Fatal(err)
+					//	}
+					//}
+					log.Printf("Launching Polybar 'standard' on %s", info.Name)
+					err := launchPolybar(string(info.Name), "standard")
+					if err != nil {
+						log.Fatal(err)
 					}
 				}
 			}
 		}
 	}
 
+
+}
+
+func main() {
+
+	logFile := logFile()
+	defer logFile.Close()
+
+	log.SetOutput(io.MultiWriter(os.Stdout, logFile))
+
+	// Kill existing polybar processes
+	procfs.PKill("polybar", syscall.SIGABRT)
+
+	launchPolybarBasedOnScreenDimensions()
 }
