@@ -24,7 +24,7 @@ linux=(
   "stow autorandr"
   "stow bspwm"
   "stow dunst"
-  "stow fonts"
+  "sudo stow fonts --target=/usr/share/fonts"
   "stow mpv"
   "stow kitty-font-linux"
   "stow picom"
