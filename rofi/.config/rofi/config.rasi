@@ -1,6 +1,6 @@
 configuration {
   theme: "~/.cache/wal/colors-rofi-light.rasi";
-  font: "TerminessTTF Nerd Font 12";
+  font: "TamzenForPowerline 12";
 }
 
 
