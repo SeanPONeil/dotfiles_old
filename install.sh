@@ -37,7 +37,6 @@ linux=(
 
 darwin=(
   "stow alfred"
-  "stow fonts-osx"
   "stow karabiner"
   "stow kitty-font-osx"
   "stow skhd"
