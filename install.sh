@@ -24,6 +24,7 @@ linux=(
   "stow autorandr"
   "stow bspwm"
   "stow dunst"
+  "stow fonts"
   "stow mpv"
   "stow kitty-font-linux"
   "stow picom"
@@ -36,6 +37,7 @@ linux=(
 
 darwin=(
   "stow alfred"
+  "stow fonts-osx"
   "stow karabiner"
   "stow kitty-font-osx"
   "stow skhd"
