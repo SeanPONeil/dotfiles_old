@@ -10,6 +10,8 @@ chrissicool/zsh-256color
 zpm-zsh/clipboard
 robbyrussell/oh-my-zsh path:plugins/autojump
 
+Tarrasch/zsh-autoenv
+
 # these have to be last
 mafredri/zsh-async
 sindresorhus/pure
