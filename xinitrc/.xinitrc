@@ -37,6 +37,8 @@ fi
 for dir in /usr/share/fonts ; do
   if [ -d "$dir"  ]; then
     pushd $dir
+    mkfontdir
+    mkfontscale
     xset +fp "$PWD"
     popd
   fi
