@@ -7,8 +7,8 @@ source ~/.cache/wal/colors.sh
 (cat ~/.cache/wal/sequences &)
 
 # Pure prompt customization
-export PURE_PROMPT_SYMBOL="$"
-export PURE_PROMPT_VICMD_SYMBOL="%"
+export PURE_PROMPT_SYMBOL=">"
+export PURE_PROMPT_VICMD_SYMBOL="<"
 
 # ZSH completion
 # zstyle :compinstall filename $HOME/.zshrc
@@ -19,7 +19,7 @@ export NVM_NO_USE=true
 source $HOME/.zsh_plugins
 
 # ZSH completion
-autoload -Uz compinit
+autoload -Uz compinit && compinit
 
 setopt null_glob
 source $HOME/.exports
