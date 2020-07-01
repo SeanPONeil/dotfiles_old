@@ -49,7 +49,7 @@ inherit = base
 dpi = 0
 height = 3%
 # font-0 = Proggy CleanTT Nerd Font Mono:size=14;2
-font-0 = TamzenForPowerline:pixelsize=16;2
+font-0 = TamzenForPowerline:size=13;2
 font-1 = boxicons:size=12;2
 
 [bar/retina]
@@ -57,7 +57,7 @@ inherit = base
 # dpi = 144
 dpi = 0
 height = 2%
-font-0 = Proggy CleanTT Nerd Font Mono:size=18;2
+font-0 = TamzenForPowerline:size=18;2
 font-1 = boxicons:size=18;5
 
 [module/pulseaudio-control]
