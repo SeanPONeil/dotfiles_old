@@ -1,4 +1,11 @@
+# If not running interactively, don't do anything
+case $- in
+  *i*) ;;
+  *) return;;
+esac
+
 # zmodload zsh/zprof
+
 
 export DOTFILES="$HOME/dotfiles"
 
@@ -19,7 +26,7 @@ export NVM_NO_USE=true
 source $HOME/.zsh_plugins
 
 # ZSH completion
-autoload -Uz compinit && compinit
+autoload -Uz compinit && compinit -i
 
 setopt null_glob
 source $HOME/.exports
@@ -59,6 +66,13 @@ if [[ -d "$HOME/.zshrc.d" ]]; then
     source "$file"
   done
 fi
+
+for file in ~/.{zsh_prompt,aliases,path,dockerfunc,extra,exports}; do
+  if [[ -f "$file" ]] && [[ -f "$file" ]]; then
+    source "$file"
+  fi
+done
+unset file
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
