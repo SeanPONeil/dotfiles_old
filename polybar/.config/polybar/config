@@ -36,7 +36,7 @@ module-margin = 1
 
 modules-left = bspwm
 modules-center = date
-modules-right = pulseaudio-control backlight battery wlan powermenu
+modules-right = pulseaudio-control bluetooth backlight battery wlan powermenu
 
 # tray-position = right
 ;tray-padding =
@@ -440,6 +440,12 @@ enable-scroll = true
 [module/nordvpn]
 type = custom/script
 exec = $HOME/.config/polybar/scripts/vpn-nordvpn-status.sh
+
+[module/bluetooth]
+type = custom/script
+exec = rofi-bluetooth --status
+interval = 1
+click-left = rofi-bluetooth &
 
 [settings]
 screenchange-reload = true
