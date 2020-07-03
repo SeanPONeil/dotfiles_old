@@ -2,7 +2,6 @@ call plug#begin()
 Plug 'tpope/vim-sensible' " sets some normal standards
 Plug 'tpope/vim-fugitive' " git
 Plug 'itchyny/lightline.vim' " status bar
-Plug 'scrooloose/nerdtree'  " file explorer
 Plug 'vim-syntastic/syntastic' " syntastic
 Plug 'jakski/vim-yaml', { 'do': ':UpdateRemotePlugins' }
 Plug 'Xuyuanp/nerdtree-git-plugin' " git status in nerdtree
@@ -16,6 +15,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'chrisbra/unicode.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " golang support
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'lambdalisue/suda.vim' " write files with sudo
 " deoplete
 " if has('nvim')
 "   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -50,23 +50,15 @@ let g:lightline = {
 
 colorscheme wal
 set noshowmode
+set showcmd
 
 " enable line numbers
 set number
 
 set colorcolumn=80
 
-" open NERDTree automatically when vim starts up on opening a directory
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
-
-" open NERDTree with ctrl + n
-map <C-n> :NERDTreeToggle<CR>
-" close vim if the only window left open is NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" Map fzf to ctrl + p, and use silver searcher
-nnoremap <c-p> :Ag<CR>
+" Map fzf to ctrl + p
+nnoremap <c-p> :Files<CR>
 
 " all extra windows pop up at the bottom
 set splitbelow
@@ -84,6 +76,9 @@ set tabstop=2
 set softtabstop=2
 " when indenting with '>', use 2 spaces width
 set shiftwidth=2
+
+" suda.vim configuration
+let g:suda_smart_edit = 1
 
 syntax on
 set modeline
