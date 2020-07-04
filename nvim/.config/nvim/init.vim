@@ -46,8 +46,33 @@ set number
 
 set colorcolumn=80
 
+" Treat long lines as break lines (useful when moving around in them)
+nmap j gj
+nmap k gk
+vmap j gj
+vmap k gk
+
+" :W sudo saves the file
+" (useful for handling the permission-denied error)
+command! W w !sudo tee % > /dev/null
+
+" Normal clipboard behavior
+if has('unnamedplus')
+  set clipboard=unnamedplus,unnamed
+else
+  set clipboard+=unnamed
+endif
+
+" backup behavior
+set nobackup
+set noswapfile
+set nowritebackup
+
 " Map fzf to ctrl + p
 nnoremap <c-p> :Files<CR>
+
+" Map ctrl + enter to new vsplit
+nnoremap <c-ENTER> :vsplit<CR>
 
 " all extra windows pop up at the bottom
 set splitbelow
@@ -71,7 +96,6 @@ set nofoldenable
 " golang specific rules
 autocmd FileType go compiler go
 let g:go_auto_sameids = 1
-" call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
 
 " Escape
 inoremap jk <esc>
