@@ -1,11 +1,6 @@
-# If not running interactively, don't do anything
-case $- in
-  *i*) ;;
-  *) return;;
-esac
-
 # zmodload zsh/zprof
 
+setopt histignorealldups sharehistory nomatch autocd
 
 export DOTFILES="$HOME/dotfiles"
 
@@ -16,10 +11,6 @@ source ~/.cache/wal/colors.sh
 # Pure prompt customization
 export PURE_PROMPT_SYMBOL=">"
 export PURE_PROMPT_VICMD_SYMBOL="<"
-
-# ZSH completion
-# zstyle :compinstall filename $HOME/.zshrc
-#autoload -Uz compinit
 
 # Load antibody plugins
 export NVM_NO_USE=true
@@ -42,7 +33,6 @@ for f in ~/.aliases.d/*; do
 	source $f; 
 done
 
-setopt histignorealldups sharehistory nomatch
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
@@ -66,6 +56,7 @@ if [[ -d "$HOME/.zshrc.d" ]]; then
     source "$file"
   done
 fi
+unsetopt null_glob
 
 for file in ~/.{zsh_prompt,aliases,path,dockerfunc,extra,exports}; do
   if [[ -f "$file" ]] && [[ -f "$file" ]]; then
