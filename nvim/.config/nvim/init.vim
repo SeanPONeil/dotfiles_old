@@ -1,6 +1,8 @@
 call plug#begin()
 Plug 'tpope/vim-sensible' " sets some normal standards
 Plug 'tpope/vim-fugitive' " git
+Plug 'tpope/vim-eunuch'   " unix commands (especially :SudoWrite)
+Plug 'tpope/vim-vinegar'  " tpope enhanced netrw
 Plug 'itchyny/lightline.vim' " status bar
 Plug 'vim-syntastic/syntastic' " syntastic
 Plug 'jakski/vim-yaml', { 'do': ':UpdateRemotePlugins' }
@@ -15,16 +17,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'chrisbra/unicode.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " golang support
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'lambdalisue/suda.vim' " write files with sudo
-" deoplete
-" if has('nvim')
-"   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" else
-"   Plug 'Shougo/deoplete.nvim'
-"   Plug 'roxma/nvim-yarp'
-"   Plug 'roxma/vim-hug-neovim-rpc'
-" endif
-" Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'sheerun/vim-polyglot'
 Plug 'OmniSharp/omnisharp-vim' " C# autocomplete and other neat stuff
 Plug 'editorconfig/editorconfig-vim' " .editorconfig linter
@@ -33,9 +25,6 @@ call plug#end()
 
 let g:python3_host_prog = "/usr/local/bin/python3"
 let g:python_host_prog = "/usr/local/bin/python2"
-
-" let g:deoplete#enable_at_startup = 1
-" let g:deoplete#auto_complete=1
 
 let g:lightline = {
       \ 'colorscheme': 'wombat',
@@ -72,9 +61,6 @@ set tabstop=2
 set softtabstop=2
 " when indenting with '>', use 2 spaces width
 set shiftwidth=2
-
-" suda.vim configuration
-let g:suda_smart_edit = 1
 
 syntax on
 set modeline

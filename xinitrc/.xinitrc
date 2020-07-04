@@ -48,11 +48,16 @@ xset +fp $HOME/.local/share/fonts/
 
 xset fp rehash
 
+xrandr
+sleep 1
+
 [ -f /etc/xprofile ] && . /etc/xprofile
 [ -f ~/.xprofile ] && . $HOME/.xprofile
 
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
 export SSH_AUTH_SOCK
+
+export SUDO_ASKPASS=/usr/lib/ssh/x11-ssh-askpass
 
 autorandr_output=$(autorandr --config)
 echo $autorandr_output
