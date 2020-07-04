@@ -10,5 +10,9 @@
 [Link]
 NamePolicy=kernel database onboard slot path
 MACAddressPolicy=persistent
+Multicast=true
+AllMulticast=true
+
+[Network]
 MulticastDNS=true
 LLMNR=true
