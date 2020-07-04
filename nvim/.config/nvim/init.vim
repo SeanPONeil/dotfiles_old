@@ -63,10 +63,6 @@ nnoremap <c-p> :Files<CR>
 " all extra windows pop up at the bottom
 set splitbelow
 
-" persistent undo
-set undodir=$HOME/.config/nvim/undodir
-set undofile
-
 " set tab as 2 spaces
 filetype plugin indent on
 " On pressing tab, insert 2 spaces
