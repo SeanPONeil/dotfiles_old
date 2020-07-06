@@ -1,4 +1,8 @@
-# zmodload zsh/zprof
+# Autoload zsh modules when they are referenced
+zmodload -a zsh/stat stat
+zmodload -a zsh/zpty zpty
+zmodload -a zsh/zprof zprof
+zmodload -a zsh/mapfile mapfile
 
 setopt histignorealldups sharehistory nomatch autocd
 
@@ -13,7 +17,9 @@ export PURE_PROMPT_SYMBOL=">"
 export PURE_PROMPT_VICMD_SYMBOL="<"
 
 # Load antibody plugins
-export NVM_NO_USE=true
+export NVM_LAZY_LOAD=true
+export NVM_LAZY_LOAD_EXTRA_COMMANDS=('yarn')
+export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
 source $HOME/.zsh_plugins
 
 # ZSH completion
@@ -38,15 +44,6 @@ done
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=$HOME/.zsh_history
-
-export EDITOR=nvim
-export SYSTEMD_EDITOR=nvim
-export VISUAL=nvim
-export PAGER=/usr/bin/less
-
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
-export FZF_DEFAULT_OPTS="--layout=reverse --inline-info"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 source $HOME/.zshrc-`uname`
 
