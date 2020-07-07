@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+# Bash wrappers for docker run commands
+
+export DOCKER_REPO_PREFIX=jess
+#
+# Helper Functions
+#
+dcleanup(){
+  for container in $(docker ps -aq 2> /dev/null); do
+    docker rm "$container" 2> /dev/null
+  done
+  for volume in $(docker ps --filter status=exited -q 2> /dev/null); do
+    docker rm -v "$volume" 2> /dev/null
+  done
+  for image in $(docker images --filter dangling=true -q 2> /dev/null); do
+    docker rmi "$image" 2> /dev/null
+  done
+}
+
+del_stopped(){
+  local name=$1
+  local state
+  state=$(docker inspect --format "{{.State.Running}}" "$name" 2>/dev/null)
+
+  if [[ "$state" == "false" ]]; then
+    docker rm "$name"
+  fi
+}
+
+rmctr(){
+  # shellcheck disable=SC2068
+  docker rm -f $@ 2>/dev/null || true
+}
+
+# volume(){
+#   docker run -it --rm \
+#     -v $1:/$1 \
+#     --log-driver none \
+#     bash bash -c "apk add --no-cache vim; bash"
+#   }
+
+cheese(){
+  del_stopped cheese
+
+  docker run -d \
+    -v /etc/localtime:/etc/localtime:ro \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -e "DISPLAY=unix${DISPLAY}" \
+    -v "${HOME}/Pictures:/root/Pictures" \
+    --device /dev/video1 \
+    --device /dev/snd \
+    --device /dev/dri \
+    --name cheese \
+    ${DOCKER_REPO_PREFIX}/cheese
+}
+
+hollywood(){
+  docker run --rm -it \
+    --name hollywood \
+    ${DOCKER_REPO_PREFIX}/hollywood
+}
+
+lynx(){
+  docker run --rm -it \
+    --name lynx \
+    ${DOCKER_REPO_PREFIX}/lynx "$@"
+  }

@@ -23,6 +23,7 @@ common=(
 linux=(
   "stow autorandr"
   "stow bspwm"
+  "stow dockerfunc"
   "stow dunst"
   "sudo stow fonts --target=/usr/share/fonts"
   "stow mpv"
