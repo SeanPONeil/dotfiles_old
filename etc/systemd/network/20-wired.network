@@ -1,0 +1,7 @@
+[Match]
+Name=en*
+
+[Network]
+DHCP=yes
+LinkLocalAddressing=ipv4
+IPv6AcceptRA=no
