@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 # Bash wrappers for docker run commands
 
 export DOCKER_REPO_PREFIX=jess
@@ -7,13 +7,13 @@ export DOCKER_REPO_PREFIX=jess
 #
 dcleanup(){
   for container in $(docker ps -aq 2> /dev/null); do
-    docker rm "$container" 2> /dev/null
+    $(docker rm "$container" 2> /dev/null)
   done
   for volume in $(docker ps --filter status=exited -q 2> /dev/null); do
-    docker rm -v "$volume" 2> /dev/null
+    $(docker rm -v "$volume" 2> /dev/null)
   done
   for image in $(docker images --filter dangling=true -q 2> /dev/null); do
-    docker rmi "$image" 2> /dev/null
+    $(docker rmi "$image" 2> /dev/null)
   done
 }
 
@@ -59,9 +59,3 @@ hollywood(){
     --name hollywood \
     ${DOCKER_REPO_PREFIX}/hollywood
 }
-
-lynx(){
-  docker run --rm -it \
-    --name lynx \
-    ${DOCKER_REPO_PREFIX}/lynx "$@"
-  }

@@ -7,12 +7,17 @@
 #  the Free Software Foundation; either version 2.1 of the License, or
 #  (at your option) any later version.
 
+[Match]
+OriginalName=*
+
 [Link]
 NamePolicy=kernel database onboard slot path
+AlternativeNamesPolicy=database onboard slot path
 MACAddressPolicy=persistent
 Multicast=true
 AllMulticast=true
 
 [Network]
+# DNS=192.168.1.1
 MulticastDNS=true
-LLMNR=true
+# LLMNR=true
