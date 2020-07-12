@@ -17,6 +17,7 @@ common=(
   "stow tmux"
   "stow wal"
   "stow youtube-dl"
+  "stow vim"
   "stow zsh"
 )
 
