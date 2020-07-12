@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [[ -z "SSH_CLIENT" ]]; then
+if [[ -z "$SSH_CLIENT" ]]; then
   xsettingsd &
   picom -b --dbus
   lxpolkit &
