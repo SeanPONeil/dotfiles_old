@@ -7,9 +7,9 @@ AllMulticast=true
 
 [Network]
 DHCP=ipv4
-# DNS=192.168.1.1
 MulticastDNS=true
-# LLMNR=true
+LinkLocalAddressing=ipv4
+IPv6AcceptRA=no
 
 [DHCP]
 RouteMetric=20
