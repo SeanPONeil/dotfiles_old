@@ -13,7 +13,7 @@ wmname compiz
 
 # Create desktops based on autorandr profile
 autorandr_current=$(autorandr --current)
-. $HOME/.config/bspwm/desktops.d/"${autorandr_current:-default}"
+$HOME/.config/bspwm/desktops.d/"${autorandr_current:-default}"
 
 bspc config border_width         2
 
