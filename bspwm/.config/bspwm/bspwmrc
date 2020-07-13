@@ -12,9 +12,6 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 wmname compiz
 
 # Create desktops based on autorandr profile
-autorandr_current=$(autorandr --current)
-$HOME/.config/bspwm/desktops.d/"${autorandr_current:-default}"
-
 bspc config border_width         2
 
 bspc config split_ratio          0.52
@@ -44,7 +41,7 @@ else
   sxhkd &
 fi
 
-gorun $HOME/bin/bar.go
+$HOME/bin/bar.go
 
 if [[ $(pidof dunst) ]]; then
   notify-send "BSPWM configured for $autorandr_current"

@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+sleep 1
+DP2=$(xrandr -q | grep -w "DP2 connected")
+DP1=$(xrandr -q | grep -w "DP1 connected")
+
+if [[ -n "$DP1" ]] && [[ -n "$DP2" ]]; then
+  xrandr --output DP2 --mode 2560x1440 \
+    --output DP1 --mode 1920x1080 --primary --right-of DP2 \
+    --output eDP1 --off
+
+  bspc wm --reorder-monitors DP2 DP1
+  bspc monitor DP2 -d 1 2 3 4 5 6
+  bspc monitor DP1 -d 7 8 9 10
+
+  feh --bg-scale --no-fehbg /home/sean/wallpapers/sphere_2560x1440.png
+
+else
+  xrandr --auto
+
+  bspc wm --reorder-monitors eDP1
+  bspc monitor eDP1 -d 1 2 3 4 5 6 7 8 9 10
+
+
+  feh --bg-scale --no-fehbg /home/sean/wallpapers/sphere_1920x1080.png
+
+fi
+
+bspc config window_gap 10
+
+
+/home/sean/bin/bar.go

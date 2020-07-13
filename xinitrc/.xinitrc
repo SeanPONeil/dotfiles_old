@@ -59,6 +59,4 @@ export SSH_AUTH_SOCK
 
 export SUDO_ASKPASS=/usr/lib/ssh/x11-ssh-askpass
 
-autorandr_output=$(autorandr --config)
-echo $autorandr_output
 exec bspwm 
