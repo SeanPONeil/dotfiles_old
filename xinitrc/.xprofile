@@ -7,6 +7,6 @@ if [[ -z "$SSH_CLIENT" ]]; then
   unclutter &
   dunst &
   networkd-notify &
-  $HOME/.fehbg &
-  wal -R
+  /home/sean/bin/monitors &
+  wal -R &
 fi
