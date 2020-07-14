@@ -11,3 +11,9 @@ alias xkb="setxkbmap -option caps:super"
 alias bspwmrc="$HOME/.config/bspwm/bspwmrc"
 alias vnc_sariel="ssh -fL 9900:localhost:5900 sariel sleep 10; vncviewer localhost:9900"
 alias -s {ape,avi,flv,m4a,mkv,mov,mp3,mp4,mpeg,mpg,ogg,ogm,wav,webm}=mpv
+
+alias dsl="docker service logs"
+alias dss="docker stack services"
+alias dsps="docker stack ps --no-trunc"
+alias dsls="docker stack ls"
+alias dsrm="docker stack rm"
