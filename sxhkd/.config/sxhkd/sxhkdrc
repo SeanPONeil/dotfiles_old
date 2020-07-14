@@ -5,7 +5,7 @@
 
 # terminal emulator
 super + Return
-  alacritty
+  termite 
 
 # firefox
 super + {shift + Return}
