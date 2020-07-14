@@ -142,7 +142,7 @@ font:
   use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
-draw_bold_text_with_bright_colors: false 
+draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night Bright)
 #colors:
@@ -169,23 +169,23 @@ draw_bold_text_with_bright_colors: false
 #    white: '#073642'
 colors:
   primary:
-    background: '#073642'
-    foreground: '#fdf6e3'
+    background: '#151718'
+    foreground: '#d6d6d6'
   normal:
-    black: '#073642'
-    red: '#dc322f'
-    green: '#859900'
-    yellow: '#b58900'
-    blue: '#268bd2'
-    magenta: '#d33682'
-    cyan: '#2aa198'
-    white: '#eee8d5'
+    black: '#151718'
+    red: '#Cd3f45'
+    green: '#9fca56'
+    yellow: '#e6cd69'
+    blue: '#55b5db'
+    magenta: '#a074c4'
+    cyan: '#55dbbe'
+    white: '#d6d6d6'
   bright:
-    black: '#6c7c80'
-    red: '#dc322f'
-    green: '#859900'
-    yellow: '#b58900'
-    blue: '#268bd2'
-    magenta: '#d33682'
-    cyan: '#2aa198'
-    white: '#eee8d5'
+    black: '#41535B'
+    red: '#Cd3f45'
+    green: '#9fca56'
+    yellow: '#e6cd69'
+    blue: '#55b5db'
+    magenta: '#a074c4'
+    cyan: '#55dbbe'
+    white: '#ffffff'
