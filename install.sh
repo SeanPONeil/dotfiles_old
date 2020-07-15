@@ -6,6 +6,7 @@ common=(
   "stow bin"
   "stow code"
   "stow curl"
+  "stow dockerfunc"
   "stow git"
   "stow kitty"
   "stow mitmproxy"
@@ -24,7 +25,6 @@ common=(
 linux=(
   "stow autorandr"
   "stow bspwm"
-  "stow dockerfunc"
   "stow dunst"
   "sudo stow fonts --target=/usr/share/fonts"
   "stow mpv"

@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 # Bash wrappers for docker run commands
 
 export DOCKER_REPO_PREFIX=jess
@@ -38,21 +38,6 @@ rmctr(){
 #     --log-driver none \
 #     bash bash -c "apk add --no-cache vim; bash"
 #   }
-
-cheese(){
-  del_stopped cheese
-
-  docker run -d \
-    -v /etc/localtime:/etc/localtime:ro \
-    -v /tmp/.X11-unix:/tmp/.X11-unix \
-    -e "DISPLAY=unix${DISPLAY}" \
-    -v "${HOME}/Pictures:/root/Pictures" \
-    --device /dev/video1 \
-    --device /dev/snd \
-    --device /dev/dri \
-    --name cheese \
-    ${DOCKER_REPO_PREFIX}/cheese
-}
 
 hollywood(){
   docker run --rm -it \
