@@ -59,4 +59,7 @@ export SSH_AUTH_SOCK
 
 export SUDO_ASKPASS=/usr/lib/ssh/x11-ssh-askpass
 
+# run local xhost
+xhost local:root
+
 exec bspwm 
