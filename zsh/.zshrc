@@ -45,17 +45,9 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=$HOME/.zsh_history
 
-source $HOME/.zshrc-`uname`
-
-# source extra shell scripts if they exist
-if [[ -d "$HOME/.zshrc.d" ]]; then
-  for file in $HOME/.zshrc.d/*.zsh; do
-    source "$file"
-  done
-fi
 unsetopt null_glob
 
-for file in ~/.{zsh_prompt,aliases,path,dockerfunc,extra,exports}; do
+for file in ~/.{zsh_prompt,aliases,path,dockerfunc,extra,exports,functions}; do
   if [[ -f "$file" ]] && [[ -f "$file" ]]; then
     source "$file"
   fi

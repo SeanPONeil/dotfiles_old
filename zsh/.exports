@@ -23,9 +23,9 @@ export PYTHONUSERBASE=$HOME/.local
 export PLATFORM=$(uname)
 
 
-export EDITOR=nvim
-export SYSTEMD_EDITOR=nvim
-export VISUAL=nvim
+export EDITOR=vim
+export SYSTEMD_EDITOR=vim
+export VISUAL=vim
 
 if [[ $PLATFORM == "Darwin" ]]; then
   export PAGER=/usr/local/bin/less
