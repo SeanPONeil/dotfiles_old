@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Determine size of a file or total size of a directory
-fs() {
+fs(){
   if du -b /dev/null > /dev/null 2>&1; then
     local arg=-sbh
   else
@@ -23,7 +23,7 @@ wal(){
   fi
 }
 
-timeshell() {
+timeshell(){
   echo "\$SHELL: $SHELL"
   shell=${1-$SHELL}
   for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
