@@ -32,7 +32,7 @@ rmctr(){
   docker rm -f $@ 2>/dev/null || true
 }
 
-dshell(){
+kali(){
   if [[ -n "$(docker network ls | grep $@)" ]]; then
     # Attach bash shell to network
   docker run --rm -it \
@@ -40,7 +40,7 @@ dshell(){
     --mount src=kali-postgres,dst=/var/lib/postgresql \
     --network $@ \
     --name dshell_kali \
-    kalilinux/kali bash
+    kali:top10_tools bash
   fi
 }
 # volume(){
