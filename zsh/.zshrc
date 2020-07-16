@@ -11,15 +11,15 @@ source ~/.cache/wal/colors.sh
 (cat ~/.cache/wal/sequences &)
 
 # Pure prompt customization
-# export PURE_PROMPT_SYMBOL=">"
-# export PURE_PROMPT_VICMD_SYMBOL="<"
+export PURE_PROMPT_SYMBOL=">"
+export PURE_PROMPT_VICMD_SYMBOL="<"
 
 # Load antibody plugins
 # export NVM_LAZY_LOAD=true
 # export NVM_LAZY_LOAD_EXTRA_COMMANDS=('yarn')
 # export NVM_NO_USE=true
-# export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
-# source $HOME/.zsh_plugins
+export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
+source $HOME/.zsh_plugins
 
 # autoload -U promptinit; promptinit
 
