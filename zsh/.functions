@@ -14,3 +14,17 @@ fs() {
     du $arg -- .[^.]* *
   fi
 }
+
+wal(){
+  if [[ $(uname) == "Darwin" ]]; then
+    echo "Darwin"
+  else
+    echo "not darwin"
+  fi
+}
+
+timeshell() {
+  echo "\$SHELL: $SHELL"
+  shell=${1-$SHELL}
+  for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
+}

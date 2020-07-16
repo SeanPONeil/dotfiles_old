@@ -1,13 +1,6 @@
-robbyrussell/oh-my-zsh
-
-lukechilds/zsh-nvm
-
 zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
 chitoku-k/fzf-zsh-completions
-gradle/gradle-completion
-
-chrissicool/zsh-256color
 
 zpm-zsh/clipboard
 robbyrussell/oh-my-zsh path:plugins/autojump
@@ -19,4 +12,3 @@ zdharma/zsh-diff-so-fancy
 # these have to be last
 mafredri/zsh-async
 sindresorhus/pure
-zsh-users/zsh-syntax-highlighting

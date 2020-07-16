@@ -1,8 +1,6 @@
+
 # Autoload zsh modules when they are referenced
-zmodload -a zsh/stat stat
-zmodload -a zsh/zpty zpty
-zmodload -a zsh/zprof zprof
-zmodload -a zsh/mapfile mapfile
+# zmodload zsh/zprof 
 
 setopt histignorealldups sharehistory nomatch autocd
 
@@ -17,26 +15,29 @@ export PURE_PROMPT_SYMBOL=">"
 export PURE_PROMPT_VICMD_SYMBOL="<"
 
 # Load antibody plugins
-export NVM_LAZY_LOAD=true
-export NVM_LAZY_LOAD_EXTRA_COMMANDS=('yarn')
+# export NVM_LAZY_LOAD=true
+# export NVM_LAZY_LOAD_EXTRA_COMMANDS=('yarn')
+export NVM_NO_USE=true
 export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
 source $HOME/.zsh_plugins
 
+autoload -U promptinit; promptinit
+
 # ZSH completion
-autoload -Uz compinit && compinit -i
+autoload -Uz compinit
 
 setopt null_glob
 source $HOME/.exports
 for f in ~/.exports.d/*; do
-	[[ ! -e $f ]] && continue  # continue, if file does not exist
-	source $f;
+  [[ ! -e $f ]] && continue  # continue, if file does not exist
+  source $f;
 done
 
 source $HOME/.aliases
 source $HOME/.aliases-`uname`
 for f in ~/.aliases.d/*; do
-	[[ ! -e $f ]] && continue  # continue, if file does not exist
-	source $f; 
+  [[ ! -e $f ]] && continue  # continue, if file does not exist
+  source $f; 
 done
 
 
@@ -55,5 +56,9 @@ done
 unset file
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
 
 # zprof
