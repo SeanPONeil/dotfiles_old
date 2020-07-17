@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh 
 # Bash wrappers for docker run commands
 
 export DOCKER_REPO_PREFIX=jess
@@ -30,6 +30,18 @@ del_stopped(){
 rmctr(){
   # shellcheck disable=SC2068
   docker rm -f $@ 2>/dev/null || true
+}
+
+dstopall(){
+  for container in $(docker ps -q 2> /dev/null); do
+    docker stop $container 2> /dev/null
+  done
+}
+
+drmi(){
+  for container in $(docker ps -aq 2> /dev/null); do
+    docker rm $container 2> /dev/null
+  done
 }
 
 kali(){
