@@ -57,3 +57,14 @@ timeshell(){
   shell=${1-$SHELL}
   for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
 }
+
+json(){
+  if [[ $# -eq 0 ]]; then
+    # No argument passed, use stdin
+    cat - | python3 -m json.tool
+  elif [[ -n "$1" ]]; then
+    python3 -m json.tool $1
+  else
+    return 1
+  fi
+}
