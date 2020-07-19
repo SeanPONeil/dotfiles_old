@@ -48,7 +48,7 @@ wal(){
   if [[ $(uname) == "Darwin" ]]; then
     echo "Darwin"
   else
-    echo "not darwin"
+   /usr/bin/wal $@ 
   fi
 }
 

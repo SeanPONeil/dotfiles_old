@@ -1,3 +1,17 @@
+SHELL := bash 
+
+.PHONY: all
+all: bin etc
+
+.PHONY: bin
+bin: ## Installs the bin directory files.
+	# add aliases for things in bin
+	for file in $(shell find $(CURDIR)/bin -type f -not -name ".*.swp"); do \
+		f=$$(basename $$file); \
+		sudo ln -sf $$file /usr/local/bin/$$f; \
+	done
+
+
 .PHONY: etc
 etc: ## Installs the etc directory files.
 	sudo mkdir -p /etc/docker/seccomp
