@@ -24,7 +24,7 @@ source $HOME/.zsh_plugins
 # autoload -U promptinit; promptinit
 
 # ZSH completion
-# autoload -Uz compinit
+autoload -Uz compinit && compinit
 
 setopt null_glob
 source $HOME/.exports
