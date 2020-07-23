@@ -1,4 +1,4 @@
-SHELL := bash 
+SHELL := bash
 
 .PHONY: all
 all: bin etc
@@ -24,8 +24,8 @@ dotfiles: ## Installs the dotfiles.
 		f=$$(basename $$file); \
 		ln -sfn $$file $(HOME)/.gnupg/$$f; \
 	done; \
-	ln -fn $(CURDIR)/gitignore $(HOME)/.gitignore;
-	git update-index --skip-worktree $(CURDIR)/.gitconfig;
+	# ln -fn $(CURDIR)/gitignore $(HOME)/.gitignore;
+	# git update-index --skip-worktree $(CURDIR)/.gitconfig;
 	mkdir -p $(HOME)/.config;
 	# ln -snf $(CURDIR)/.i3 $(HOME)/.config/sway;
 	mkdir -p $(HOME)/.local/share;
