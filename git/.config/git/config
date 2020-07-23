@@ -1,6 +1,6 @@
 [core]
-  editor  = nvim
-  pager   = diff-so-fancy | less -FXR1   
+  editor  = vim
+  pager   = diff-so-fancy | less -FXR1
 [user]
   name = Sean O'Neil
   email = oneilse14@gmail.com
