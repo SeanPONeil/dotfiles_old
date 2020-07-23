@@ -45,15 +45,12 @@ drmi() {
 }
 
 kali() {
-  if [[ -n "$(docker network ls | grep $@)" ]]; then
-    # Attach bash shell to network
-    docker run --rm -it \
-      --mount src=kali-root,dst=/root \
-      --mount src=kali-postgres,dst=/var/lib/postgresql \
-      --network $@ \
-      --name dshell_kali \
-      kali:top10_tools bash
-  fi
+  # Attach bash shell to network
+  docker run --rm -it \
+    --mount src=kali-root,dst=/root \
+    --mount src=kali-postgres,dst=/var/lib/postgresql \
+    --name kali \
+    sean/kali:latest
 }
 
 hollywood() {
