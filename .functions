@@ -46,12 +46,14 @@ fs(){
 
 wal(){
   if [[ $(uname) == "Darwin" ]]; then
-   /usr/local/bin/wal $@
-   $HOME/bin/alacritty_color_scheme
-   brew services restart spacebar
-   brew services restart yabai
+    /usr/local/bin/wal $@
+    if [ "$#" -ge 2 ]; then
+      $HOME/bin/alacritty_color_scheme
+      brew services restart spacebar
+      brew services restart yabai
+    fi
   else
-   /usr/bin/wal $@ 
+    /usr/bin/wal $@
   fi
 }
 
