@@ -19,7 +19,8 @@ export PURE_PROMPT_VICMD_SYMBOL="<"
 # export NVM_LAZY_LOAD_EXTRA_COMMANDS=('yarn')
 # export NVM_NO_USE=true
 export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
-source $HOME/.zsh_plugins
+source <(antibody init)
+antibody bundle < ~/.zsh_plugins
 
 # autoload -U promptinit; promptinit
 
