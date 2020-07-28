@@ -1,1 +1,82 @@
-/Users/seanoneil/dotfiles/dockerfunc/.dockerfunc
+#!/usr/bin/env bash
+# Bash wrappers for docker run commands
+
+export DOCKER_REPO_PREFIX=jess
+#
+# Helper Functions
+#
+dcleanup() {
+  for container in $(docker ps -aq 2>/dev/null); do
+    $(docker rm "$container" 2>/dev/null)
+  done
+  for volume in $(docker ps --filter status=exited -q 2>/dev/null); do
+    $(docker rm -v "$volume" 2>/dev/null)
+  done
+  for image in $(docker images --filter dangling=true -q 2>/dev/null); do
+    $(docker rmi "$image" 2>/dev/null)
+  done
+}
+
+del_stopped() {
+  local name=$1
+  local state
+  state=$(docker inspect --format "{{.State.Running}}" "$name" 2>/dev/null)
+
+  if [[ "$state" == "false" ]]; then
+    docker rm "$name"
+  fi
+}
+
+rmctr() {
+  # shellcheck disable=SC2068
+  docker rm -f $@ 2>/dev/null || true
+}
+
+dstopall() {
+  for container in $(docker ps -q 2>/dev/null); do
+    docker stop $container 2>/dev/null
+  done
+}
+
+drmi() {
+  for container in $(docker ps -aq 2>/dev/null); do
+    docker rm $container 2>/dev/null
+  done
+}
+
+kali() {
+  # Attach bash shell to network
+  docker run --rm -it \
+    --mount src=kali-root,dst=/root \
+    --mount src=kali-postgres,dst=/var/lib/postgresql \
+    --name kali \
+    sean/kali:latest
+}
+
+hollywood() {
+  docker run --rm -it \
+    --name hollywood \
+    ${DOCKER_REPO_PREFIX}/hollywood
+}
+
+#cheese() {
+#  del_stopped cheese
+#
+#  docker run --rm -d \
+#    -v /etc/localtime:/etc/localtime:ro \
+#    -v /tmp/.X11-unix:/tmp/.X11-unix \
+#    -e "DISPLAY=unix${DISPLAY}" \
+#    -v "${HOME}/Pictures:/root/Pictures" \
+#    -v /run/udev/data:/run/udev/data:ro \
+#    --device=/dev/video0 \
+#    --device=/dev/snd \
+#    --device=/dev/dri \
+#    --name cheese \
+#    sean/cheese
+#}
+# volume(){
+#   docker run -it --rm \
+#     -v $1:/$1 \
+#     --log-driver none \
+#     bash bash -c "apk add --no-cache vim; bash"
+#   }

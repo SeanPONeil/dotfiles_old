@@ -1,1 +1,75 @@
-/Users/seanoneil/dotfiles/.functions
+#!/usr/bin/env bash
+
+lazynvm(){
+  unset -f nvm node npm npx
+  export NVM_DIR=~/.nvm
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+  if [ -f "$NVM_DIR/bash_completion" ]; then
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+  fi
+}
+
+nvm(){
+  lazynvm
+  nvm $@
+}
+
+node() {
+  lazynvm
+  node $@
+}
+
+npm() {
+  lazynvm
+  npm $@
+}
+
+npx() {
+  lazynvm
+  npx $@
+}
+
+# Determine size of a file or total size of a directory
+fs(){
+  if du -b /dev/null > /dev/null 2>&1; then
+    local arg=-sbh
+  else
+    local arg=-sh
+  fi
+  # shellcheck disable=SC2199
+  if [[ -n "$@" ]]; then
+    du $arg -- "$@"
+  else
+    du $arg -- .[^.]* *
+  fi
+}
+
+wal(){
+  if [[ $(uname) == "Darwin" ]]; then
+    /usr/local/bin/wal $@
+    if [ "$#" -ge 2 ]; then
+      $HOME/bin/alacritty_color_scheme
+      brew services restart spacebar
+      brew services restart yabai
+    fi
+  else
+    /usr/bin/wal $@
+  fi
+}
+
+timeshell(){
+  echo "\$SHELL: $SHELL"
+  shell=${1-$SHELL}
+  for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
+}
+
+json(){
+  if [[ $# -eq 0 ]]; then
+    # No argument passed, use stdin
+    cat - | python3 -m json.tool
+  elif [[ -n "$1" ]]; then
+    python3 -m json.tool $1
+  else
+    return 1
+  fi
+}
