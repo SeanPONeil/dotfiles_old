@@ -1,0 +1,43 @@
+#!/usr/bin/env sh
+
+# get color values from pywal
+source $HOME/.cache/wal/colors.sh
+
+# yabai template colours
+CBACK=$(echo $background | sed 's/#//')
+CFORE=$(echo $foreground | sed 's/#//')
+CACTV=$(echo $color3 | sed 's/#//')
+CNORM=$(echo $color1 | sed 's/#//')
+CINSE=$(echo $foreground | sed 's/#//')
+
+# global settings
+yabai -m config mouse_follows_focus          on 
+yabai -m config focus_follows_mouse          autofocus
+yabai -m config window_placement             second_child
+yabai -m config window_topmost               off
+yabai -m config window_opacity               off
+yabai -m config window_shadow                off
+yabai -m config window_border                on
+yabai -m config window_border_width          1
+yabai -m config active_window_border_color   0xffeff0eb
+yabai -m config normal_window_border_color   0xff686868
+yabai -m config active_window_opacity        1.0
+yabai -m config normal_window_opacity        1.0
+yabai -m config split_ratio                  0.50
+yabai -m config auto_balance                 on
+yabai -m config mouse_modifier               fn
+yabai -m config mouse_action1                move
+yabai -m config mouse_action2                resize
+
+# general space settings
+yabai -m config layout                       bsp
+yabai -m config top_padding                  28
+yabai -m config bottom_padding               10
+yabai -m config left_padding                 10
+yabai -m config right_padding                10
+yabai -m config window_gap                   10
+
+# application rules
+# yabai -m rule --add app="Firefox" opacity=1.0
+# yabai -m rule --add app="kitty" opacity=0.95
+echo "yabai configuration loaded.."
