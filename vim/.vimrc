@@ -7,15 +7,18 @@ Plug 'dylanaraps/wal.vim'  " pywal colorscheme
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'chrisbra/unicode.vim'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}} 
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'sheerun/vim-polyglot'
 Plug 'editorconfig/editorconfig-vim' " .editorconfig linter
-Plug 'preservim/nerdcommenter' 
+Plug 'preservim/nerdcommenter'
+Plug 'kevinoid/vim-jsonc'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'stephpy/vim-yaml'
 call plug#end()
 
 " Don't complain about node version
 let g:coc_disable_startup_warning = 1
-let g:coc_global_extensions = [ 'coc-emoji', 'coc-eslint', 'coc-prettier','coc-tsserver', 'coc-tslint', 'coc-tslint-plugin','coc-css', 'coc-json', 'coc-pyls', 'coc-yaml', 'coc-sh', 'coc-go', 'coc-java', 'coc-git' ]
+let g:coc_global_extensions = []
 
 let g:python3_host_prog = "/usr/local/bin/python3"
 let g:python_host_prog = "/usr/local/bin/python2"
@@ -71,15 +74,14 @@ nnoremap <c-ENTER> :vsplit<CR>
 " all extra windows pop up at the bottom
 set splitbelow
 
-" set tab as 2 spaces
-filetype plugin indent on
-" On pressing tab, insert 2 spaces
-set expandtab
 " show existing tab with 2 spaces width
 set tabstop=2
 set softtabstop=2
 " when indenting with '>', use 2 spaces width
 set shiftwidth=2
+set expandtab
+set smarttab
+set autoindent
 
 syntax on
 set modeline
