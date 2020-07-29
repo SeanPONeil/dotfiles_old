@@ -4,9 +4,10 @@ if [[ -z "$SSH_CLIENT" ]]; then
   xsettingsd &
   picom -b --dbus
   lxpolkit &
+  libinput-gestures-setup start
   unclutter &
   dunst &
   networkd-notify &
-  /home/sean/bin/monitors &
+  monitor-hotplug &
   wal -R &
 fi
